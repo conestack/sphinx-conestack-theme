@@ -1,4 +1,4 @@
-CONE CUSTOM LAYOUT FOR SPHINX DOCUMENTATION
+cone custom layout for sphinx documentation
 ===========================================
 
 Custom styles:
