@@ -1,0 +1,27 @@
+body {
+    background: white;
+}
+
+#test {
+    color: red;
+}
+
+div.body {
+    margin-top: 40px;
+}
+
+#header {
+    background: grey;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    font-size: x-large;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+div#sphinxsidebar {
+    margin-top:40px;
+}
