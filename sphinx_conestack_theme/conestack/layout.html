@@ -1,0 +1,20 @@
+{%- extends "basic/layout.html" %}
+
+{%- block extrahead %}
+<link rel="stylesheet" src="{{ pathto('_static/bootstrap.css') }}" />
+{% endblock %}
+
+{% block header %}
+{%- if logo_url %}
+<div class="header" role="banner">
+  <div class="logo">
+    <a href="{{ pathto(root_doc)|e }}">
+      <img class="logo" src="{{ logo_url|e }}" alt="Logo"/>
+    </a>
+  </div>
+</div>
+{%- endif %}
+{% endblock %}
+
+{%- block sidebarlogo %}{%- endblock %}
+{%- block sidebarsourcelink %}{%- endblock %}
