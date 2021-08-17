@@ -1,0 +1,8 @@
+*.pyc
+/bin/
+/lib/
+/lib64
+/pyvenv.cfg
+/share/
+/sphinx_conestack_theme.egg-info/
+__pycache__
