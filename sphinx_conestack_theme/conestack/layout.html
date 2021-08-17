@@ -1,15 +1,15 @@
 {%- extends "basic/layout.html" %}
 
 {%- block extrahead %}
-<link rel="stylesheet" src="{{ pathto('_static/bootstrap.css') }}" />
+<link rel="stylesheet" type="text/css" src="{{ pathto('_static/bootstrap.css', 1) }}" />
 {% endblock %}
 
 {% block header %}
-{%- if logo_url %}
+{%- if theme_logo_url %}
 <div class="header" role="banner">
   <div class="logo">
     <a href="{{ pathto(root_doc)|e }}">
-      <img class="logo" src="{{ logo_url|e }}" alt="Logo"/>
+      <img class="logo" src="{{ theme_logo_url|e }}" alt="Logo"/>
     </a>
   </div>
 </div>

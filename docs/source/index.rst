@@ -6,6 +6,16 @@
 Welcome to Conestack Sphinx Theme's documentation!
 ==================================================
 
+Short description of theme and purpose.
+
+Theme Options
+-------------
+
+* ``option 1``: Foo bar
+
+* ``option 2``: Baz Bam
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

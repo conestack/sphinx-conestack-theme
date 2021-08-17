@@ -1,5 +1,6 @@
 *.pyc
 /bin/
+/docs/html/
 /lib/
 /lib64
 /pyvenv.cfg
