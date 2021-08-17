@@ -4,17 +4,39 @@
 <link rel="stylesheet" type="text/css" src="{{ pathto('_static/bootstrap.css', 1) }}" />
 {% endblock %}
 
-{% block header %}
-{%- if theme_logo_url %}
-<div class="header" role="banner">
-  <div class="logo">
-    <a href="{{ pathto(root_doc)|e }}">
-      <img class="logo" src="{{ theme_logo_url|e }}" alt="Logo"/>
-    </a>
+{%- block relbar1 %}{% endblock %}
+
+{%- block content %}
+<div id="wrapper">
+  <div class="header navbar" id="header">
+    {% block header_navbar %}
+      {%- if theme_logo_url %}
+        <div class="logo navbar-brand">
+          <a href="{{ pathto(root_doc)|e }}">
+            <img class="logo" src="{{ theme_logo_url|e }}" alt="Logo"/>
+            <span class="logo-title">{{  theme_logo_title }}</span>
+          </a>
+        </div>
+      {%- endif %}
+
+      {% block searchbox %}
+        {%- include "searchbox.html" %}
+      {% endblock %}
+    {% endblock %}
+
+  </div>
+  <div id="content-wrapper">
+    <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-light">
+      {% block relbarsidebar %}{{ relbar() }}{% endblock %}
+    </div>
+    <div id="content">
+      content
+    </div>
   </div>
 </div>
-{%- endif %}
+{%- endblock %}
+
+{% block footer %}
 {% endblock %}
 
-{%- block sidebarlogo %}{%- endblock %}
-{%- block sidebarsourcelink %}{%- endblock %}
+{%- block relbar2 %}{% endblock %}

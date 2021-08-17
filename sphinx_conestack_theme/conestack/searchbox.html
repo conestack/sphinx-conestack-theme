@@ -1,0 +1,8 @@
+{%- if pagename != "search" and builder != "singlehtml" %}
+
+<div class="input-group nav-item" id="searchbox"style="display: none" role="search">
+    <input type="text" class="form-control">
+    <span class="input-group-text" type="submit"><i class="bi bi-search"></i></span>
+</div>
+<script>$('#searchbox').show(0);</script>
+{%- endif %}
