@@ -40,6 +40,5 @@ setup(
         'sphinx.html_themes': [
             'conestack = sphinx_conestack_theme',
         ]
-    },
-    templates_path='conestack/_templates/sidebar.html'
+    }
 )
