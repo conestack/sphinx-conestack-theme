@@ -23,3 +23,15 @@ Change the header color to your preference:
     
     def func(para, **kw):
         return 1
+
+
+Other
+~~~~~
+
+.. note::
+
+    This is a note
+
+.. warning::
+
+    This is a warning
