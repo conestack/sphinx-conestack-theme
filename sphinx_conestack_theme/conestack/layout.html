@@ -6,26 +6,19 @@
 <script src="{{ pathto('_static/bootstrap.bundle.min.js', 1) }}"></script>
 {% endblock %}
 
-<!-- custom relbar -->
-{%- macro cone_relbar() %}
-    <div class="related" role="navigation" aria-label="related navigation">
-      <ul class="list-unstyled fw-normal pb-1 small cone-relbar">
-        {%- for rellink in rellinks %}
-        <li class="right" {% if loop.first %}style="border-bottom:1px solid black;"{% endif %}>
-          <a href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
-             {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-          {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
-        {%- endfor %}
-        {%- block rootrellink %}
-        <li class="nav-item nav-item-0"><a href="{{ pathto(root_doc)|e }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-        {%- endblock %}
-        {%- for parent in parents %}
-          <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
-        {%- endfor %}
-        <li class="nav-item nav-item-this"><a href="{{ link|e }}">{{ title }}</a></li>
-        {%- block relbaritems %} {% endblock %}
-      </ul>
-    </div>
+<!-- custom sidebar -->
+{%- macro cone_sidebar() %}
+      {%- if render_sidebar %}
+        <aside id="cone-sidebar" class="ms-4 sphinxsidebar">
+          <nav id="cone-docs-nav">
+            {%- if sidebars != None %}
+              {%- for sidebartemplate in sidebars %}
+                {%- include sidebartemplate %}
+              {%- endfor %}
+            {% endif %}
+          </nav>
+        </aside>
+      {%- endif %}
 {%- endmacro %}
 
 {% block relbar1 %}{% endblock %}
@@ -177,38 +170,49 @@
 
     <div class="container-xxl my-md-4" id="cone-layout">
 
-      <aside id="cone-sidebar" class="ms-4">
-        <nav id="cone-docs-nav">
-          <ul class="list-unstyled mb-0 py-3 pt-md-1">
-            <li class="mb-1">
-              <li>
-                Getting started
-              </li>
+      {% block sidebar %}
+        {{ cone_sidebar() }}
+      {% endblock %}
 
-              {% block relbar_sidebar %}
-                {{ cone_relbar() }}
-              {% endblock %}
-
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-      <main class="cone-main order-1 ms-4">
-        <div class="ps-lg-4">
-          <div class="d-md-flex flex-md-row">
-            <h1 class="cone-title" id="content">Welcome to Conestack's Documentation</h1>
+      <main class="document cone-main order-1 ms-4">
+        {%- block document %}
+          <div class="ps-lg-4 mt-3">
+            {% block body %} {% endblock %}
           </div>
-        </div>
-
-        <div class="ps-lg-4 mt-3">
-          Content
-        </div>
+        {%- endblock %}
       </main>
     </div>
 {%- endblock %}
 
 {% block footer %}
+<div class="container footer" role="contentinfo">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    {%- if show_copyright %}
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}"><p class="col-md-4 mb-0 text-muted">Copyright</p></a> {{ copyright }}.{% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}
+      {%- endif %}
+    {%- endif %}
+    {%- if show_ssphinx %}
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+    {%- endif %}
+
+    <a href="{{ pathto(root_doc)|e }}" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 link-dark text-decoration-none">
+      <img src="{{ theme_logo_url|e }}" style="height:32px;" alt="footer_logo"></img>
+      <span>{{  theme_logo_title }}</span>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+    {%- endif %}
+  </footer>
+  </div>
 {% endblock %}
 
 {%- block relbar2 %}
