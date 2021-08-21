@@ -1,9 +1,9 @@
 {%- extends "layout.html" %}
 {% set title = _('Search') %}
 {%- block scripts %}
-    {{ super() }}
-    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
-    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+  {{ super() }}
+  <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+  <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
 {%- endblock %}
 {% block extrahead %}
   <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
@@ -29,8 +29,8 @@
   {% block searchbox %}
   <div id="searchbox" class="nav-item me-3" role="search">
     <form class="search input-group" action="" method="get">
-        <input type="text" class="form-control" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-        <button type="submit" class="bi bi-search input-group-text" />
+      <input type="text" class="form-control" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <button type="submit" class="bi bi-search input-group-text" />
     </form>
   </div>
   {% endblock %}

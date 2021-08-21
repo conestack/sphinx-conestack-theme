@@ -1,0 +1,10 @@
+{% if theme_github_url or theme_twitter_url or theme_pypi_url or theme_gitlab_url %}
+  <div id="nav_links"class="me-3">
+    <ul class="navbar-nav flex-row ms-md-auto">
+      {%- include "github.html" %}
+      {%- include "twitter.html" %}
+      {%- include "pypi.html" %}
+      {%- include "gitlab.html" %}
+    </ul>
+  </div>
+{% endif %}
