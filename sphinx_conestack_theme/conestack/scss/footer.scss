@@ -1,0 +1,6 @@
+.previous-chapter::before {
+    content: '<< ';
+}
+.next-chapter::after {
+    content: '>> ';
+}

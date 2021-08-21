@@ -1,14 +1,12 @@
 @import 'bootstrap.css';
 @import "bootstrap-icons/bootstrap-icons.css";
 @import 'conestack-vars.css';
-/** general **/
 body {
   width: 100vw;
   height: 100vh;
   background-color: var(--bs-body-bg);
 }
 
-/** header **/
 #header {
   color: var(--cs-header-color);
   background: var(--cs-header-bg-color);
@@ -16,7 +14,6 @@ body {
   height: 64px;
 }
 
-/* logo */
 #logo,
 #logo:active,
 #logo:hover,
@@ -36,12 +33,18 @@ body {
   font-size: 1.3em;
 }
 
-/* searchbox */
 #searchbox {
   max-width: 300px;
 }
 
-/* navbar */
+#cs-ext-links path {
+  fill: var(--cs-header-color);
+}
+
+#cs-ext-links svg {
+  width: 24px;
+}
+
 #cs-navbar {
   background: var(--cs-header-bg-color);
 }
@@ -50,25 +53,11 @@ body {
   color: var(--cs-header-color);
 }
 
-#navbar-toggle {
-  color: var(--bs-white);
-}
-
-#nav_links path {
-  fill: var(--cs-header-color);
-}
-
-#nav_links svg {
-  width: 24px;
-}
-
-/** sidebar **/
 #cs-sidebar {
   grid-area: sidebar;
   background: white;
 }
 
-/* navtree */
 #cs-docs-nav a,
 #cs-docs-nav a:visited {
   text-decoration: none !important;
@@ -128,7 +117,6 @@ body {
   display: block;
 }
 
-/** main area **/
 /* XXX: grid template areas for media queries */
 .cs-main {
   grid-template-areas: "content toc";
@@ -159,7 +147,6 @@ body {
   overflow-y: auto;
 }
 
-/* relations */
 .previous-chapter::before {
   content: "<< ";
 }
@@ -221,7 +208,7 @@ body {
   }
 }
 @media (max-width: 400px) {
-  #nav_links {
+  #cs-ext-links {
     display: none !important;
   }
 

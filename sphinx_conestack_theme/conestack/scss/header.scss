@@ -1,0 +1,41 @@
+#header {
+    color: var(--cs-header-color);
+    background: var(--cs-header-bg-color);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+    height: 64px;
+}
+
+#logo,
+#logo:active,
+#logo:hover,
+#logo:visited {
+    margin-left: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--cs-header-color);
+    text-decoration: none;
+}
+#logo > img {
+    height: 40px;
+}
+#logo > span {
+    font-size: 1.3em;
+}
+
+#searchbox {
+    max-width: 300px;
+}
+
+#cs-ext-links path {
+    fill: var(--cs-header-color);
+}
+#cs-ext-links svg {
+    width: 24px;
+}
+
+#cs-navbar {
+    background: var(--cs-header-bg-color);
+}
+#cs-navbar *:not(#searchbox *) {
+    color: var(--cs-header-color);
+}
