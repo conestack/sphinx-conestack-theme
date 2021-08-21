@@ -1,27 +1,54 @@
 @import 'bootstrap.css';
 @import "bootstrap-icons/bootstrap-icons.css";
 
-#cone-navbar {
-    background: {{ theme_header_bg_color }};
-}
-#cone-navbar *:not(#searchbox *) {
-    color: {{ theme_header_color }};
-}
-
+/** general **/
 body {
     width: 100vw;
     height: 100vh;
     background-color: var(--bs-body-bg);
 }
 
+/** header **/
+#header {
+    color: {{ theme_header_color }};
+    background: {{ theme_header_bg_color }};
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+    height: 64px;
+}
+
+/* logo */
+#logo,
+#logo:active,
+#logo:hover,
+#logo:visited {
+    margin-left: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: {{ theme_header_color }};
+    text-decoration: none;
+}
+#logo > img {
+    height: 40px;
+}
+#logo > span {
+    font-size: 1.3em;
+}
+
+/* searchbox */
+#searchbox {
+    max-width: 300px;
+}
+
+/* navbar */
+#cone-navbar {
+    background: {{ theme_header_bg_color }};
+}
+#cone-navbar *:not(#searchbox *) {
+    color: {{ theme_header_color }};
+}
 #navbar-toggle {
     color: var(--bs-white);
 }
-
-.cone-main {
-    grid-area: main;
-}
-
 #nav_links path {
     fill: {{ theme_header_color }};
 }
@@ -29,17 +56,23 @@ body {
     width: 24px;
 }
 
+/** sidebar **/
+#cone-sidebar {
+    grid-area: sidebar;
+    background: white;
+}
+
+/* navtree */
 #cone-docs-nav a,
-a:visited {
+#cone-docs-nav a:visited {
     text-decoration: none!important;
     color: var(--bs-gray-800);
 }
 #cone-docs-nav a:active,
-a:hover {
+#cone-docs-nav a:hover {
     text-decoration: none;
     color: {{ theme_header_bg_color }};
 }
-
 #cone-docs-nav > ul {
     padding-left: 0;
 }
@@ -50,14 +83,15 @@ a:hover {
 #cone-docs-nav li.toctree-l1 {
     margin-bottom: 0.3rem;
 }
-
 #cone-docs-nav .toctree-l1.current > a {
     color: {{ theme_header_bg_color }};
 }
 #cone-docs-nav .topless {
     margin-bottom: .3rem;
 }
-#cone-docs-nav .current > ul a, .previous a, .next a {
+#cone-docs-nav .current > ul a,
+#cone-docs-nav .previous a,
+#cone-docs-nav .next a {
     font-size: 14px;
 }
 #cone-docs-nav ul ul {
@@ -76,6 +110,8 @@ a:hover {
     margin: .5rem 0;
     display: block;
 }
+
+/* relations */
 #cone-docs-nav .prev-next {
     font-size: 16px;
     font-weight: 600;
@@ -93,38 +129,36 @@ a:hover {
     width: 100%;
     font-weight: 300;
 }
-#header {
-    color: {{ theme_header_color }};
-    background: {{ theme_header_bg_color }};
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
-    height: 64px;
+
+/** main area **/
+
+/* XXX: grid template areas for media queries */
+.cone-main {
+    grid-template-areas: "content toc";
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+.cone-main {
+    display: grid;
+    grid-area: main;
+}
+.cone-content {
+    grid-area: content;
+}
+.cone-toc {
+    grid-area: toc;
+}
+.cone-toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    right: 0;
+    z-index: 2;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
 }
 
-#logo > img {
-    height: 40px;
-}
-#logo > span {
-    font-size: 1.3em;
-}
-
-#logo {
-    margin-left: 2rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-#logo,
-#logo:active,
-#logo:hover,
-#logo:visited {
-    color: {{ theme_header_color }};
-    text-decoration: none;
-}
-
-#searchbox {
-    max-width: 300px;
-}
-
+/**  media queries XXX: split up **/
 @media (min-width: 992px) {
     #cone-layout {
         grid-template-columns: 1fr 5fr;
@@ -157,6 +191,7 @@ a:hover {
         font-weight: 600;
     }
 }
+
 @media (max-width: 768px) {
     #logo {
         max-width: calc(100% - 300px)!important;
@@ -168,6 +203,8 @@ a:hover {
         max-width: none;
         color: black;
     }
+
+    /* cone-title still needed? */
     .cone-title {
         float: none!important;
     }
@@ -175,6 +212,7 @@ a:hover {
         border-bottom: 1px solid {{ theme_header_color }}!important;
     }
 }
+
 @media (max-width: 400px) {
     #nav_links {
         display: none!important;
@@ -184,11 +222,7 @@ a:hover {
     }
 }
 
-#cone-sidebar {
-    grid-area: sidebar;
-    background: white;
-}
-
+/* cone-title still needed? */
 .cone-title {
     float: left;
 }
