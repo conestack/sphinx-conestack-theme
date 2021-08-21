@@ -13,12 +13,7 @@
   {% block header_navbar %}
     <header class="navbar navbar-expand-md bd-navbar" id="header">
       <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cone-nav">
-        {%- if theme_logo_url %}
-          <a id="logo" class="navbar-brand p-0 me-2" href="{{ pathto(root_doc)|e }}">
-            <img src="{{ theme_logo_url|e }}" alt="Logo"/>
-            <span>{{  theme_logo_title }}</span>
-          </a>
-        {%- endif %}
+        {%- include "logo.html" %}
 
         {% block searchbox %}
           {%- include "searchbox.html" %}

@@ -1,0 +1,6 @@
+{%- if theme_logo_url %}
+  <a id="logo" class="navbar-brand p-0 me-2" href="{{ pathto(root_doc)|e }}">
+    <img src="{{ theme_logo_url|e }}" alt="Logo"/>
+    <span>{{ theme_logo_title }}</span>
+  </a>
+{%- endif %}
