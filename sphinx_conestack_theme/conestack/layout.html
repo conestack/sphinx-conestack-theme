@@ -15,9 +15,12 @@
     <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
       {%- include "logo.html" %}
 
-      {% block searchbox %}
-        {%- include "searchbox.html" %}
-      {% endblock %}
+      {% block searchbox %}{#
+        override searchbox block empty,
+        always display searchbox,
+        also in search result
+      #}{% endblock %}
+      {%- include "searchbox.html" %}
 
       {%- include "external.html" %}
 

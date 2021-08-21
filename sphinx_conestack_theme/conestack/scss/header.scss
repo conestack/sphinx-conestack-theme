@@ -40,18 +40,36 @@
 
 #searchbox {
   max-width: 300px;
+
+  @media (max-width: 768px) {
+    max-width: none;
+    color: black;
+  }
 }
 
-#cs-ext-links path {
-  fill: var(--cs-header-color);
-}
-#cs-ext-links svg {
-  width: 24px;
+#cs-ext-links {
+
+  @media (max-width: 400px) {
+    display: none !important;
+  }
+
+  svg {
+    width: 24px;
+  }
+
+  path {
+    fill: var(--cs-header-color);
+  }
 }
 
 #cs-navbar {
   background: var(--cs-header-bg-color);
-}
-#cs-navbar *:not(#searchbox *) {
-  color: var(--cs-header-color);
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  *:not(#searchbox *) {
+    color: var(--cs-header-color);
+  }
 }

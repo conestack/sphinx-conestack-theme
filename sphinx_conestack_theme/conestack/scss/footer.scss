@@ -1,6 +1,9 @@
-.previous-chapter::before {
-  content: '<< ';
-}
-.next-chapter::after {
-  content: '>> ';
+footer {
+  .previous-chapter::before {
+    content: '<< ';
+  }
+
+  .next-chapter::after {
+    content: '>> ';
+  }
 }
