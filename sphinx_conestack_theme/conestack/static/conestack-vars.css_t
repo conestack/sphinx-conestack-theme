@@ -1,0 +1,4 @@
+:root {
+    --cs-header-color: {{ theme_header_color }};
+    --cs-header-bg-color: {{ theme_header_bg_color }};
+}

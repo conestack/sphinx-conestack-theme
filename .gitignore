@@ -3,6 +3,7 @@
 /docs/html/
 /lib/
 /lib64
+/node_modules/
 /pyvenv.cfg
 /share/
 /sphinx_conestack_theme.egg-info/

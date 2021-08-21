@@ -3,7 +3,7 @@
 set -e
 
 to_remove=(
-    bin dist docs/html include lib64 lib pyvenv.cfg share
+    bin dist docs/html include lib64 lib node_modules pyvenv.cfg share
 )
 
 for item in "${to_remove[@]}"; do

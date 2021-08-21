@@ -1,10 +1,17 @@
 Sphinx Theme for Conestack
 ==========================
 
-Write me.
+Theme development
+-----------------
 
+Install environment:
 
-TODO
-====
+.. code-block: sh
 
-[ ] - What is page.html?
+    ./scripts/install.sh
+
+Build docs:
+
+.. code-block: sh
+
+    ./scripts/docs.sh

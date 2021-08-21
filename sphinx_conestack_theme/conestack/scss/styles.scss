@@ -1,5 +1,6 @@
 @import 'bootstrap.css';
 @import "bootstrap-icons/bootstrap-icons.css";
+@import 'conestack-vars.css';
 
 /** general **/
 body {
@@ -10,8 +11,8 @@ body {
 
 /** header **/
 #header {
-    color: {{ theme_header_color }};
-    background: {{ theme_header_bg_color }};
+    color: var(--cs-header-color);
+    background: var(--cs-header-bg-color);
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
     height: 64px;
 }
@@ -24,7 +25,7 @@ body {
     margin-left: 2rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: {{ theme_header_color }};
+    color: var(--cs-header-color);
     text-decoration: none;
 }
 #logo > img {
@@ -41,16 +42,16 @@ body {
 
 /* navbar */
 #cs-navbar {
-    background: {{ theme_header_bg_color }};
+    background: var(--cs-header-bg-color);
 }
 #cs-navbar *:not(#searchbox *) {
-    color: {{ theme_header_color }};
+    color: var(--cs-header-color);
 }
 #navbar-toggle {
     color: var(--bs-white);
 }
 #nav_links path {
-    fill: {{ theme_header_color }};
+    fill: var(--cs-header-color);
 }
 #nav_links svg {
     width: 24px;
@@ -71,7 +72,7 @@ body {
 #cs-docs-nav a:active,
 #cs-docs-nav a:hover {
     text-decoration: none;
-    color: {{ theme_header_bg_color }};
+    color: var(--cs-header-bg-color);
 }
 #cs-docs-nav > ul {
     padding-left: 0;
@@ -84,7 +85,7 @@ body {
     margin-bottom: 0.3rem;
 }
 #cs-docs-nav .toctree-l1.current > a {
-    color: {{ theme_header_bg_color }};
+    color: var(--cs-header-bg-color);
 }
 #cs-docs-nav .topless {
     margin-bottom: .3rem;
@@ -192,13 +193,8 @@ body {
         max-width: none;
         color: black;
     }
-
-    /* cs-title still needed? */
-    .cs-title {
-        float: none!important;
-    }
     li.right {
-        border-bottom: 1px solid {{ theme_header_color }}!important;
+        border-bottom: 1px solid var(--cs-header-color)!important;
     }
 }
 
@@ -209,9 +205,4 @@ body {
     #logo {
         max-width: calc(100% - 100px)!important;
     }
-}
-
-/* cs-title still needed? */
-.cs-title {
-    float: left;
 }
