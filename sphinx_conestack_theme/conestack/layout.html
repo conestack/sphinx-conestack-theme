@@ -12,7 +12,7 @@
 
   {% block header_navbar %}
   <header class="navbar navbar-expand-md bd-navbar" id="header">
-    <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cone-nav">
+    <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
       {%- include "logo.html" %}
 
       {% block searchbox %}
@@ -21,25 +21,25 @@
 
       {%- include "external.html" %}
 
-      <button id="navbar-toggle" class="navbar-toggler p-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#cone-navbar">
+      <button id="navbar-toggle" class="navbar-toggler p-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#cs-navbar">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
       </button>
 
-      <div class="collapse container-fluid m-0 p-3" id="cone-navbar">
+      <div class="collapse container-fluid m-0 p-3" id="cs-navbar">
       </div>
     </nav>
   </header>
   {% endblock %}
 
-  <div class="container-xxl my-md-4" id="cone-layout">
+  <div class="container-xxl my-md-4" id="cs-layout">
 
     {% block sidebar %}
       {%- include "sidebar.html" %}
     {% endblock %}
 
-    <main class="document cone-main order-1 ms-4">
+    <main class="document cs-main order-1 ms-4">
       {%- block document %}
-      <div class="ps-lg-4 mt-3 cone-content">
+      <div class="ps-lg-4 mt-3 cs-content">
         {% block body %}{% endblock %}
       </div>
       {%- endblock %}
