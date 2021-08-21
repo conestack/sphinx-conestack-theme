@@ -6,21 +6,6 @@
 <script src="{{ pathto('_static/bootstrap.bundle.min.js', 1) }}"></script>
 {% endblock %}
 
-<!-- custom sidebar -->
-{%- macro cone_sidebar() %}
-  {%- if render_sidebar %}
-    <aside id="cone-sidebar" class="ms-4 sphinxsidebar">
-      <nav id="cone-docs-nav">
-        {%- if sidebars != None %}
-          {%- for sidebartemplate in sidebars %}
-            {%- include sidebartemplate %}
-          {%- endfor %}
-        {% endif %}
-      </nav>
-    </aside>
-  {%- endif %}
-{%- endmacro %}
-
 {% block relbar1 %}{% endblock %}
 
 {% block content %}
@@ -63,7 +48,7 @@
     <div class="container-xxl my-md-4" id="cone-layout">
 
       {% block sidebar %}
-        {{ cone_sidebar() }}
+        {%- include "sidebar.html" %}
       {% endblock %}
 
       <main class="document cone-main order-1 ms-4">

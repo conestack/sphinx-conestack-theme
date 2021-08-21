@@ -1,0 +1,11 @@
+{%- if render_sidebar %}
+  <aside id="cone-sidebar" class="ms-4 sphinxsidebar">
+    <nav id="cone-docs-nav">
+      {%- if sidebars != None %}
+        {%- for sidebartemplate in sidebars %}
+          {%- include sidebartemplate %}
+        {%- endfor %}
+      {% endif %}
+    </nav>
+  </aside>
+{%- endif %}
