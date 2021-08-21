@@ -14,21 +14,31 @@ body {
   height: 64px;
 }
 
-#logo,
-#logo:active,
-#logo:hover,
-#logo:visited {
+#logo, #logo:active, #logo:hover, #logo:visited {
   margin-left: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--cs-header-color);
   text-decoration: none;
 }
-
+@media (min-width: 769px) {
+  #logo {
+    max-width: calc(100% - 500px) !important;
+  }
+}
+@media (max-width: 768px) {
+  #logo {
+    max-width: calc(100% - 300px) !important;
+  }
+}
+@media (max-width: 400px) {
+  #logo {
+    max-width: calc(100% - 100px) !important;
+  }
+}
 #logo > img {
   height: 40px;
 }
-
 #logo > span {
   font-size: 1.3em;
 }
@@ -117,16 +127,31 @@ body {
   display: block;
 }
 
-/* XXX: grid template areas for media queries */
-.cs-main {
-  grid-template-areas: "content toc";
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: auto 1fr;
+@media (min-width: 992px) {
+  #cs-layout {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+@media (min-width: 769px) {
+  #cs-layout {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media (max-width: 768px) {
+  #cs-layout {
+    padding: 1rem;
+  }
 }
 
 .cs-main {
   display: grid;
   grid-area: main;
+  grid-template-areas: "content toc";
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .cs-content {
@@ -179,25 +204,9 @@ body {
 }
 
 /**  media queries XXX: split up **/
-@media (min-width: 992px) {
-  #cs-layout {
-    grid-template-columns: 1fr 5fr;
-  }
-}
 @media (min-width: 769px) {
   #cs-navbar {
     display: none;
-  }
-
-  #cs-layout {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 3fr;
-  }
-
-  #logo {
-    max-width: calc(100% - 500px) !important;
   }
 
   #cs-docs-nav {
@@ -213,14 +222,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-  #logo {
-    max-width: calc(100% - 300px) !important;
-  }
-
-  #cs-layout {
-    padding: 1rem;
-  }
-
   #searchbox {
     max-width: none;
     color: black;
@@ -233,10 +234,6 @@ body {
 @media (max-width: 400px) {
   #cs-ext-links {
     display: none !important;
-  }
-
-  #logo {
-    max-width: calc(100% - 100px) !important;
   }
 }
 

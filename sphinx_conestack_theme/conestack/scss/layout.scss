@@ -1,0 +1,17 @@
+#cs-layout {
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  @media (min-width: 769px) {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}

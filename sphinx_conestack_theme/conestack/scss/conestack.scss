@@ -1,6 +1,7 @@
 @use 'base';
 @use 'header';
 @use 'sidebar';
+@use 'layout';
 @use 'main';
 @use 'footer';
 
@@ -9,24 +10,10 @@
 @import 'conestack-vars.css';
 
 /**  media queries XXX: split up **/
-@media (min-width: 992px) {
-  #cs-layout {
-    grid-template-columns: 1fr 5fr;
-  }
-}
 
 @media (min-width: 769px) {
   #cs-navbar {
     display: none;
-  }
-  #cs-layout {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 3fr;
-  }
-  #logo {
-    max-width: calc(100% - 500px)!important;
   }
 
   #cs-docs-nav {
@@ -43,12 +30,6 @@
 }
 
 @media (max-width: 768px) {
-  #logo {
-    max-width: calc(100% - 300px)!important;
-  }
-  #cs-layout {
-    padding: 1rem;
-  }
   #searchbox {
     max-width: none;
     color: black;
@@ -61,8 +42,5 @@
 @media (max-width: 400px) {
   #cs-ext-links {
     display: none!important;
-  }
-  #logo {
-    max-width: calc(100% - 100px)!important;
   }
 }

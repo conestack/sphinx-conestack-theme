@@ -1,19 +1,18 @@
-/* XXX: grid template areas for media queries */
 .cs-main {
+  display: grid;
+  grid-area: main;
   grid-template-areas: "content toc";
   grid-template-columns: 4fr 1fr;
   grid-template-rows: auto 1fr;
 }
-.cs-main {
-  display: grid;
-  grid-area: main;
-}
+
 .cs-content {
   grid-area: content;
 }
 
-
 .cs-toc {
+  grid-area: toc;
+
   @media (min-width: 992px) {
     position: sticky;
     top: 5rem;
@@ -22,8 +21,6 @@
     height: subtract(100vh, 7rem);
     overflow-y: auto;
   }
-
-  grid-area: toc;
 
   nav {
     font-size: .875rem;

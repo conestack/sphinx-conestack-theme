@@ -5,21 +5,37 @@
   height: 64px;
 }
 
-#logo,
-#logo:active,
-#logo:hover,
-#logo:visited {
-  margin-left: 2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--cs-header-color);
-  text-decoration: none;
-}
-#logo > img {
-  height: 40px;
-}
-#logo > span {
-  font-size: 1.3em;
+#logo {
+  &,
+  &:active,
+  &:hover,
+  &:visited {
+    margin-left: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--cs-header-color);
+    text-decoration: none;
+  }
+
+  @media (min-width: 769px) {
+    max-width: calc(100% - 500px)!important;
+  }
+
+  @media (max-width: 768px) {
+    max-width: calc(100% - 300px)!important;
+  }
+
+  @media (max-width: 400px) {
+    max-width: calc(100% - 100px)!important;
+  }
+
+  > img {
+    height: 40px;
+  }
+
+  > span {
+    font-size: 1.3em;
+  }
 }
 
 #searchbox {
