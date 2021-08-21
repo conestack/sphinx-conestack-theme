@@ -10,13 +10,8 @@ from pygments.token import (
     String,
     Whitespace
 )
+from sphinx.environment.adapters.toctree import TocTree
 import os
-
-
-def setup(app):
-    base_path = os.path.dirname(__file__)
-    theme_path = os.path.abspath(os.path.join(base_path, 'conestack'))
-    app.add_html_theme('conestack', theme_path)
 
 
 class ConestackStyle(Style):
@@ -64,3 +59,25 @@ class ConestackStyle(Style):
         Generic.Traceback: '#04D',
         Error: '#a40000 bg:#fbe3e4'
     }
+
+
+def render_localtoc(app, pagename):
+    builder = app.builder
+    toctree = TocTree(app.env).get_toc_for(pagename, builder)
+    children = toctree[0].children[1:]
+    return '\n'.join([
+        builder.render_partial(child)['fragment'] for child in children
+    ])
+
+
+def setup_localtoc(app, pagename, templatename, context, doctree):
+    def _render():
+        return render_localtoc(app, pagename)
+    context['cs_localtoc'] = _render
+
+
+def setup(app):
+    base_path = os.path.dirname(__file__)
+    theme_path = os.path.abspath(os.path.join(base_path, 'conestack'))
+    app.add_html_theme('conestack', theme_path)
+    app.connect('html-page-context', setup_localtoc)
