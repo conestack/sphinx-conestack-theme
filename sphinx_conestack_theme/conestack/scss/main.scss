@@ -1,25 +1,57 @@
 /* XXX: grid template areas for media queries */
 .cs-main {
-    grid-template-areas: "content toc";
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: auto 1fr;
+  grid-template-areas: "content toc";
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto 1fr;
 }
 .cs-main {
-    display: grid;
-    grid-area: main;
+  display: grid;
+  grid-area: main;
 }
 .cs-content {
-    grid-area: content;
+  grid-area: content;
 }
+
+
 .cs-toc {
-    grid-area: toc;
-}
-.cs-toc {
-    position: -webkit-sticky;
+  @media (min-width: 992px) {
     position: sticky;
     top: 5rem;
     right: 0;
     z-index: 2;
-    height: calc(100vh - 7rem);
+    height: subtract(100vh, 7rem);
     overflow-y: auto;
+  }
+
+  grid-area: toc;
+
+  nav {
+    font-size: .875rem;
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      ul {
+        padding-left: 1rem;
+        margin-top: .25rem;
+      }
+    }
+
+    li {
+      margin-bottom: .25rem;
+    }
+
+    a {
+      color: inherit;
+
+      &:not(:hover) {
+        text-decoration: none;
+      }
+
+      code {
+        font: inherit;
+      }
+    }
+  }
 }
