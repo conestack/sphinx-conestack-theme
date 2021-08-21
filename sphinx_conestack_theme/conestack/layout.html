@@ -8,17 +8,17 @@
 
 <!-- custom sidebar -->
 {%- macro cone_sidebar() %}
-      {%- if render_sidebar %}
-        <aside id="cone-sidebar" class="ms-4 sphinxsidebar">
-          <nav id="cone-docs-nav">
-            {%- if sidebars != None %}
-              {%- for sidebartemplate in sidebars %}
-                {%- include sidebartemplate %}
-              {%- endfor %}
-            {% endif %}
-          </nav>
-        </aside>
-      {%- endif %}
+  {%- if render_sidebar %}
+    <aside id="cone-sidebar" class="ms-4 sphinxsidebar">
+      <nav id="cone-docs-nav">
+        {%- if sidebars != None %}
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        {% endif %}
+      </nav>
+    </aside>
+  {%- endif %}
 {%- endmacro %}
 
 {% block relbar1 %}{% endblock %}
@@ -35,11 +35,9 @@
           </a>
         {%- endif %}
 
-        <div id="nav_search" class="ms-auto">
-          {% block searchbox %}
-            {%- include "searchbox.html" %}
-          {% endblock %}
-        </div>
+        {% block searchbox %}
+          {%- include "searchbox.html" %}
+        {% endblock %}
 
         <div id="nav_links"class="me-3">
           <ul class="navbar-nav flex-row ms-md-auto">
