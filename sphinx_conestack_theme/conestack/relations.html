@@ -1,12 +1,16 @@
-{%- if prev %}
-  <span class="prev-next">{{ _('Previous topic') }}</span>
-  <p class="topless previous">
-    <a href="{{ prev.link|e }}" title="{{ _('previous chapter') }}">{{ prev.title }}</a>
-  </p>
-{%- endif %}
-{%- if next %}
-  <span class="prev-next">{{ _('Next topic') }}</span>
-  <p class="topless next">
-    <a href="{{ next.link|e }}" title="{{ _('next chapter') }}">{{ next.title }}</a>
-  </p>
-{%- endif %}
+<ul class="nav col-md-8 justify-content-end">
+  {%- if prev %}
+    <li class="nav-item">
+      <a href="{{ next.link|e }}"
+         title="{{ _('next chapter') }}"
+         class="nav-link px-2 text-muted previous-chapter">{{ prev.title }}</a>
+    </li>
+  {%- endif %}
+  {%- if next %}
+    <li class="nav-item">
+      <a href="{{ next.link|e }}"
+         title="{{ _('next chapter') }}"
+         class="nav-link px-2 text-muted next-chapter">{{ next.title }}</a>
+    </li>
+  {%- endif %}
+</ul>

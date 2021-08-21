@@ -111,25 +111,6 @@ body {
     display: block;
 }
 
-/* relations */
-#cs-docs-nav .prev-next {
-    font-size: 16px;
-    font-weight: 600;
-}
-#cs-docs-nav .topless {
-    font-weight: 300;
-}
-#cs-docs-nav .previous::before {
-    content: '<< ';
-    width: 100%;
-    font-weight: 300;
-}
-#cs-docs-nav .next::before {
-    content: '>> ';
-    width: 100%;
-    font-weight: 300;
-}
-
 /** main area **/
 
 /* XXX: grid template areas for media queries */
@@ -156,6 +137,14 @@ body {
     z-index: 2;
     height: calc(100vh - 7rem);
     overflow-y: auto;
+}
+
+/* relations */
+.previous-chapter::before {
+    content: '<< ';
+}
+.next-chapter::after {
+    content: '>> ';
 }
 
 /**  media queries XXX: split up **/
