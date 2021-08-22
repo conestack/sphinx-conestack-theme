@@ -21,3 +21,4 @@ TODO
 
 [ ] - Dedicated mobile TOC
 [ ] - Search bar hidden (inline styles) if noscript
+[ ] - Styles in gitlab icon needed?

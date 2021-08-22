@@ -65,15 +65,15 @@ body {
   fill: var(--cs-header-color);
 }
 
-#cs-navbar {
+#cs-mobile-menu {
   background: var(--cs-header-bg-color);
 }
 @media (min-width: 769px) {
-  #cs-navbar {
+  #cs-mobile-menu {
     display: none;
   }
 }
-#cs-navbar *:not(#searchbox *) {
+#cs-mobile-menu *:not(#searchbox *) {
   color: var(--cs-header-color);
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 @media (min-width: 769px) {
-  #cs-docs-nav {
+  .cs-nav-toc {
     position: sticky;
     top: 1rem;
     display: block !important;
@@ -94,39 +94,39 @@ body {
     font-weight: 600;
   }
 }
-#cs-docs-nav a,
-#cs-docs-nav a:visited,
-#cs-docs-nav a:active,
-#cs-docs-nav a:hover {
+.cs-nav-toc a,
+.cs-nav-toc a:visited,
+.cs-nav-toc a:active,
+.cs-nav-toc a:hover {
   text-decoration: none;
   color: var(--bs-gray-800);
 }
-#cs-docs-nav ul {
+.cs-nav-toc ul {
   list-style: none;
   margin-bottom: 0.2rem;
   padding-left: 0;
 }
-#cs-docs-nav ul ul {
+.cs-nav-toc ul ul {
   padding-left: 1rem;
 }
-#cs-docs-nav li.toctree-l1 {
+.cs-nav-toc li.toctree-l1 {
   position: relative;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
-#cs-docs-nav li.toctree-l1.current > a {
+.cs-nav-toc li.toctree-l1.current > a {
   color: var(--cs-header-bg-color);
 }
-#cs-docs-nav li.toctree-l1.current ul {
+.cs-nav-toc li.toctree-l1.current ul {
   display: block;
 }
-#cs-docs-nav li.toctree-l1 ul {
+.cs-nav-toc li.toctree-l1 ul {
   display: none;
 }
-#cs-docs-nav li.toctree-l1 li {
+.cs-nav-toc li.toctree-l1 li {
   font-weight: 300;
 }
-#cs-docs-nav li.toctree-l1 > a::before {
+.cs-nav-toc li.toctree-l1 > a::before {
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
@@ -141,17 +141,17 @@ body {
   margin-right: 0.2rem;
   color: var(--bs-gray-800);
 }
-#cs-docs-nav li.toctree-l1 > a.current::before, #cs-docs-nav li.toctree-l1 > a.expanded::before {
+.cs-nav-toc li.toctree-l1 > a.current::before, .cs-nav-toc li.toctree-l1 > a.expanded::before {
   content: "\f282";
 }
-#cs-docs-nav li.toctree-l1 > a.collapsed::before {
+.cs-nav-toc li.toctree-l1 > a.collapsed::before {
   content: "\f285" !important;
 }
-#cs-docs-nav li.toctree-l1 > span.toggle {
+.cs-nav-toc li.toctree-l1 > span.toggle {
   position: absolute;
   cursor: pointer;
 }
-#cs-docs-nav li.toctree-l1 > span.toggle::before {
+.cs-nav-toc li.toctree-l1 > span.toggle::before {
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
@@ -165,13 +165,13 @@ body {
   content: "\f285";
   opacity: 0;
 }
-#cs-docs-nav li.toctree-l2 a {
+.cs-nav-toc li.toctree-l2 a {
   font-size: 14px;
 }
-#cs-docs-nav li.toctree-l2 a, #cs-docs-nav li.toctree-l2 a:visited, #cs-docs-nav li.toctree-l2 a:active, #cs-docs-nav li.toctree-l2 a:hover {
+.cs-nav-toc li.toctree-l2 a, .cs-nav-toc li.toctree-l2 a:visited, .cs-nav-toc li.toctree-l2 a:active, .cs-nav-toc li.toctree-l2 a:hover {
   color: var(--bs-gray-600);
 }
-#cs-docs-nav li.toctree-l2 a.active, #cs-docs-nav li.toctree-l2 a.active:visited, #cs-docs-nav li.toctree-l2 a.active:active, #cs-docs-nav li.toctree-l2 a.active:hover {
+.cs-nav-toc li.toctree-l2 a.active, .cs-nav-toc li.toctree-l2 a.active:visited, .cs-nav-toc li.toctree-l2 a.active:active, .cs-nav-toc li.toctree-l2 a.active:hover {
   color: var(--bs-gray-800);
   font-weight: bold;
 }
@@ -207,11 +207,11 @@ body {
   grid-area: content;
 }
 
-.cs-toc {
+.cs-local-toc {
   grid-area: toc;
 }
 @media (min-width: 992px) {
-  .cs-toc {
+  .cs-local-toc {
     position: sticky;
     top: 1rem;
     right: 0;
@@ -220,27 +220,27 @@ body {
     overflow-y: auto;
   }
 }
-.cs-toc nav {
+.cs-local-toc nav {
   font-size: 0.875rem;
 }
-.cs-toc nav ul {
+.cs-local-toc nav ul {
   padding-left: 0;
   list-style: none;
 }
-.cs-toc nav ul ul {
+.cs-local-toc nav ul ul {
   padding-left: 1rem;
   margin-top: 0.25rem;
 }
-.cs-toc nav li {
+.cs-local-toc nav li {
   margin-bottom: 0.25rem;
 }
-.cs-toc nav a {
+.cs-local-toc nav a {
   color: inherit;
 }
-.cs-toc nav a:not(:hover) {
+.cs-local-toc nav a:not(:hover) {
   text-decoration: none;
 }
-.cs-toc nav a code {
+.cs-local-toc nav a code {
   font: inherit;
 }
 

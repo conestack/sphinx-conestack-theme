@@ -4,7 +4,7 @@ let cs = {
     curr_nav_link_sel: 'li.toctree-l1.current a',
 
     init: function() {
-        this.navigation = $('#cs-docs-nav');
+        this.navigation = $('.cs-nav-toc');
         this.searchbox = $('#searchbox');
         this.init_navigation();
         this.toggle_mobile();
@@ -14,10 +14,8 @@ let cs = {
 
     toggle_mobile: function() {
         if(window.matchMedia('(max-width:768px)').matches) {
-            this.navigation.detach().appendTo('#cs-navbar');
-            this.searchbox.detach().prependTo('#cs-navbar');
+            this.searchbox.detach().prependTo('#cs-mobile-menu');
         } else {
-            this.navigation.detach().appendTo('#cs-sidebar');
             this.searchbox.detach().appendTo('#nav-search');
         }
     },

@@ -1,11 +1,9 @@
 {%- if render_sidebar %}
   <aside id="cs-sidebar" class="ms-4 sphinxsidebar">
-    <nav id="cs-docs-nav">
-      {%- if sidebars != None %}
-        {%- for sidebartemplate in sidebars %}
-          {%- include sidebartemplate %}
-        {%- endfor %}
-      {% endif %}
-    </nav>
+    {%- if sidebars != None %}
+      {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+      {%- endfor %}
+    {% endif %}
   </aside>
 {%- endif %}
