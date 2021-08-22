@@ -1,4 +1,4 @@
-{%- if builder != "singlehtml" %}
+{%- if pagename != "search" and builder != "singlehtml" %}
   <div id="nav-search" class="ms-auto">
     <div id="searchbox" class="nav-item me-3" role="search">
       <form class="search input-group" action="{{ pathto('search') }}" method="get">

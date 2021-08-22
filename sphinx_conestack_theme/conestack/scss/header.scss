@@ -62,6 +62,11 @@
   }
 }
 
+#navbar-toggle {
+  color: var(--cs-header-color);
+  opacity: .6;
+}
+
 #cs-mobile-menu {
   background: var(--cs-header-bg-color);
 
@@ -71,5 +76,29 @@
 
   *:not(#searchbox *) {
     color: var(--cs-header-color);
+  }
+
+  .cs-mobile-toc {
+    margin-top: 1rem;
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      li {
+        margin-top: .8rem;
+        margin-bottom: .8rem;
+        font-size: 110%;
+
+        a {
+          text-decoration: none;
+        }
+
+        &.current a {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }

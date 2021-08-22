@@ -13,6 +13,10 @@
 .cs-local-toc {
   grid-area: toc;
 
+  @media (max-width: 991px) {
+    display: none;
+  }
+
   @media (min-width: 992px) {
     position: sticky;
     top: 1rem;
