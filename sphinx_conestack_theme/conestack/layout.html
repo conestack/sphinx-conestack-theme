@@ -1,4 +1,4 @@
-{% extends "basic/layout.html" %}
+{%- extends "basic/layout.html" %}
 
 {%- block extrahead %}
 <link rel="stylesheet" type="text/css" src="{{ pathto('_static/bootstrap.css', 1) }}" />
@@ -15,12 +15,9 @@
     <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
       {%- include "logo.html" %}
 
-      {% block searchbox %}{#
-        override searchbox block empty,
-        always display searchbox,
-        also in search result
-      #}{% endblock %}
-      {%- include "searchbox.html" %}
+      {% block searchbox %}
+        {%- include "searchbox.html" %}
+      {% endblock %}
 
       {%- include "external.html" %}
 
