@@ -114,6 +114,12 @@ body {
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
+#cs-docs-nav li.toctree-l1.current > a {
+  color: var(--cs-header-bg-color);
+}
+#cs-docs-nav li.toctree-l1.current ul {
+  display: block;
+}
 #cs-docs-nav li.toctree-l1 ul {
   display: none;
 }
@@ -158,12 +164,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 0;
-}
-#cs-docs-nav li.toctree-l1.current ul {
-  display: block;
-}
-#cs-docs-nav li.toctree-l1.current > a {
-  color: var(--cs-header-bg-color);
 }
 #cs-docs-nav li.toctree-l2 a {
   font-size: 14px;

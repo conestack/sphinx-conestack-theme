@@ -39,7 +39,9 @@ let cs = {
         let toggle_nav_links = $(this.main_nav_toggle_sel, this.navigation);
         toggle_nav_links.on('click', function(e) {
             let elem = $(e.currentTarget).next();
-            let expanded = elem.hasClass('expanded') || elem.hasClass('current');
+            let expanded = elem.hasClass('expanded') || (
+                elem.hasClass('current') && !elem.hasClass('collapsed')
+            );
             let ul = $('> ul', elem.parent())
             if (expanded) {
                 elem.addClass('collapsed').removeClass('expanded');
