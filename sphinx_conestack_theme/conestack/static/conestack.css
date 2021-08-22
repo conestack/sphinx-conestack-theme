@@ -85,9 +85,9 @@ body {
 @media (min-width: 769px) {
   #cs-docs-nav {
     position: sticky;
-    top: 5rem;
+    top: 1rem;
     display: block !important;
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 5rem);
     padding-left: 0.25rem;
     margin-left: -0.25rem;
     overflow: auto;
@@ -95,14 +95,11 @@ body {
   }
 }
 #cs-docs-nav a,
-#cs-docs-nav a:visited {
-  text-decoration: none !important;
-  color: var(--bs-gray-800);
-}
+#cs-docs-nav a:visited,
 #cs-docs-nav a:active,
 #cs-docs-nav a:hover {
   text-decoration: none;
-  color: var(--cs-header-bg-color);
+  color: var(--bs-gray-800);
 }
 #cs-docs-nav ul {
   list-style: none;
@@ -114,9 +111,6 @@ body {
 #cs-docs-nav > ul {
   padding-left: 0;
 }
-#cs-docs-nav li > ul a {
-  font-size: 14px;
-}
 #cs-docs-nav li.toctree-l1 {
   font-weight: 600;
   margin-bottom: 0.3rem;
@@ -126,6 +120,16 @@ body {
 }
 #cs-docs-nav li.toctree-l1 > a.current {
   color: var(--cs-header-bg-color);
+}
+#cs-docs-nav li.toctree-l2 a {
+  font-size: 14px;
+}
+#cs-docs-nav li.toctree-l2 a, #cs-docs-nav li.toctree-l2 a:visited, #cs-docs-nav li.toctree-l2 a:active, #cs-docs-nav li.toctree-l2 a:hover {
+  color: var(--bs-gray-600);
+}
+#cs-docs-nav li.toctree-l2 a.active, #cs-docs-nav li.toctree-l2 a.active:visited, #cs-docs-nav li.toctree-l2 a.active:active, #cs-docs-nav li.toctree-l2 a.active:hover {
+  color: var(--bs-gray-800);
+  font-weight: bold;
 }
 
 @media (min-width: 992px) {
@@ -165,10 +169,10 @@ body {
 @media (min-width: 992px) {
   .cs-toc {
     position: sticky;
-    top: 5rem;
+    top: 1rem;
     right: 0;
     z-index: 2;
-    height: subtract(100vh, 7rem);
+    height: calc(100vh - 5rem);
     overflow-y: auto;
   }
 }
