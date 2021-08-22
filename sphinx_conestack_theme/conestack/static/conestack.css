@@ -136,7 +136,7 @@ body {
   padding-left: 0;
 }
 .cs-nav-toc ul ul {
-  padding-left: 1rem;
+  padding-left: 1.2rem;
 }
 .cs-nav-toc li.toctree-l1 {
   position: relative;
@@ -198,10 +198,10 @@ body {
   font-size: 14px;
 }
 .cs-nav-toc li.toctree-l2 a, .cs-nav-toc li.toctree-l2 a:visited, .cs-nav-toc li.toctree-l2 a:active, .cs-nav-toc li.toctree-l2 a:hover {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-700);
 }
 .cs-nav-toc li.toctree-l2 a.active, .cs-nav-toc li.toctree-l2 a.active:visited, .cs-nav-toc li.toctree-l2 a.active:active, .cs-nav-toc li.toctree-l2 a.active:hover {
-  color: var(--bs-gray-800);
+  color: var(--bs-gray-700);
   font-weight: bold;
 }
 
