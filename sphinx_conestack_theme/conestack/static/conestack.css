@@ -1,5 +1,5 @@
 @import 'bootstrap.css';
-@import "bootstrap-icons/bootstrap-icons.css";
+@import 'bootstrap-icons/bootstrap-icons.css';
 @import 'conestack-vars.css';
 body {
   width: 100vw;
@@ -127,7 +127,6 @@ body {
   font-weight: 300;
 }
 #cs-docs-nav li.toctree-l1 > a::before {
-  content: "\f285";
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
@@ -138,6 +137,7 @@ body {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  content: "\f285";
   margin-right: 0.2rem;
   color: var(--bs-gray-800);
 }
@@ -152,7 +152,6 @@ body {
   cursor: pointer;
 }
 #cs-docs-nav li.toctree-l1 > span.toggle::before {
-  content: "\f285";
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
@@ -163,6 +162,7 @@ body {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  content: "\f285";
   opacity: 0;
 }
 #cs-docs-nav li.toctree-l2 a {
