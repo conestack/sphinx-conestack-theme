@@ -1,35 +1,54 @@
 let cs = {
-    nav_link_sel: '#cs-docs-nav li.toctree-l1.current a',
+    main_nav_link_sel: 'li.toctree-l1 > a',
+    main_nav_toggle_sel: 'li.toctree-l1 > span.toggle',
+    curr_nav_link_sel: 'li.toctree-l1.current a',
 
     init: function() {
-        $(window).on('resize', cs.toggle_mobile);
-        this.toggle_mobile();
+        this.navigation = $('#cs-docs-nav');
+        this.searchbox = $('#searchbox');
         this.init_navigation();
+        this.toggle_mobile();
         this.bind_navigation();
+        $(window).on('resize', cs.toggle_mobile.bind(this));
     },
 
     toggle_mobile: function() {
         if(window.matchMedia('(max-width:768px)').matches) {
-            $('#cs-docs-nav').detach().appendTo('#cs-navbar');
-            $('#searchbox').detach().prependTo('#cs-navbar');
+            this.navigation.detach().appendTo('#cs-navbar');
+            this.searchbox.detach().prependTo('#cs-navbar');
         } else {
-            $('#cs-docs-nav').detach().appendTo('#cs-sidebar');
-            $('#searchbox').detach().appendTo('#nav-search');
+            this.navigation.detach().appendTo('#cs-sidebar');
+            this.searchbox.detach().appendTo('#nav-search');
         }
     },
 
     init_navigation: function() {
         let anchor = window.location.hash;
-        let curr = $(`${this.nav_link_sel}[href='${anchor}']`);
-        curr.addClass('active');
+        let sel = `${this.curr_nav_link_sel}[href='${anchor}']`;
+        $(sel, this.navigation).addClass('active');
     },
 
     bind_navigation: function() {
-        let nav_links = $(this.nav_link_sel);
-        nav_links.on('click', function(e) {
-            $(nav_links).removeClass('active');
+        let curr_nav_links = $(this.curr_nav_link_sel, this.navigation);
+        curr_nav_links.on('click', function(e) {
+            $(curr_nav_links).removeClass('active');
             $(this).addClass('active');
         });
+        let main_nav_links = $(this.main_nav_link_sel, this.navigation);
+        main_nav_links.before('<span class="toggle" />');
+        let toggle_nav_links = $(this.main_nav_toggle_sel, this.navigation);
+        toggle_nav_links.on('click', function(e) {
+            let elem = $(e.currentTarget).next();
+            let expanded = elem.hasClass('expanded') || elem.hasClass('current');
+            let ul = $('> ul', elem.parent())
+            if (expanded) {
+                elem.addClass('collapsed').removeClass('expanded');
+                ul.slideUp(300);
+            } else {
+                elem.removeClass('collapsed').addClass('expanded');
+                ul.slideDown(300);
+            }
+        }.bind(this));
     }
 }
 

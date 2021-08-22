@@ -15,3 +15,9 @@ Build docs:
 .. code-block: sh
 
     ./scripts/docs.sh
+
+TODO
+====
+
+[ ] - Dedicated mobile TOC
+[ ] - Search bar hidden (inline styles) if noscript
