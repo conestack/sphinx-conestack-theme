@@ -95,6 +95,7 @@ body {
   font-size: 110%;
 }
 #cs-mobile-menu .cs-mobile-toc ul li a {
+  color: var(--cs-header-color);
   text-decoration: none;
 }
 #cs-mobile-menu .cs-mobile-toc ul li.current a {

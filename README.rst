@@ -19,6 +19,12 @@ Build docs:
 TODO
 ====
 
-[ ] - Dedicated mobile TOC
+[ ] - Anchor styles
+[ ] - Pygments styles
+[ ] - Footer styles + behavior
 [ ] - Search bar hidden (inline styles) if noscript
-[ ] - Styles in gitlab icon needed?
+[ ] - Color Variable names
+[ ] - Header logo size variables
+[ ] - Search result styles
+[ ] - Content styles
+[ ] - Noscript version of mobile nav -> Always display

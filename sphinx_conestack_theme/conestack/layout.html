@@ -10,6 +10,23 @@
 
 {% block content %}
 
+  <noscript>
+    <style type="text/css">
+      #searchbox,
+      #searchdesc {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #navbar-toggle {
+          display: none;
+        }
+        #cs-mobile-menu {
+          display: block;
+        }
+      }
+    </style>
+  </noscript>
+
   {% block header_navbar %}
   <header class="navbar navbar-expand-md" id="header">
     <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">

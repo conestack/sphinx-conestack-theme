@@ -8,7 +8,7 @@ def read_file(name):
 
 
 version = '1.0a1.dev0'
-shortdesc = 'Sphinx Theme for Conestack'
+shortdesc = 'Mobile friendly Bootstrap 5 based Sphinx theme'
 longdesc = '\n\n'.join([read_file(name) for name in [
     'README.rst',
     'CHANGES.rst',
@@ -17,16 +17,19 @@ longdesc = '\n\n'.join([read_file(name) for name in [
 
 
 setup(
-    name='sphinx_conestack_theme',
+    name='sphinx-conestack-theme',
     version=version,
     description=shortdesc,
     long_description=longdesc,
     classifiers=[
-        'License :: OSI Approved :: BSD License',
+        'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'Topic :: Software Development',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Topic :: Software Development :: Documentation',
+        'Topic :: Software Development'
     ],
     keywords='Sphinx theme conestack',
     author='Cone Contributors',
@@ -34,6 +37,7 @@ setup(
     url='https://github.com/conestack/sphinx-conestack-theme',
     license='Simplified BSD',
     packages=['sphinx_conestack_theme'],
+    include_package_data=True,
     zip_safe=False,
     install_requires=['Sphinx'],
     entry_points={
