@@ -1,17 +1,7 @@
-Welcome to Conestack Theme's documentation!
-===========================================
+Conestack Sphinx Theme
+======================
 
-Short description of theme and purpose.
-
-
-Get started
------------
-
-.. toctree::
-   :maxdepth: 2
-
-   intro
-   installation
+A Bootstrap 5 based, mobile friendly Sphinx theme.
 
 
 Indices and tables
@@ -20,7 +10,6 @@ Indices and tables
 .. toctree::
    :maxdepth: 3
 
-   FAQ <faq>
-   Customize <customize>
-   utils
-   about
+   Paragraphs <paragraph-markup>
+   Lists and Tables <lists-and-tables>
+   API Docs <api>

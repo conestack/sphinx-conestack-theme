@@ -1,5 +1,5 @@
-Mobile friendly Bootstrap 5 based Sphinx theme
-==============================================
+Conestack Sphinx Theme
+======================
 
 Theme development
 -----------------
