@@ -6,13 +6,13 @@ Theme development
 
 Install environment:
 
-.. code-block: sh
+.. code-block:: sh
 
     ./scripts/install.sh
 
 Build docs:
 
-.. code-block: sh
+.. code-block:: sh
 
     ./scripts/docs.sh
 
