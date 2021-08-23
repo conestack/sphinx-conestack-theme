@@ -8,4 +8,4 @@ fi
 
 ./scripts/styles.sh
 
-./bin/sphinx-build docs/source/ docs/html
+./bin/sphinx-build -E docs/source/ docs/html
