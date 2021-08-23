@@ -13,3 +13,4 @@ Indices and tables
    Paragraphs <paragraph-markup>
    Lists and Tables <lists-and-tables>
    API Docs <api>
+   Utils <utils>

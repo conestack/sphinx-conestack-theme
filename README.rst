@@ -22,7 +22,6 @@ TODO
 [ ] - Anchor styles
 [ ] - Pygments styles
 [ ] - Footer styles + behavior
-[ ] - Search bar hidden (inline styles) if noscript
 [ ] - Color Variable names
 [ ] - Header logo size variables
 [ ] - Search result styles
