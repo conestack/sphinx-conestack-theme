@@ -7,17 +7,9 @@ let cs = {
         this.navigation = $('.cs-nav-toc');
         this.searchbox = $('#searchbox');
         this.init_navigation();
-        this.toggle_mobile();
         this.bind_navigation();
-        $(window).on('resize', cs.toggle_mobile.bind(this));
-    },
-
-    toggle_mobile: function() {
-        if(window.matchMedia('(max-width:768px)').matches) {
-            this.searchbox.detach().prependTo('#cs-mobile-menu');
-        } else {
-            this.searchbox.detach().appendTo('#nav-search');
-        }
+        this.handle_searchbox();
+        $(window).on('resize', cs.handle_searchbox.bind(this));
     },
 
     init_navigation: function() {
@@ -49,6 +41,14 @@ let cs = {
                 ul.slideDown(300);
             }
         }.bind(this));
+    },
+
+    handle_searchbox: function() {
+        if(window.matchMedia('(max-width:768px)').matches) {
+            this.searchbox.detach().prependTo('#cs-mobile-menu');
+        } else {
+            this.searchbox.detach().appendTo('#nav-search');
+        }
     }
 }
 
