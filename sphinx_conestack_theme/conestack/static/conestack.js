@@ -49,8 +49,39 @@ let cs = {
         } else {
             this.searchbox.detach().appendTo('#nav-search');
         }
+    },
+
+    highlight_search_words: function() {
+        var params = $.getQueryParameters();
+        var terms = (params.highlight) ? params.highlight[0].split(/\s+/) : [];
+        if (terms.length) {
+            var body = $('div.body');
+            if (!body.length) {
+                body = $('body');
+            }
+            window.setTimeout(function() {
+                $.each(terms, function() {
+                    body.highlightText(this.toLowerCase(), 'highlighted');
+                });
+            }, 10);
+            let btn = `
+              <button class="btn-default highlight-link"
+                      onclick="Documentation.hideSearchWords()">
+              </button>
+            `
+            $(btn).insertBefore($('#searchbox input'));
+        }
+    },
+
+    hide_search_words: function() {
+        $('#searchbox .highlight-link').fadeOut(300).remove();
+        $('span.highlighted').removeClass('highlighted');
     }
 }
+
+// Patch search highlighting related functions
+Documentation.highlightSearchWords = cs.highlight_search_words;
+Documentation.hideSearchWords = cs.hide_search_words;
 
 $(function() {
     cs.init();
