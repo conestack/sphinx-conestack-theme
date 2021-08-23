@@ -1,8 +1,9 @@
 .cs-main {
+  gap: inherit;
   display: grid;
   grid-area: main;
   grid-template-areas: "content toc";
-  grid-template-columns: 4fr 1fr;
+  grid-auto-columns: minmax(0, auto);
   grid-template-rows: auto 1fr;
 }
 
@@ -10,8 +11,14 @@
   grid-area: content;
 }
 
+table {
+  overflow: auto;
+  display: block;
+}
+
 .cs-local-toc {
   grid-area: toc;
+  min-width: min-content;
 
   @media (max-width: 991px) {
     display: none;

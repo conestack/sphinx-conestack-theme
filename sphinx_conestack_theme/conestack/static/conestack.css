@@ -2,8 +2,6 @@
 @import 'bootstrap-icons/bootstrap-icons.css';
 @import 'conestack-vars.css';
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: var(--bs-body-bg);
 }
 
@@ -216,7 +214,7 @@ body {
     display: grid;
     gap: 1.5rem;
     grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto;
   }
 }
 @media (max-width: 768px) {
@@ -226,10 +224,11 @@ body {
 }
 
 .cs-main {
+  gap: inherit;
   display: grid;
   grid-area: main;
   grid-template-areas: "content toc";
-  grid-template-columns: 4fr 1fr;
+  grid-auto-columns: minmax(0, auto);
   grid-template-rows: auto 1fr;
 }
 
@@ -237,8 +236,14 @@ body {
   grid-area: content;
 }
 
+table {
+  overflow: auto;
+  display: block;
+}
+
 .cs-local-toc {
   grid-area: toc;
+  min-width: min-content;
 }
 @media (max-width: 991px) {
   .cs-local-toc {
