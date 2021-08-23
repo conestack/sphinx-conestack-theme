@@ -7,3 +7,9 @@ footer {
     content: '>> ';
   }
 }
+
+@media (max-width: 992px) {
+  .container.footer {
+    max-width: 100%;
+  }
+}

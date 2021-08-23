@@ -1,4 +1,5 @@
 #cs-layout {
+  min-height: 75vh;
 
   @media (min-width: 992px) {
     grid-template-columns: 1fr 5fr;
@@ -8,7 +9,7 @@
     display: grid;
     gap: 1.5rem;
     grid-template-areas: "sidebar main";
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 4fr;
   }
 
   @media (max-width: 768px) {

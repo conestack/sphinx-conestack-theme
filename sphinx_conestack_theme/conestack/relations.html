@@ -1,16 +1,16 @@
 <ul class="nav container">
   {%- if prev %}
-    <li class="nav-item col-md-6 col-sm-12">
+    <li class="nav-item col-md-6 col">
       <a href="{{ prev.link|e }}"
          title="{{ _('previous chapter') }}"
          class="nav-link px-2 text-muted previous-chapter">{{ prev.title }}</a>
     </li>
   {%- endif %}
   {%- if next %}
-    <li class="nav-item col-md-6 col-sm-12">
+    <li class="nav-item col-md-6 col text-end">
       <a href="{{ next.link|e }}"
          title="{{ _('next chapter') }}"
-         class="nav-link px-2 text-muted next-chapter text-md-end">{{ next.title }}</a>
+         class="nav-link px-2 text-muted next-chapter">{{ next.title }}</a>
     </li>
   {%- endif %}
 </ul>

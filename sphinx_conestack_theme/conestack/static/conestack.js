@@ -65,8 +65,9 @@ let cs = {
                 });
             }, 10);
             let btn = `
-              <button class="btn-default highlight-link"
-                      onclick="Documentation.hideSearchWords()">
+              <button class="highlight-link bi bi-eye-slash input-group-text"
+                      onclick="Documentation.hideSearchWords()"
+                      btn-title="remove highlighted words">
               </button>
             `
             $(btn).insertBefore($('#searchbox input'));

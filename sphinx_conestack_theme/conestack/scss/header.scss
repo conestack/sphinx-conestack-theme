@@ -3,6 +3,19 @@
   background: var(--cs-header-bg-color);
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
   height: 64px;
+
+  button[btn-title]:hover::after {
+    content: attr(btn-title);
+    color: var(--bs-gray-600);
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    border: 1px solid var(--bs-gray-200);
+    background: var(--bs-white);
+    position: absolute;
+    z-index: 1000;
+    top: 30px;
+  }
 }
 
 #logo {
@@ -23,6 +36,7 @@
 
   @media (max-width: 768px) {
     max-width: calc(100% - 300px)!important;
+    margin-left: 1rem!important;
   }
 
   @media (max-width: 400px) {
