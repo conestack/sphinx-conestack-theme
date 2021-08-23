@@ -9,11 +9,21 @@
 
 .cs-content {
   grid-area: content;
-}
 
-table {
-  overflow: auto;
-  display: block;
+  table {
+    overflow: auto;
+    display: block;
+  }
+
+  .headerlink {
+    text-decoration: none;
+    padding-left: 8px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .cs-local-toc {

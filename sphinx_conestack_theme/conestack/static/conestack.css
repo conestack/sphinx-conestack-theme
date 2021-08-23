@@ -235,10 +235,17 @@ body {
 .cs-content {
   grid-area: content;
 }
-
-table {
+.cs-content table {
   overflow: auto;
   display: block;
+}
+.cs-content .headerlink {
+  text-decoration: none;
+  padding-left: 8px;
+  opacity: 0;
+}
+.cs-content .headerlink:hover {
+  opacity: 1;
 }
 
 .cs-local-toc {
