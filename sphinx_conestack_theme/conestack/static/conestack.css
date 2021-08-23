@@ -244,7 +244,7 @@ body {
   padding-left: 8px;
   opacity: 0;
 }
-.cs-content .headerlink:hover {
+.cs-content section:hover .headerlink {
   opacity: 1;
 }
 

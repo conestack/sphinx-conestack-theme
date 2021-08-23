@@ -20,7 +20,9 @@
     padding-left: 8px;
     opacity: 0;
 
-    &:hover {
+  }
+  section:hover {
+    .headerlink {
       opacity: 1;
     }
   }
