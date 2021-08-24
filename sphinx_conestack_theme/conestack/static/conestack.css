@@ -61,9 +61,24 @@ body {
   #searchbox {
     max-width: none;
     color: black;
+    margin-right: 0px !important;
   }
 }
 
+#cs-ext-links .nav-link {
+  height: 100%;
+}
+#cs-ext-links .nav-item:hover::after {
+  content: attr(data-title);
+  color: var(--bs-gray-600);
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--bs-gray-200);
+  background: var(--bs-white);
+  position: absolute;
+  z-index: 1000;
+}
 @media (max-width: 400px) {
   #cs-ext-links {
     display: none !important;
@@ -73,7 +88,7 @@ body {
   width: 24px;
 }
 #cs-ext-links path {
-  fill: var(--cs-header-color);
+  fill: var(--cs-header-color) !important;
 }
 
 #navbar-toggle {
@@ -83,6 +98,7 @@ body {
 
 #cs-mobile-menu {
   background: var(--cs-header-bg-color);
+  z-index: 1000;
 }
 @media (min-width: 769px) {
   #cs-mobile-menu {
@@ -116,6 +132,8 @@ body {
 #cs-sidebar {
   grid-area: sidebar;
   background: white;
+  width: fit-content;
+  min-width: 180px;
 }
 @media (max-width: 768px) {
   #cs-sidebar {
@@ -278,11 +296,318 @@ body {
 .cs-content h2, .cs-content h3, .cs-content h4 {
   margin-top: 3rem;
 }
-.cs-content .highlight {
+.cs-content .highlight, .cs-content pre.literal-block {
+  position: relative;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1.5rem;
   border-radius: 0.25rem;
+}
+.cs-content .highlight .copy-literal-block, .cs-content pre.literal-block .copy-literal-block {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  border-radius: 0.2rem;
+}
+.cs-content .highlight .copy-literal-block:hover::after, .cs-content pre.literal-block .copy-literal-block:hover::after {
+  content: attr(data-text);
+  color: var(--bs-gray-600);
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--bs-gray-200);
+  background: var(--bs-white);
+  position: absolute;
+  z-index: 1000;
+  transform: translate(calc(-50% - .75rem), -120%);
+}
+.cs-content pre.literal-block {
+  background: #f8f9fa;
+  margin-right: var(--bs-gutter-x, 0.75rem);
+  margin-left: var(--bs-gutter-x, 0.75rem);
+}
+.cs-content section .sidebar {
+  float: right;
+  clear: right;
+  width: 30%;
+  margin-left: 1rem;
+  margin-right: 0;
+  border-radius: 0.2rem;
+  background-color: #f8f9fa;
+  border: 1px solid lightgray;
+}
+.cs-content section .sidebar .sidebar-title {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.cs-content section .sidebar > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cs-content section .sidebar img {
+  width: 100%;
+}
+.cs-content section .sidebar p {
+  margin-top: 1rem;
+}
+.cs-content .highlight-rst {
+  overflow: auto;
+}
+.cs-content .admonition {
+  margin: 1rem auto;
+  padding: 0 0.5rem 0.5rem;
+  background: white;
+  border-radius: 0.2rem;
+  border-left: 10px solid black;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.0625rem rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+.cs-content .admonition p.admonition-title {
+  position: relative;
+  margin: 0 -0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-weight: 400;
+  font-size: var(--admonition-title-font-size);
+  background-color: var(--color-admonition-title-background);
+  line-height: 1.3;
+}
+.cs-content .admonition p.admonition-title:before {
+  position: absolute;
+  left: 0.5rem;
+  font-size: 16px;
+  font-family: "bootstrap-icons";
+}
+.cs-content .admonition.attention {
+  border-left-color: var(--bs-danger);
+}
+.cs-content .admonition.attention > .admonition-title {
+  background: rgba(220, 53, 69, 0.2);
+}
+.cs-content .admonition.attention > .admonition-title:before {
+  content: "\f332";
+  color: var(--bs-danger);
+}
+.cs-content .admonition.danger {
+  border-left-color: var(--bs-danger);
+}
+.cs-content .admonition.danger > .admonition-title {
+  background: rgba(220, 53, 69, 0.2);
+}
+.cs-content .admonition.danger > .admonition-title:before {
+  content: "\f532";
+  color: var(--bs-danger);
+}
+.cs-content .admonition.error {
+  border-left-color: var(--bs-danger);
+}
+.cs-content .admonition.error > .admonition-title {
+  background: rgba(220, 53, 69, 0.2);
+}
+.cs-content .admonition.error > .admonition-title:before {
+  content: "\f622";
+  color: var(--bs-danger);
+}
+.cs-content .admonition.caution {
+  border-left-color: var(--bs-orange);
+}
+.cs-content .admonition.caution > .admonition-title {
+  background: rgba(253, 126, 20, 0.2);
+}
+.cs-content .admonition.caution > .admonition-title:before {
+  content: "\f46e";
+  color: var(--bs-orange);
+}
+.cs-content .admonition.warning {
+  border-left-color: var(--bs-orange);
+}
+.cs-content .admonition.warning > .admonition-title {
+  background: rgba(253, 126, 20, 0.2);
+}
+.cs-content .admonition.warning > .admonition-title:before {
+  content: "\f33a";
+  color: var(--bs-orange);
+}
+.cs-content .admonition.hint {
+  border-left-color: var(--bs-teal);
+}
+.cs-content .admonition.hint > .admonition-title {
+  background: rgba(32, 201, 151, 0.2);
+}
+.cs-content .admonition.hint > .admonition-title:before {
+  content: "\f504";
+  color: var(--bs-teal);
+}
+.cs-content .admonition.tip {
+  border-left-color: var(--bs-teal);
+}
+.cs-content .admonition.tip > .admonition-title {
+  background: rgba(32, 201, 151, 0.2);
+}
+.cs-content .admonition.tip > .admonition-title:before {
+  content: "\f406";
+  color: var(--bs-teal);
+}
+.cs-content .admonition.important {
+  border-left-color: var(--bs-info);
+}
+.cs-content .admonition.important > .admonition-title {
+  background: rgba(13, 202, 240, 0.2);
+}
+.cs-content .admonition.important > .admonition-title:before {
+  content: "\f400";
+  color: var(--bs-info);
+}
+.cs-content .admonition.note {
+  border-left-color: var(--bs-primary);
+}
+.cs-content .admonition.note > .admonition-title {
+  background: rgba(13, 110, 253, 0.2);
+}
+.cs-content .admonition.note > .admonition-title:before {
+  content: "\f4c9";
+  color: var(--bs-primary);
+}
+.cs-content .admonition.admonition-and-by-the-way {
+  border-left-color: var(--bs-indigo);
+}
+.cs-content .admonition.admonition-and-by-the-way > .admonition-title {
+  background: rgba(102, 16, 242, 0.2);
+}
+.cs-content .admonition.admonition-and-by-the-way > .admonition-title:before {
+  content: "\f43c";
+  color: var(--bs-indigo);
+}
+.cs-content dl.class > dt .property, .cs-content dl.enum-class > dt .property, .cs-content dl.enum-struct > dt .property, .cs-content dl.enum > dt .property, .cs-content dl.exception > dt .property, .cs-content dl.function > dt .property, .cs-content dl.method > dt .property, .cs-content dl.type > dt .property {
+  color: var(--bs-red);
+  font-weight: 400;
+  padding-right: 0.25rem;
+}
+.cs-content .sig-prename {
+  font-weight: 400;
+  color: var(--bs-blue);
+}
+.cs-content .sig-name {
+  font-weight: 700;
+  color: var(--bs-blue);
+}
+.cs-content .sig-param {
+  font-weight: 400;
+  color: var(--bs-gray-600);
+}
+.cs-content .problematic {
+  color: var(--bs-danger);
+}
+.cs-content .highlight pre, .cs-content pre.literal-block {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+.cs-content p.rubric {
+  text-transform: uppercase;
+  font-size: var(--font-size--small);
+}
+.cs-content .align-default, .cs-content .align-center {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cs-content table.align-default {
+  text-align: initial;
+}
+.cs-content table {
+  margin-bottom: 2rem;
+  max-width: fit-content;
+}
+.cs-content table.docutils {
+  border-radius: 0.2rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.0625rem rgba(0, 0, 0, 0.1);
+}
+.cs-content table.docutils td, .cs-content table.docutils th {
+  padding: 0 0.25rem;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.cs-content table.docutils td:first-child, .cs-content table.docutils th:first-child {
+  border-left: none;
+}
+.cs-content table.docutils td p, .cs-content table.docutils th p {
+  margin: 0.25rem;
+}
+.cs-content tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.cs-content dd > p {
+  margin-top: 0;
+}
+.cs-content p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.cs-content .centered {
+  text-align: center;
+}
+.cs-content dd {
+  display: block;
+  margin-inline-start: 2rem;
+}
+.cs-content code.literal {
+  background: #f8f9fa;
+  border: 1px solid lightgray;
+  color: black;
+  border-radius: 0.2em;
+  font-size: 12px;
+  padding: 0.1em 0.2em;
+}
+.cs-content .footnote-reference {
+  font-size: 10px;
+  vertical-align: super;
+}
+.cs-content dl {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+.cs-content dl.footnote {
+  font-size: 14px;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.cs-content dl.footnote .field-list dt, .cs-content dl.footnote .option-list dt, .cs-content dl.footnote dl.footnote dt, .cs-content dl.footnote dl.glossary dt, .cs-content dl.footnote dl.simple dt, .cs-content dl.footnote dl:not([class]) dt {
+  font-weight: 300 !important;
+  margin-top: 0.25rem;
+}
+.cs-content dl.footnote dt.label {
+  font-weight: 300;
+}
+.cs-content dl.footnote dt .brackets:before {
+  content: "[";
+}
+.cs-content dl.footnote dt .brackets:after {
+  content: "]";
+}
+.cs-content dl.footnote dd {
+  display: block;
+  margin-inline-start: 40px;
+}
+.cs-content blockquote {
+  border-left: 1px solid var(--bs-gray-700);
+  color: var(--bs-gray-700);
+  font-style: italic;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .cs-local-toc {
@@ -301,6 +626,11 @@ body {
     right: 0;
     z-index: 2;
     overflow-y: auto;
+    min-height: calc(100vh - 30rem);
+    height: max-content;
+    max-height: calc(100vh - 10rem);
+    width: min-content;
+    min-width: 180px;
   }
 }
 .cs-local-toc nav {

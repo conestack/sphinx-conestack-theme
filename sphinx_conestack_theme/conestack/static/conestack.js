@@ -9,6 +9,7 @@ let cs = {
         this.init_navigation();
         this.bind_navigation();
         this.handle_searchbox();
+        this.handle_codeblocks();
         $(window).on('resize', cs.handle_searchbox.bind(this));
     },
 
@@ -49,6 +50,17 @@ let cs = {
         } else {
             this.searchbox.detach().appendTo('#nav-search');
         }
+    },
+
+    handle_codeblocks: function() {
+        let elem = $(`<button class="copy-literal-block btn btn-outline-primary" data-text="Copy">Copy</button>`);
+        $('.highlight').prepend(elem);
+        $('.copy-literal-block').on('click', function() {
+            let el = $(this);
+            navigator.clipboard.writeText(el.next().text());
+            $('.copy-literal-block').attr('data-text', 'Copy');
+            el.attr('data-text', 'Copied!');
+        });
     },
 
     highlight_search_words: function() {

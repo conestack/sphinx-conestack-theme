@@ -1,6 +1,10 @@
 {%- if theme_logo_url %}
   <a id="logo" class="navbar-brand p-0 me-2" href="{{ pathto(root_doc)|e }}">
-    <img src="{{ theme_logo_url|e }}" alt="Logo"/>
+    {% if theme_logo_width or theme_logo_height %}
+      <img src="{{ theme_logo_url|e }}"
+          alt="Logo"
+          style="height:{{ theme_logo_height }}; width:{{ theme_logo_width }}"/>
+      {% endif %}
     <span>{{ theme_logo_title }}</span>
   </a>
 {%- endif %}

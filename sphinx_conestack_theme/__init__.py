@@ -15,54 +15,60 @@ import os
 
 
 class ConestackStyle(Style):
-    background_color = '#f0f0f0'
+    background_color = '#f8f9fa'
     default_style = ''
     line_number_color = '#666666'
 
     styles = {
         Whitespace: '#bbbbbb',
-        Comment: 'italic #60a0b0',
-        Comment.Preproc: 'noitalic #007020',
+
+        Comment: 'italic #727272',
+        Comment.Preproc: 'noitalic #069',
         Comment.Special: 'noitalic bg:#fff0f0',
 
-        Keyword: 'bold #007020',
+        Keyword: '#069',
         Keyword.Pseudo: 'nobold',
         Keyword.Type: 'nobold #902000',
 
-        Operator: '#666666',
-        Operator.Word: 'bold #007020',
+        Operator: '#555',
+        Operator.Word: '#6f42c1',
 
-        Name.Builtin: '#007020',
-        Name.Function: '#06287e',
-        Name.Class: 'bold #0e84b5',
-        Name.Namespace: 'bold #0e84b5',
-        Name.Exception: '#007020',
-        Name.Variable: '#bb60d5',
+        Name.Attribute: '#c30',
+        Name.Builtin: '#6b62de',
+        Name.Class: '#0e84b5',
         Name.Constant: '#60add5',
-        Name.Label: 'bold #002070',
+        Name.Decorator: '#555555',
         Name.Entity: 'bold #d55537',
-        Name.Attribute: '#4070a0',
+        Name.Exception: '#069',
+        Name.Function: '#069',
+        Name.Label: 'bold #002070',
+        Name.Namespace: 'bold #0e84b5',
         Name.Tag: 'bold #062873',
-        Name.Decorator: 'bold #555555',
+        Name.Variable: '#bb60d5',
 
-        String: '#4070a0',
+        Number: "bold #fd7e14",
+        Number.Integer: "bold #fd7e14",
+        Number.Float: "bold #fd7e14",
+        Number.Hex: "bold #fd7e14",
+        Number.Oct: "bold #fd7e14",
+
+        String: '#c30',
         String.Doc: 'italic',
+        String.Escape: 'bold #c30',
         String.Interpol: 'italic #70a0d0',
-        String.Escape: 'bold #4070a0',
+        String.Other: '#c65d09',
         String.Regex: '#235388',
         String.Symbol: '#517918',
-        String.Other: '#c65d09',
-        Number: '#40a070',
 
-        Generic.Heading: 'bold #000080',
-        Generic.Subheading: 'bold #800080',
         Generic.Deleted: '#A00000',
-        Generic.Inserted: '#00A000',
-        Generic.Error: '#FF0000',
         Generic.Emph: 'italic',
-        Generic.Strong: 'bold',
-        Generic.Prompt: 'bold #c65d09',
+        Generic.Error: '#FF0000',
+        Generic.Heading: 'bold #000080',
+        Generic.Inserted: '#00A000',
         Generic.Output: '#888',
+        Generic.Prompt: 'bold #c65d09',
+        Generic.Strong: 'bold',
+        Generic.Subheading: 'bold #800080',
         Generic.Traceback: '#04D',
 
         Error: 'border:#FF0000'

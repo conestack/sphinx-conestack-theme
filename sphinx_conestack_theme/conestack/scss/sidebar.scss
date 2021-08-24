@@ -3,6 +3,8 @@
 #cs-sidebar {
   grid-area: sidebar;
   background: white;
+  width: fit-content;
+  min-width: 180px;
 
   @media (max-width: 768px) {
       display: none;
