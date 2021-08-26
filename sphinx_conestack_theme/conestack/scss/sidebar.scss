@@ -5,7 +5,6 @@
   background: white;
   width: fit-content;
   min-width: 180px;
-  height: max-content;
   max-height: calc(100vh - 8rem);
   position: sticky;
   top: 1rem;
@@ -17,10 +16,7 @@
 }
 
 .cs-nav-toc {
-
   @media (min-width: 769px) {
-    position: sticky;
-    top: 1rem;
     display: block !important;
     padding-left: .25rem;
     margin-left: -.25rem;

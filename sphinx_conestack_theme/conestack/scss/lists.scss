@@ -1,0 +1,43 @@
+.cs-content {
+  ol > li > p,
+  ul > li > p {
+    margin: 0.2rem 0;
+  }
+  .hlist {
+    tr {
+      display: flex;
+      vertical-align: top;
+      border-color: inherit;
+    }
+    td {
+      &:first-child {
+        border: none !important;
+      }
+      position: relative;
+      padding: 1rem;
+      padding-left: 0;
+      border-radius: 5px;
+      margin-right: 1rem;
+
+      > ul {
+        list-style: none;
+        padding-right: 1rem;
+
+        li::before {
+          content: "•";
+          position: absolute;
+          font-size: 25px;
+          transform: translate(-1.5rem, -0.3rem);
+        }
+
+        img {
+          padding-bottom: 1rem;
+        }
+
+        figcaption {
+          border-top: 1px solid var(--bs-gray-400);
+        }
+      }
+    }
+  }
+}

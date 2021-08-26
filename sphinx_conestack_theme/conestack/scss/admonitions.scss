@@ -1,0 +1,134 @@
+.cs-main {
+  .admonition {
+    margin: 1rem auto;
+    padding: 0 0.5rem 0.5rem;
+    background: white;
+    border-radius: 0.2rem;
+    border-left: 10px solid var(--bs-gray-600);
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
+    font-size: 14px;
+    overflow: hidden;
+    page-break-inside: avoid;
+
+    p.admonition-title {
+      position: relative;
+      margin: 0 -0.5rem 0.5rem;
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      font-weight: 400;
+      font-size: 16px;
+      background-color: var(--bs-gray-200);
+      line-height: 1.3;
+
+      &:before {
+        content: "\f43c";
+        position: absolute;
+        left: 0.5rem;
+        font-size: 16px;
+        font-family: "bootstrap-icons";
+        color: var(--bs-gray-600);
+      }
+    }
+  }
+
+  .admonition {
+    &.attention {
+      > .admonition-title {
+        background: rgba(#ff3a00, 0.2);
+
+        &:before {
+          content: "\f332";
+          color: #ff3a00;
+        }
+      }
+      border-left-color: #ff3a00;
+    }
+    &.danger {
+      > .admonition-title {
+        background: rgba(#ff0000, 0.25);
+
+        &:before {
+          content: "\f532";
+          color: #ff0000;
+        }
+      }
+      border-left-color: #ff0000;
+    }
+    &.error {
+      > .admonition-title {
+        background: rgba(#ff3a00, 0.2);
+
+        &:before {
+          content: "\f622";
+          color: #ff3a00;
+        }
+      }
+      border-left-color: #ff3a00;
+    }
+    &.caution {
+      > .admonition-title {
+        background: rgba(#fd7e14, 0.2);
+
+        &:before {
+          content: "\f46e";
+          color: var(--bs-orange);
+        }
+      }
+      border-left-color: var(--bs-orange);
+    }
+    &.warning {
+      > .admonition-title {
+        background: rgba(#fd7e14, 0.2);
+
+        &:before {
+          content: "\f33a";
+          color: var(--bs-orange);
+        }
+      }
+      border-left-color: var(--bs-orange);
+    }
+    &.hint {
+      > .admonition-title {
+        background: rgba(#20c997, 0.2);
+
+        &:before {
+          content: "\f504";
+          color: var(--bs-teal);
+        }
+      }
+      border-left-color: var(--bs-teal);
+    }
+    &.tip {
+      > .admonition-title {
+        background: rgba(#20c997, 0.2);
+
+        &:before {
+          content: "\f406";
+          color: var(--bs-teal);
+        }
+      }
+      border-left-color: var(--bs-teal);
+    }
+    &.important {
+      > .admonition-title {
+        background: rgba(#0dcaf0, 0.2);
+
+        &:before {
+          content: "\f400";
+          color: var(--bs-info);
+        }
+      }
+      border-left-color: var(--bs-info);
+    }
+    &.note {
+      > .admonition-title {
+        background: rgba(#0d6efd, 0.2);
+
+        &:before {
+          content: "\f4c9";
+          color: var(--bs-primary);
+        }
+      }
+      border-left-color: var(--bs-primary);
+    }
+  }
+}
