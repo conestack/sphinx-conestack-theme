@@ -6,7 +6,7 @@ $highlight: #0d6efd;
   grid-area: main;
   grid-template-areas: "content toc";
   grid-template-columns: minmax(0, 4fr) 1fr;
-  grid-template-rows: auto 1fr;
+  height: min-content;
 
   .highlighted {
     background: rgba($highlight, 0.2);
@@ -20,10 +20,99 @@ $highlight: #0d6efd;
 
 .cs-content {
   grid-area: content;
+  height: fit-content;
 
+  caption {
+    text-align: center;
+    color: var(--bs-gray-800);
+    font-size: .9rem;
+    padding-top: .3rem;
+    padding-bottom: .35rem;
+  }
+  ol > li > p, ul > li > p {
+    margin: .2rem 0;
+  }
+  .hlist {
+    tr {
+      display: flex;
+      vertical-align: top;
+      border-color: inherit;
+    }
+    td {
+      &:first-child {
+        border: none!important;
+      }
+      position: relative;
+      padding: 1rem;
+      padding-left: 0;
+      border-radius: 5px;
+      margin-right: 1rem;
+
+      > ul {
+        list-style: none;
+        padding-right: 1rem;
+
+        li::before {
+          content: "•";
+          position: absolute;
+          font-size: 25px;
+          transform: translate(-1.5rem, -.3rem);
+        }
+
+        li::marker {
+          color: red!important;
+        }
+        img {
+          padding-bottom: 1rem;
+        }
+        figcaption {
+          border-top: 1px solid var(--bs-gray-400);
+        }
+      }
+    }
+  }
+
+  a > code {
+    color: var(--bs-blue)!important;
+  }
+
+  .math {
+    overflow: auto;
+  }
+
+  kbd {
+    padding: 0.1rem 0.4em;
+    font-size: 0.8em;
+    color: var(--bs-gray-800);
+    background: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-400);
+    box-shadow: 0 .0625rem 0 rgba(0,0,0,.5),inset 0 0 0 .125rem white;
+    border-radius: 0.2rem;
+    font-weight: 400;
+  }
+
+  dt {
+    color: var(--bs-gray-700);
+  }
   table {
+    caption-side: top;
     overflow: auto;
     display: block;
+
+    thead {
+      border-top: 1px solid var(--bs-gray-400);
+      border-left: 1px solid var(--bs-gray-400);
+      background: var(--bs-gray-100);
+    }
+
+    .stub {
+      border-left: 1px solid var(--bs-gray-400)!important;
+      background: var(--bs-gray-100);
+    }
+
+    tr > td:first-child {
+      border-left: 1px solid var(--bs-gray-400)!important;
+    }
   }
 
   .headerlink {
@@ -41,10 +130,19 @@ $highlight: #0d6efd;
 
   h1 {
     margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--cs-header-bg-color);
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
   h2, h3, h4 {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--bs-gray-700);
+    font-weight: 500;
   }
 
   .highlight, pre.literal-block {
@@ -91,7 +189,7 @@ $highlight: #0d6efd;
     margin-right: 0;
     border-radius: .2rem;
     background-color: #f8f9fa;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bs-gray-400);
 
     .sidebar-title {
       margin: 0;
@@ -123,7 +221,7 @@ $highlight: #0d6efd;
     padding: 0 .5rem .5rem;
     background: white;
     border-radius: .2rem;
-    border-left: 10px solid black;
+    border-left: 10px solid var(--bs-gray-600);
     box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
     font-size: 14px;
     overflow: hidden;
@@ -134,15 +232,17 @@ $highlight: #0d6efd;
       margin: 0 -.5rem .5rem;
       padding: .5rem .5rem .5rem 2rem;
       font-weight: 400;
-      font-size: var(--admonition-title-font-size);
-      background-color: var(--color-admonition-title-background);
+      font-size: 16px;
+      background-color: var(--bs-gray-200);
       line-height: 1.3;
 
       &:before {
+        content: "\f43c";
         position: absolute;
         left: 0.5rem;
         font-size: 16px;
         font-family: 'bootstrap-icons';
+        color: var(--bs-gray-600);
       }
     }
   }
@@ -150,36 +250,36 @@ $highlight: #0d6efd;
   .admonition {
     &.attention {
       > .admonition-title {
-        background: rgba(#dc3545, 0.2);
+        background: rgba(#FF3A00, 0.2);
 
         &:before {
           content: "\f332";
-          color: var(--bs-danger);
+          color: #FF3A00;
         }
       }
-      border-left-color: var(--bs-danger);
+      border-left-color: #FF3A00;
     }
     &.danger {
       > .admonition-title {
-        background: rgba(#dc3545, 0.2);
+        background: rgba(#FF0000, 0.25);
 
         &:before {
           content: "\f532";
-          color: var(--bs-danger);
+          color: #FF0000;
         }
       }
-      border-left-color: var(--bs-danger);
+      border-left-color: #FF0000;
     }
     &.error {
       > .admonition-title {
-        background: rgba(#dc3545, 0.2);
+        background: rgba(#FF3A00, 0.2);
 
         &:before {
           content: "\f622";
-          color: var(--bs-danger);
+          color: #FF3A00;
         }
       }
-      border-left-color: var(--bs-danger);
+      border-left-color: #FF3A00;
     }
     &.caution {
       > .admonition-title {
@@ -247,21 +347,13 @@ $highlight: #0d6efd;
       }
       border-left-color: var(--bs-primary);
     }
-    &.admonition-and-by-the-way {
-      > .admonition-title {
-        background: rgba(#6610f2, 0.2);
-
-        &:before {
-          content: "\f43c";
-          color: var(--bs-indigo);
-        }
-      }
-      border-left-color: var(--bs-indigo);
-    }
   }
 
   // misc
 
+  dt.label > .brackets {
+    margin-right: .2rem;
+  }
   // auto doc
   dl.class>dt .property, dl.enum-class>dt .property, dl.enum-struct>dt .property, dl.enum>dt .property, dl.exception>dt .property, dl.function>dt .property, dl.method>dt .property, dl.type>dt .property {
     color: var(--bs-red);
@@ -284,6 +376,7 @@ $highlight: #0d6efd;
 
   .problematic {
     color: var(--bs-danger);
+    text-decoration: underline;
   }
 
   .highlight pre, pre.literal-block {
@@ -320,9 +413,10 @@ $highlight: #0d6efd;
 
     td, th {
       padding: 0 .25rem;
-      border-left: 1px solid lightgray;
-      border-right: 1px solid lightgray;
-      border-bottom: 1px solid lightgray;
+      border-left: 1px solid var(--bs-gray-400);
+      border-right: 1px solid var(--bs-gray-400);
+      border-bottom: 1px solid var(--bs-gray-400);
+      border-top: 1px solid var(--bs-gray-400);
     }
     td:first-child, th:first-child {
       border-left: none;
@@ -353,13 +447,19 @@ $highlight: #0d6efd;
   dd {
     display: block;
     margin-inline-start: 2rem;
+    margin-top: 0.3rem;
+    font-size: .96rem;
+
+    > p {
+      margin-bottom: 0.2rem;
+    }
   }
 
   // footnotes
 
   code.literal {
     background: #f8f9fa;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bs-gray-400);
     color: black;
     border-radius: .2em;
     font-size: 12px;
@@ -406,7 +506,6 @@ $highlight: #0d6efd;
     border-left: 1px solid var(--bs-gray-700);
     color: var(--bs-gray-700);
     font-style: italic;
-    margin-left: .5rem;
     margin-right: .5rem;
     padding: .5rem 1rem;
   }
@@ -428,7 +527,7 @@ $highlight: #0d6efd;
     overflow-y: auto;
     min-height: calc(100vh - 30rem);
     height: max-content;
-    max-height: calc(100vh - 10rem);
+    max-height: calc(100vh - 8rem);
     width: min-content;
     min-width: 180px;
   }

@@ -5,6 +5,11 @@
   background: white;
   width: fit-content;
   min-width: 180px;
+  height: max-content;
+  max-height: calc(100vh - 8rem);
+  position: sticky;
+  top: 1rem;
+  overflow-y: auto;
 
   @media (max-width: 768px) {
       display: none;
@@ -19,7 +24,6 @@
     display: block !important;
     padding-left: .25rem;
     margin-left: -.25rem;
-    overflow: auto;
     font-weight: 600;
   }
 
