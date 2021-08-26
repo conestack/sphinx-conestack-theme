@@ -530,6 +530,7 @@ body {
 }
 .cs-content img {
   max-width: -webkit-fill-available;
+  max-width: 100%;
 }
 .cs-content blockquote {
   border-left: 1px solid var(--bs-gray-700);
@@ -723,6 +724,7 @@ footer .next-chapter::after {
   display: block;
   margin-bottom: 2rem;
   max-width: fit-content;
+  max-width: -moz-fit-content;
 }
 .cs-content table caption {
   border-bottom: 1px solid var(--bs-gray-400);

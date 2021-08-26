@@ -5,6 +5,7 @@
     display: block;
     margin-bottom: 2rem;
     max-width: fit-content;
+    max-width: -moz-fit-content;
 
     caption {
       border-bottom: 1px solid var(--bs-gray-400);
