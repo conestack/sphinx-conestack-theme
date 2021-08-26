@@ -318,7 +318,21 @@ body {
 .cs-content .math {
   overflow: auto;
 }
-.cs-content kbd {
+.cs-content span.menuselection {
+  background: rgba(102, 16, 242, 0.1);
+  border-radius: 0.2rem;
+  font-size: 0.85em;
+  padding: 0 0.2rem;
+  border: 1px solid rgba(102, 16, 242, 0.1);
+}
+.cs-content span.guilabel {
+  background: rgba(13, 110, 253, 0.1);
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
+  font-size: 0.85rem;
+  border: 1px solid rgba(13, 110, 253, 0.4);
+}
+.cs-content kbd:not(.compound) {
   padding: 0.1rem 0.4em;
   font-size: 0.8em;
   color: var(--bs-gray-800);
@@ -327,6 +341,13 @@ body {
   box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem white;
   border-radius: 0.2rem;
   font-weight: 400;
+}
+.cs-content kbd.compound {
+  background: none;
+  color: var(--bs-gray-800);
+  padding: 0;
+  border-radius: 0;
+  font-size: 1em;
 }
 .cs-content dt {
   color: var(--bs-gray-700);
@@ -505,6 +526,10 @@ body {
 .cs-content dl.footnote dd {
   display: block;
   margin-inline-start: 40px;
+  margin-top: 0;
+}
+.cs-content img {
+  max-width: -webkit-fill-available;
 }
 .cs-content blockquote {
   border-left: 1px solid var(--bs-gray-700);
@@ -694,7 +719,7 @@ footer .next-chapter::after {
 
 .cs-content table {
   caption-side: top;
-  overflow: auto;
+  overflow-x: auto;
   display: block;
   margin-bottom: 2rem;
   max-width: fit-content;

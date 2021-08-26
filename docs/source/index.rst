@@ -10,7 +10,11 @@ Indices and tables
 .. toctree::
    :maxdepth: 3
 
-   Paragraphs <paragraph-markup>
-   Lists and Tables <lists-and-tables>
+   Setup <setup>
+   Customize <customize>
+   Paragraphs <paragraphs>
+   Lists <lists>
+   Tables <tables>
    API Docs <api>
-   Utils <utils>
+   Images <images>
+   FAQ <faq>
