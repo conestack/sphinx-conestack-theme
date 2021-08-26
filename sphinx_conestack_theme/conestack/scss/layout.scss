@@ -2,7 +2,7 @@
   min-height: calc(100vh - 19rem);
 
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr!important;
   }
 
   @media (min-width: 769px) {

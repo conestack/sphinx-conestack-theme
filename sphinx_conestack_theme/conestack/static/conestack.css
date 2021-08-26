@@ -136,6 +136,7 @@ body {
   width: fit-content;
   min-width: 180px;
   max-height: calc(100vh - 8rem);
+  height: max-content;
   position: sticky;
   top: 1rem;
   overflow-y: auto;
@@ -241,7 +242,7 @@ body {
 }
 @media (min-width: 992px) {
   #cs-layout {
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr !important;
   }
 }
 @media (min-width: 769px) {
