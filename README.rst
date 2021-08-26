@@ -62,8 +62,3 @@ Build docs:
 .. code-block:: sh
 
     ./scripts/docs.sh
-
-TODO
-====
-
-[ ] - Color Variable names
