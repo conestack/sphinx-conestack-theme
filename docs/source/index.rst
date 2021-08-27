@@ -1,7 +1,14 @@
 Conestack Sphinx Theme
 ======================
 
-**A Bootstrap 5 based, mobile friendly Sphinx theme**
+A `Bootstrap 5 <https://getbootstrap.com/docs/5.1>`_ based, mobile
+friendly Sphinx theme.
+
+This documentation contains a guide about the theme :doc:`usage <usage>` and
+how to :doc:`contribute <contributing>` to this project.
+
+All other pages are showcases how this theme renders things among
+reStructuredText examples how to produce this results.
 
 
 Behavior
@@ -9,7 +16,9 @@ Behavior
 
 This sphinx theme is created with responsive design in mind.
 
-.. Tip:: Try resizing this page to see the effect!
+.. Tip::
+
+    Try resizing this page to see the effect!
 
 The conestack sphinx template works on the following breakpoints:
 
@@ -25,15 +34,15 @@ Mobile View
 
 If the window width is lesser or equal than 768px, no sidebars will be visible.
 
-The global table of contents (``globaltoc``) and searchbar are accessible from a dropdown menu in the header.
+The global table of contents and searchbar are accessible from a dropdown menu
+in the header.
 
 
 Tablet View
 ~~~~~~~~~~~
 
-If the window width is greater than 769px and smaller than 991px, 
-the global table of contents (``globaltoc``) is visible and the local table of contents 
-(``localtoc``) is hidden.
+If the window width is greater than 769px and smaller than 991px, the global
+table of contents is visible and the local table of contents is hidden.
 
 The search box appears in the header element.
 
@@ -41,8 +50,8 @@ The search box appears in the header element.
 Desktop View
 ~~~~~~~~~~~~
 
-If the window width is greater than 992px, both (``globaltoc``) and (``localtoc``) are visible
-as left and right sidebar, respectively.
+If the window width is greater than 992px, both global TOC and
+local TOC are visible as left and right sidebar, respectively.
 
 The search box appears in the header element.
 
@@ -64,7 +73,7 @@ Contributors
 Credits
 -------
 
-Parts of the demo content is taken from
+Parts of the showcase contents are taken from
 `Sphinx Themes <https://sphinx-themes.org>`_.
 
 Sample images on this page are taken from
@@ -84,6 +93,6 @@ Indices and tables
    Paragraphs <paragraphs>
    Lists <lists>
    Tables <tables>
-   API Docs <api>
-   Code Blocks <code>
    Images <images>
+   Code Blocks <blocks>
+   API Docs <api>
