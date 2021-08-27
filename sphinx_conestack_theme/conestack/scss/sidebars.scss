@@ -1,0 +1,32 @@
+.cs-content {
+  section .sidebar {
+    float: right;
+    clear: right;
+    display: flow-root;
+    width: 30%;
+    margin-left: 1rem;
+    margin-right: 0;
+    border-radius: 0.2rem;
+    background-color: #f8f9fa;
+    border: 1px solid var(--bs-gray-400);
+
+    .sidebar-title {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+    }
+
+    > *:not(table) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+  }
+}

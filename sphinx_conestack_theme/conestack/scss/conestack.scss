@@ -8,6 +8,11 @@
 @use 'tables';
 @use 'lists';
 @use 'apidoc';
+@use 'localtoc';
+@use 'sidebars';
+@use 'footnotes';
+@use 'paragraphs';
+@use 'blocks';
 
 @import 'bootstrap.css';
 @import 'bootstrap-icons/bootstrap-icons.css';

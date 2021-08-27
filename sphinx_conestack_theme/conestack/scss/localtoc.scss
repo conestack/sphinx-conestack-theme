@@ -1,0 +1,50 @@
+
+.cs-local-toc {
+  grid-area: toc;
+  min-width: min-content;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    position: sticky;
+    top: 1rem;
+    right: 0;
+    z-index: 2;
+    overflow-y: auto;
+    min-height: calc(100vh - 30rem);
+    height: max-content;
+    max-height: calc(100vh - 8rem);
+    width: min-content;
+    min-width: 180px;
+  }
+
+  nav {
+    font-size: 0.875rem;
+
+    ul {
+      padding-left: 0;
+        list-style: none;
+  
+        ul {
+          padding-left: 1rem;
+          margin-top: 0.25rem;
+        }
+      }
+  
+      li {
+        margin-bottom: 0.25rem;
+      }
+  
+      a {
+        color: inherit;
+        &:not(:hover) {
+          text-decoration: none;
+        }
+        code {
+          font: inherit;
+        }
+      }
+    }
+  }

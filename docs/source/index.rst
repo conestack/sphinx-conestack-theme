@@ -78,4 +78,5 @@ Indices and tables
    Lists <lists>
    Tables <tables>
    API Docs <api>
+   Code Blocks <code>
    Images <images>

@@ -1,0 +1,48 @@
+.cs-content {
+  .footnote-reference {
+    font-size: 10px;
+    vertical-align: super;
+  }
+
+  dl.footnote {
+    font-size: 14px;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: max-content auto;
+
+    .field-list dt,
+    .option-list dt,
+    dl.footnote dt,
+    dl.glossary dt,
+    dl.simple dt,
+    dl:not([class]) dt {
+      font-weight: 300 !important;
+      margin-top: 0.25rem;
+    }
+
+    dt {
+      &.label {
+        font-weight: 300;
+        > .brackets {
+          margin-right: 0.2rem;
+        }
+      }
+
+      &.brackets {
+        &:before {
+          content: "[";
+        }
+
+        &:after {
+          content: "]";
+        }
+      }
+    }
+
+    dd {
+      display: block;
+      margin-inline-start: 40px;
+      margin-top: 0;
+    }
+  }
+}

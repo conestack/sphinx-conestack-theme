@@ -10,6 +10,7 @@ let cs = {
         this.bind_navigation();
         this.handle_searchbox();
         this.handle_codeblocks();
+        this.handle_images();
         $(window).on('resize', cs.handle_searchbox.bind(this));
     },
 
@@ -61,6 +62,13 @@ let cs = {
             $('.copy-literal-block').attr('data-text', 'Copy');
             el.attr('data-text', 'Copied!');
         });
+    },
+
+    handle_images: function() {
+        var imageEls = document.getElementsByTagName("img");
+        for(var i=0;i<imageEls.length;i++){
+            imageEls[i].title=imageEls[i].alt;
+        }
     },
 
     highlight_search_words: function() {

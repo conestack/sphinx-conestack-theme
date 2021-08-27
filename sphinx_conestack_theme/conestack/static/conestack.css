@@ -287,10 +287,14 @@ body {
   opacity: 0;
   color: var(--bs-blue);
 }
-.cs-content .math {
+.cs-content .highlight-rst {
   overflow: auto;
 }
-.cs-content .highlight-rst {
+.cs-content .highlight pre,
+.cs-content pre.literal-block {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
   overflow: auto;
 }
 .cs-content h1 {
@@ -310,257 +314,6 @@ body {
 }
 .cs-content h2:hover .headerlink, .cs-content h3:hover .headerlink, .cs-content h4:hover .headerlink {
   opacity: 1;
-}
-.cs-content caption {
-  text-align: center;
-  color: var(--bs-gray-800);
-  font-size: 0.9rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.35rem;
-}
-.cs-content a > code {
-  color: var(--bs-blue) !important;
-}
-.cs-content span.menuselection {
-  background: rgba(102, 16, 242, 0.1);
-  border-radius: 0.2rem;
-  font-size: 0.85em;
-  padding: 0 0.2rem;
-  border: 1px solid rgba(102, 16, 242, 0.1);
-}
-.cs-content span.guilabel {
-  background: rgba(13, 110, 253, 0.1);
-  padding: 0 0.3rem;
-  border-radius: 0.2rem;
-  font-size: 0.85rem;
-  border: 1px solid rgba(13, 110, 253, 0.4);
-}
-.cs-content kbd:not(.compound) {
-  padding: 0.1rem 0.4em;
-  font-size: 0.8em;
-  color: var(--bs-gray-800);
-  background: var(--bs-gray-100);
-  border: 1px solid var(--bs-gray-400);
-  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem white;
-  border-radius: 0.2rem;
-  font-weight: 400;
-}
-.cs-content kbd.compound {
-  background: none;
-  color: var(--bs-gray-800);
-  padding: 0;
-  border-radius: 0;
-  font-size: 1em;
-}
-.cs-content dt {
-  color: var(--bs-gray-700);
-}
-.cs-content pre.literal-block {
-  background: #f8f9fa;
-  margin-right: var(--bs-gutter-x, 0.75rem);
-  margin-left: var(--bs-gutter-x, 0.75rem);
-}
-.cs-content .highlight,
-.cs-content pre.literal-block {
-  position: relative;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-  border-radius: 0.25rem;
-}
-.cs-content .highlight .copy-literal-block,
-.cs-content pre.literal-block .copy-literal-block {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.65rem;
-  border-radius: 0.2rem;
-}
-.cs-content .highlight .copy-literal-block:hover::after,
-.cs-content pre.literal-block .copy-literal-block:hover::after {
-  content: attr(data-text);
-  color: var(--bs-gray-600);
-  font-size: 13px;
-  padding: 2px 6px;
-  border-radius: 5px;
-  border: 1px solid var(--bs-gray-200);
-  background: var(--bs-white);
-  position: absolute;
-  z-index: 1000;
-  transform: translate(calc(-50% - 0.75rem), -120%);
-}
-.cs-content section .sidebar {
-  float: right;
-  clear: right;
-  width: 30%;
-  margin-left: 1rem;
-  margin-right: 0;
-  border-radius: 0.2rem;
-  background-color: #f8f9fa;
-  border: 1px solid var(--bs-gray-400);
-}
-.cs-content section .sidebar .sidebar-title {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-}
-.cs-content section .sidebar > * {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.cs-content section .sidebar img {
-  width: 100%;
-}
-.cs-content section .sidebar p {
-  margin-top: 1rem;
-}
-.cs-content dt.label > .brackets {
-  margin-right: 0.2rem;
-}
-.cs-content a > span.problematic {
-  color: var(--bs-danger);
-  text-decoration: underline;
-}
-.cs-content .highlight pre,
-.cs-content pre.literal-block {
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  overflow: auto;
-}
-.cs-content p.rubric {
-  text-transform: uppercase;
-  font-size: var(--font-size--small);
-}
-.cs-content .align-default,
-.cs-content .align-center {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-.cs-content p {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-.cs-content dd > p {
-  margin-top: 0;
-}
-.cs-content dd {
-  display: block;
-  margin-inline-start: 2rem;
-  margin-top: 0.3rem;
-  font-size: 0.96rem;
-}
-.cs-content dd > p {
-  margin-bottom: 0.2rem;
-}
-.cs-content dl {
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-}
-.cs-content .centered {
-  text-align: center;
-}
-.cs-content code.literal {
-  background: #f8f9fa;
-  border: 1px solid var(--bs-gray-400);
-  color: black;
-  border-radius: 0.2em;
-  font-size: 12px;
-  padding: 0.1em 0.2em;
-}
-.cs-content .footnote-reference {
-  font-size: 10px;
-  vertical-align: super;
-}
-.cs-content dl.footnote {
-  font-size: 14px;
-  font-weight: 300;
-  display: grid;
-  grid-template-columns: max-content auto;
-}
-.cs-content dl.footnote .field-list dt,
-.cs-content dl.footnote .option-list dt,
-.cs-content dl.footnote dl.footnote dt,
-.cs-content dl.footnote dl.glossary dt,
-.cs-content dl.footnote dl.simple dt,
-.cs-content dl.footnote dl:not([class]) dt {
-  font-weight: 300 !important;
-  margin-top: 0.25rem;
-}
-.cs-content dl.footnote dt.label {
-  font-weight: 300;
-}
-.cs-content dl.footnote dt.brackets:before {
-  content: "[";
-}
-.cs-content dl.footnote dt.brackets:after {
-  content: "]";
-}
-.cs-content dl.footnote dd {
-  display: block;
-  margin-inline-start: 40px;
-  margin-top: 0;
-}
-.cs-content img {
-  max-width: -webkit-fill-available;
-  max-width: 100%;
-}
-.cs-content blockquote {
-  border-left: 1px solid var(--bs-gray-700);
-  color: var(--bs-gray-700);
-  font-style: italic;
-  margin-right: 0.5rem;
-  padding: 0.5rem 1rem;
-}
-
-.cs-local-toc {
-  grid-area: toc;
-  min-width: min-content;
-}
-@media (max-width: 991px) {
-  .cs-local-toc {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .cs-local-toc {
-    position: sticky;
-    top: 1rem;
-    right: 0;
-    z-index: 2;
-    overflow-y: auto;
-    min-height: calc(100vh - 30rem);
-    height: max-content;
-    max-height: calc(100vh - 8rem);
-    width: min-content;
-    min-width: 180px;
-  }
-}
-.cs-local-toc nav {
-  font-size: 0.875rem;
-}
-.cs-local-toc nav ul {
-  padding-left: 0;
-  list-style: none;
-}
-.cs-local-toc nav ul ul {
-  padding-left: 1rem;
-  margin-top: 0.25rem;
-}
-.cs-local-toc nav li {
-  margin-bottom: 0.25rem;
-}
-.cs-local-toc nav a {
-  color: inherit;
-}
-.cs-local-toc nav a:not(:hover) {
-  text-decoration: none;
-}
-.cs-local-toc nav a code {
-  font: inherit;
 }
 
 footer .previous-chapter::before {
@@ -735,6 +488,9 @@ footer .next-chapter::after {
   border-collapse: collapse;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.0625rem rgba(0, 0, 0, 0.1);
 }
+.cs-content table.docutils td {
+  background: var(--bs-white);
+}
 .cs-content table.docutils td, .cs-content table.docutils th {
   padding: 0 0.25rem;
   border-top: 1px solid var(--bs-gray-400);
@@ -811,6 +567,263 @@ footer .next-chapter::after {
 .cs-content .sig-param {
   font-weight: 400;
   color: var(--bs-gray-600);
+}
+
+.cs-local-toc {
+  grid-area: toc;
+  min-width: min-content;
+}
+@media (max-width: 991px) {
+  .cs-local-toc {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .cs-local-toc {
+    position: sticky;
+    top: 1rem;
+    right: 0;
+    z-index: 2;
+    overflow-y: auto;
+    min-height: calc(100vh - 30rem);
+    height: max-content;
+    max-height: calc(100vh - 8rem);
+    width: min-content;
+    min-width: 180px;
+  }
+}
+.cs-local-toc nav {
+  font-size: 0.875rem;
+}
+.cs-local-toc nav ul {
+  padding-left: 0;
+  list-style: none;
+}
+.cs-local-toc nav ul ul {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+.cs-local-toc nav li {
+  margin-bottom: 0.25rem;
+}
+.cs-local-toc nav a {
+  color: inherit;
+}
+.cs-local-toc nav a:not(:hover) {
+  text-decoration: none;
+}
+.cs-local-toc nav a code {
+  font: inherit;
+}
+
+.cs-content section .sidebar {
+  float: right;
+  clear: right;
+  display: flow-root;
+  width: 30%;
+  margin-left: 1rem;
+  margin-right: 0;
+  border-radius: 0.2rem;
+  background-color: #f8f9fa;
+  border: 1px solid var(--bs-gray-400);
+}
+.cs-content section .sidebar .sidebar-title {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.cs-content section .sidebar > *:not(table) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cs-content section .sidebar img {
+  width: 100%;
+}
+.cs-content section .sidebar p {
+  margin-top: 1rem;
+}
+
+.cs-content .footnote-reference {
+  font-size: 10px;
+  vertical-align: super;
+}
+.cs-content dl.footnote {
+  font-size: 14px;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.cs-content dl.footnote .field-list dt,
+.cs-content dl.footnote .option-list dt,
+.cs-content dl.footnote dl.footnote dt,
+.cs-content dl.footnote dl.glossary dt,
+.cs-content dl.footnote dl.simple dt,
+.cs-content dl.footnote dl:not([class]) dt {
+  font-weight: 300 !important;
+  margin-top: 0.25rem;
+}
+.cs-content dl.footnote dt.label {
+  font-weight: 300;
+}
+.cs-content dl.footnote dt.label > .brackets {
+  margin-right: 0.2rem;
+}
+.cs-content dl.footnote dt.brackets:before {
+  content: "[";
+}
+.cs-content dl.footnote dt.brackets:after {
+  content: "]";
+}
+.cs-content dl.footnote dd {
+  display: block;
+  margin-inline-start: 40px;
+  margin-top: 0;
+}
+
+.cs-content p.rubric {
+  text-transform: uppercase;
+  font-size: var(--font-size--small);
+}
+.cs-content .align-default,
+.cs-content .align-center {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cs-content .math {
+  overflow: auto;
+}
+.cs-content p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.cs-content dd > p {
+  margin-top: 0;
+}
+.cs-content dd {
+  display: block;
+  margin-inline-start: 2rem;
+  margin-top: 0.3rem;
+  font-size: 0.96rem;
+}
+.cs-content dd > p {
+  margin-bottom: 0.2rem;
+}
+.cs-content dl {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+.cs-content dt {
+  color: var(--bs-gray-700);
+}
+.cs-content a > span.problematic {
+  color: var(--bs-danger);
+  text-decoration: underline;
+}
+.cs-content .centered {
+  text-align: center;
+}
+.cs-content img {
+  max-width: -webkit-fill-available;
+  max-width: 100%;
+}
+.cs-content blockquote {
+  border-left: 1px solid var(--bs-gray-700);
+  color: var(--bs-gray-700);
+  font-style: italic;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.cs-content caption {
+  text-align: center;
+  color: var(--bs-gray-800);
+  font-size: 0.9rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.35rem;
+}
+.cs-content a > code {
+  color: var(--bs-blue) !important;
+}
+.cs-content span.menuselection {
+  background: rgba(102, 16, 242, 0.1);
+  border-radius: 0.2rem;
+  font-size: 0.85em;
+  padding: 0 0.2rem;
+  border: 1px solid rgba(102, 16, 242, 0.1);
+}
+.cs-content span.guilabel {
+  background: rgba(13, 110, 253, 0.1);
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
+  font-size: 0.85rem;
+  border: 1px solid rgba(13, 110, 253, 0.4);
+}
+.cs-content span.classifier {
+  color: var(--bs-indigo);
+  padding-inline-start: 5px;
+}
+.cs-content kbd:not(.compound) {
+  padding: 0.1rem 0.4em;
+  font-size: 0.8em;
+  color: var(--bs-gray-800);
+  background: var(--bs-gray-100);
+  border: 1px solid var(--bs-gray-400);
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem white;
+  border-radius: 0.2rem;
+  font-weight: 400;
+}
+.cs-content kbd.compound {
+  background: none;
+  color: var(--bs-gray-800);
+  padding: 0;
+  border-radius: 0;
+  font-size: 1em;
+}
+
+.cs-content pre.literal-block {
+  background: #f8f9fa;
+  margin-right: var(--bs-gutter-x, 0.75rem);
+  margin-left: var(--bs-gutter-x, 0.75rem);
+}
+.cs-content .highlight,
+.cs-content pre.literal-block {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  display: flow-root;
+}
+.cs-content .highlight .copy-literal-block,
+.cs-content pre.literal-block .copy-literal-block {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  border-radius: 0.2rem;
+}
+.cs-content .highlight .copy-literal-block:hover::after,
+.cs-content pre.literal-block .copy-literal-block:hover::after {
+  content: attr(data-text);
+  color: var(--bs-gray-600);
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--bs-gray-200);
+  background: var(--bs-white);
+  position: absolute;
+  z-index: 1000;
+  transform: translate(calc(-50% - 0.75rem), -120%);
+}
+.cs-content code.literal {
+  background: #f8f9fa;
+  border: 1px solid var(--bs-gray-400);
+  color: black;
+  border-radius: 0.2em;
+  font-size: 12px;
+  padding: 0.1em 0.2em;
 }
 
 /*# sourceMappingURL=conestack.css.map */

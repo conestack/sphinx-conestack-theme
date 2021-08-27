@@ -1,0 +1,48 @@
+.cs-content {
+  pre.literal-block {
+    background: #f8f9fa;
+    margin-right: var(--bs-gutter-x, 0.75rem);
+    margin-left: var(--bs-gutter-x, 0.75rem);
+  }
+
+  .highlight,
+  pre.literal-block {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    display: flow-root;
+
+    .copy-literal-block {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.65rem;
+      border-radius: 0.2rem;
+
+      &:hover::after {
+        content: attr(data-text);
+        color: var(--bs-gray-600);
+        font-size: 13px;
+        padding: 2px 6px;
+        border-radius: 5px;
+        border: 1px solid var(--bs-gray-200);
+        background: var(--bs-white);
+        position: absolute;
+        z-index: 1000;
+        transform: translate(calc(-50% - 0.75rem), -120%);
+      }
+    }
+  }
+
+  code.literal {
+    background: #f8f9fa;
+    border: 1px solid var(--bs-gray-400);
+    color: black;
+    border-radius: 0.2em;
+    font-size: 12px;
+    padding: 0.1em 0.2em;
+  }
+}

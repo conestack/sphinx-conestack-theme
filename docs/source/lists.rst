@@ -4,34 +4,58 @@ Lists
 Enumerated Lists
 ----------------
 
-1. Arabic numerals.
+Auto-enumerate lists by prepending ``#.``. ::
 
-   a) lower alpha)
+  #. List item 1
 
-      (i) (lower roman)
+     #. List item 1.1
 
-          A. upper alpha.
+  #. List item 2
 
-             I) upper roman)
+     #. List item 2.1
 
-2. Lists that don't start at 1:
+#. List item 1
+
+   #. List item 1.1
+
+#. List item 2
+
+   #. List item 2.1
+
+.. Caution:: There must be a blank line between each list item.
+
+Manually enumerate by prepending a number. ::
+
+  2. List item 2
+
+     3. Three
+
+     4. Four
+
+     5. Five
+
+2. List item 2
 
    3. Three
 
    4. Four
 
-   C. C
+   5. Five
 
-   D. D
-
-   iii. iii
-
-   iv. iv
-
-#. List items may also be auto-enumerated.
 
 Definition Lists
 ----------------
+
+Use definition lists as a sort of glossary for terms and definitions. ::
+
+  Term
+    Definition
+  Term : classifier
+      Definition paragraph 1.
+
+      Definition paragraph 2.
+  Term
+      Definition
 
 Term
     Definition
@@ -42,73 +66,39 @@ Term : classifier
 Term
     Definition
 
-I have no clue why the definition list below is classified as a different style
-of definition list than the one above.
-
-Is it the spaces in the term?
-    Maybe it was the multiple line paragraph
-    in the line below that caused this?
-
-Is it the paragraph above the list maybe?
-    I guess a lot of these lists don't have leading paragraphs?
-
-Is it everything all at once?
-    Who knows?!
 
 Option Lists
 ------------
 
-For listing command-line options:
+For listing command-line options: ::
 
--a            command-line option "a"
--b file       options can have arguments
-              and long descriptions
---long        options can be long also
+  -a            command-line option "a".
+  -b file       options can have arguments.
+  --long        options can also be long.
+  --input=file  long options can also have
+                arguments.
+  -x, -y, -z    Multiple options are an "option group".
+
+-a            command-line option "a".
+-b file       options can have arguments.
+--long        options can also be long.
 --input=file  long options can also have
-              arguments
-
---very-long-option
-              The description can also start on the next line.
-
-              The description may contain multiple body elements,
-              regardless of where it starts.
-
+              arguments.
 -x, -y, -z    Multiple options are an "option group".
--v, --verbose  Commonly-seen: short & long options.
--1 file, --one=file, --two file
-              Multiple options with arguments.
-/V            DOS/VMS-style options too
 
-There must be at least two spaces between the option and the description.
+.. Caution:: There must be at least two spaces between the option and the description.
 
 Field list
 ----------
 
-.. bibliographic fields (which also require a transform):
+.. bibliographic fields:
 
 :Author: David Goodger
 :Address: 123 Example Street
           Example, EX  Canada
           A1B 2C3
 :Contact: docutils-develop@lists.sourceforge.net
-:Authors: Me; Myself; I
-:organization: humankind
 :date: $Date: 2012-01-03 19:23:53 +0000 (Tue, 03 Jan 2012) $
-:status: This is a "work in progress"
-:revision: $Revision: 7302 $
-:version: 1
-:copyright: This document has been placed in the public domain. You
-            may do with it as you wish. You may copy, modify,
-            redistribute, reattribute, sell, buy, rent, lease,
-            destroy, or improve it, quote it at length, excerpt,
-            incorporate, collate, fold, staple, or mutilate it, or do
-            anything else to it that your or anyone else's heart
-            desires.
-:field name: This is a generic bibliographic field.
-:field name 2:
-    Generic bibliographic fields may contain multiple body elements.
-
-    Like this.
 
 :Dedication:
 
@@ -120,27 +110,18 @@ Field list
     language, containing examples of all basic reStructuredText
     constructs and many advanced constructs.
 
+
 Bullet Lists
 ------------
-
-..
-    Docutils supports two types of lists, "simple" and "complex". Complex lists
-    have item margins, simple lists do not.
-    https://docutils.sourceforge.io/sandbox/html4strict/data/simple-lists.html
 
 Simple
 ^^^^^^
 
 - A simple list.
-- There are no margins between list items.
-- Simple lists do not contain multiple paragraphs. That's a complex list.
+- Simple lists do not contain multiple paragraphs.
 - In the case of a nested list
 
   - There are no margins between elements
-
-    - Still no margins
-
-      - Still no margins
 
 Complex
 ^^^^^^^
@@ -160,63 +141,46 @@ Complex
     - Third level.
     - Item 2.
 
-  * Nested item 3.
-
-- ``inline literall``
-- ``inline literall``
-- ``inline literall``
-- This item has multiple paragraphs.
-
-  This item has multiple paragraphs.
 - This item has multiple paragraphs.
 
   This item has multiple paragraphs.
 
 
-Second list level
-^^^^^^^^^^^^^^^^^
+Nesting elements
+^^^^^^^^^^^^^^^^
 
-- here is a list in a second-level section.
-- `yahoo <http://www.yahoo.com>`_
-- `yahoo <http://www.yahoo.com>`_
+Most elements can be nested in a list.
 
-  - `yahoo <http://www.yahoo.com>`_
-  - here is an inner bullet ``oh``
+- Examples:
 
-    - one more ``with an inline literally``. `yahoo <http://www.yahoo.com>`_
+  - `This is a nested link on second level <http://www.google.com>`_
 
-      heh heh. child. try to beat this embed:
+  - code may be embedded in a list.
 
-      .. literalinclude:: api.rst
-          :language: rst
-          :linenos:
+    .. literalinclude:: api.rst
+        :language: rst
+        :linenos:
 
-  - and another. `yahoo <http://www.yahoo.com>`_
-  - `yahoo <http://www.yahoo.com>`_
-  - ``hi``
-- how about an admonition?
+  - admonitions can also be nested.
 
-  .. note::
-      This is a note nested in a list.
-
-- and hehe
-
-But deeper down the rabbit hole
-"""""""""""""""""""""""""""""""
-
-- I kept saying that, "deeper down the rabbit hole". `yahoo <http://www.yahoo.com>`_
-
-  - I cackle at night `yahoo <http://www.yahoo.com>`_.
-- I'm so lonely here in GZ ``guangzhou``
-- A man of python destiny, hopes and dreams. `yahoo <http://www.yahoo.com>`_
-
-  - `yahoo <http://www.yahoo.com>`_
-
-    - `yahoo <http://www.yahoo.com>`_ ``hi``
-    - ``destiny``
+    .. note::
+        This is a note nested in a list.
+  - ``this is an inline literall``
 
 Hlists
 ------
+
+Create a horizontal list by prepending ``.. hlist::``. ::
+
+  .. hlist::
+    :columns: 2
+
+    - First item
+    - Second item
+    - Third item
+    - Forth item
+    - Fifth item
+    - Sixth item
 
 .. hlist::
     :columns: 2
@@ -226,30 +190,34 @@ Hlists
     - Third item
     - Forth item
     - Fifth item
-    - Sixths item
+    - Sixth item
 
-.. rubric:: Hlist with images
+
+Hlist with images
+-----------------
+
+Images and figures can also be added to a horizontal list.
 
 .. hlist::
-    :columns: 2
+    :columns: 3
 
-    - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
+    - .. figure:: ./_static/spiral.png
+         :width: 200px
+         :alt: David Zydd | Pixabay
+         :target: https://pixabay.com/users/davidzydd-985081/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559">David Zydd</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559
 
          This is a short caption for a figure.
 
-    - .. figure:: https://source.unsplash.com/200x200/daily?cute+animals
+    - .. figure:: ./_static/drops.jpg
+         :width: 200px
+         :alt: Leohoho | pixabay
+         :target: https://pixabay.com/users/leohoho-16235524/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5470471
 
-         This is a long caption for a figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Donec porttitor dolor in odio posuere, vitae ornare libero mattis. In lobortis justo vestibulum nibh aliquet, non.
+         This is another caption.
 
-Numbered List
--------------
+    - .. figure:: ./_static/rgb.png
+           :width: 180px
+           :alt: OpenClipart-Vectors | Pixabay
+           :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782
 
-#. One,
-#. Two.
-#. Three with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-   Sed feugiat sagittis neque quis eleifend. Duis rutrum lectus sit amet mattis suscipit.
-
-- A) Using bullets and letters. (A)
-- B) Using bullets and letters. (B)
-- C) Using bullets and letters. (C)
+           This is yet another caption.
