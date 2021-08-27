@@ -8,7 +8,8 @@ This documentation contains a guide about the theme :doc:`usage <usage>` and
 how to :doc:`contribute <contributing>` to this project.
 
 All other pages are showcases how this theme renders things among
-reStructuredText examples how to produce this results.
+`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+examples how to produce this results.
 
 
 Behavior
@@ -74,7 +75,7 @@ Credits
 -------
 
 Parts of the showcase contents are taken from
-`Sphinx Themes <https://sphinx-themes.org>`_.
+`sphinx-themes.org <https://sphinx-themes.org>`_.
 
 Sample images on this page are taken from
 `Pixabay <https://pixabay.com>`_.

@@ -38,3 +38,9 @@ Contributors
 - Lena Daxenbichler
 
 - Robert Niederreiter
+
+
+TODO
+----
+
+- Fix searchbox and external links in mobile view.

@@ -1,19 +1,36 @@
 Usage
 =====
 
-To activate **Conestack Sphinx Theme**, set ``html_theme`` in the ``conf.py``
-file of your docs source.
+Install **Conestack Sphinx Theme** with
+`pip <https://docs.python.org/3/installing/index.html>`_:
+
+.. code-block:: sh
+
+    pip install sphinx-conestack-theme
+
+Create your sphinx project:
+
+.. code-block:: sh
+
+    sphinx-quickstart
+
+Sphinx theme confguration is done in the ``conf.py`` file of your docs source
+folder.
+
+To activate the theme, ``html_theme`` must be set:
 
 .. code-block:: python
 
     html_theme = 'conestack'
 
-See `here <https://www.sphinx-doc.org/en/master/usage/theming.html>`_ for
-a detailed documentation about Sphinx theming.
+See `here <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ for
+more information about boilerplating sphinx documentation projects and
+`here <https://www.sphinx-doc.org/en/master/usage/theming.html>`_ for
+a detailed documentation about customizing Sphinx themes.
 
 
-Theme related options
----------------------
+Theming options
+---------------
 
 Theme colors
 ~~~~~~~~~~~~
@@ -47,14 +64,12 @@ The Logo is customized by setting the following HTML theme options.
         'logo_height': '40px'
     }
 
-A logo can be any .svg or image files (.png, .jpeg, etc).
-
 
 External links
 ~~~~~~~~~~~~~~
 
-You can link to your twitter, github, pypi, gitlab or npm account 
-in the header by inserting the link in the corresponding variable.
+You can link to your twitter, github, gitlab, pypi or npm account in the header
+by inserting the URL in the corresponding variable.
 
 .. code-block:: python
 
@@ -62,7 +77,7 @@ in the header by inserting the link in the corresponding variable.
         'twitter_url': 'https://twitter.com/your-account',
         'github_url': 'https://github.com/your-repo',
         'gitlab_url': 'https://gitlab.com/your-repo',
-        'pypi_url': 'https://pypi.org/project/your-project',
+        'pypi_url': 'https://pypi.org/project/your-package',
         'npm_url': 'https://npmjs.com/your-package'
     }
 
