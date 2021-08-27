@@ -12,14 +12,6 @@ Conestack Sphinx Theme
 **A mobile friendly Bootstrap 5 based Sphinx theme.**
 
 
-Features
---------
-
-- Feature a
-- Feature b
-- ...
-
-
 Detailed Documentation
 ----------------------
 
@@ -46,19 +38,3 @@ Contributors
 - Lena Daxenbichler
 
 - Robert Niederreiter
-
-
-Theme development
------------------
-
-Install environment:
-
-.. code-block:: sh
-
-    ./scripts/install.sh
-
-Build docs:
-
-.. code-block:: sh
-
-    ./scripts/docs.sh

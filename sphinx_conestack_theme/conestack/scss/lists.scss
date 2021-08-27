@@ -3,21 +3,25 @@
   ul > li > p {
     margin: 0.2rem 0;
   }
+
   .hlist {
+
     tr {
       display: flex;
       vertical-align: top;
       border-color: inherit;
     }
+
     td {
-      &:first-child {
-        border: none !important;
-      }
       position: relative;
       padding: 1rem;
       padding-left: 0;
       border-radius: 5px;
       margin-right: 1rem;
+
+      &:first-child {
+        border: none !important;
+      }
 
       > ul {
         list-style: none;

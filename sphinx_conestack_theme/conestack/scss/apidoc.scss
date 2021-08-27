@@ -1,0 +1,29 @@
+.cs-content {
+  dl.class > dt .property,
+  dl.enum-class > dt .property,
+  dl.enum-struct > dt .property,
+  dl.enum > dt .property,
+  dl.exception > dt .property,
+  dl.function > dt .property,
+  dl.method > dt .property,
+  dl.type > dt .property {
+    color: var(--bs-red);
+    font-weight: 400;
+    padding-right: 0.25rem;
+  }
+
+  .sig-prename {
+    font-weight: 400;
+    color: var(--bs-blue);
+  }
+
+  .sig-name {
+    font-weight: 700;
+    color: var(--bs-blue);
+  }
+
+  .sig-param {
+    font-weight: 400;
+    color: var(--bs-gray-600);
+  }
+}

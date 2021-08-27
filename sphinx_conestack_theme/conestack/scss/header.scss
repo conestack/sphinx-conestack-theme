@@ -63,9 +63,14 @@
 }
 
 #cs-ext-links {
+  @media (max-width: 400px) {
+    display: none !important;
+  }
+
   .nav-link {
     height: 100%;
   }
+
   .nav-item:hover::after {
     content: attr(data-title);
     color: var(--bs-gray-600);
@@ -76,10 +81,6 @@
     background: var(--bs-white);
     position: absolute;
     z-index: 1000;
-  }
-
-  @media (max-width: 400px) {
-    display: none !important;
   }
 
   svg {

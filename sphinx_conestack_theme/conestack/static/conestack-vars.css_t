@@ -1,4 +1,5 @@
 :root {
     --cs-color: {{ theme_cs_color }};
     --cs-bg-color: {{ theme_cs_bg_color }};
+    --cs-highlight-color: {{ theme_cs_highlight_color }};
 }
