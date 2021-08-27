@@ -1,9 +1,21 @@
-*****************
 API documentation
-*****************
+=================
 
-``asyncio``
-===========
+API Documentation can be generated with
+`sphinx.ext.autodoc <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_.
 
-.. automodule:: asyncio
-    :members: run, gather, AbstractEventLoop
+For example, the following directive::
+
+    Sphinx
+    ------
+
+    .. autoclass:: sphinx.application.Sphinx
+        :members:
+
+produces the following output:
+
+Sphinx
+------
+
+.. autoclass:: sphinx.application.Sphinx
+    :members:
