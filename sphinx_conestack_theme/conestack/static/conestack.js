@@ -54,7 +54,12 @@ let cs = {
     },
 
     handle_codeblocks: function() {
-        let elem = $(`<button class="copy-literal-block btn btn-outline-primary" data-text="Copy">Copy</button>`);
+        let elem = $(`
+          <button class="copy-literal-block btn btn-outline-primary"
+                  data-text="Copy">
+            Copy
+          </button>
+        `);
         $('.highlight').prepend(elem);
         $('.copy-literal-block').on('click', function() {
             let el = $(this);
@@ -65,10 +70,10 @@ let cs = {
     },
 
     handle_images: function() {
-        var imageEls = document.getElementsByTagName("img");
-        for(var i=0;i<imageEls.length;i++){
-            imageEls[i].title=imageEls[i].alt;
-        }
+        $('img').each(function() {
+            let im = $(this);
+            im.attr('title', im.attr('alt'));
+        });
     },
 
     highlight_search_words: function() {
