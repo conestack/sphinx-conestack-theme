@@ -274,7 +274,7 @@ body {
   }
 }
 .cs-main .highlighted {
-  background: var(--cs-highlight-color);
+  background: rgba(13, 110, 253, 0.2);
 }
 
 .cs-content {
