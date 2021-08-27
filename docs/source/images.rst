@@ -4,9 +4,7 @@ Images and Figures
 Inserting Images
 ----------------
 
-Images can be inserted with the ``.. image::`` or ``.. figure::`` command:
-
-.. code-block:: python
+Images can be inserted with the ``.. image::`` or ``.. figure::`` command: ::
 
     .. image:: ./_static/image.jpg
     .. figure:: https://webpage/image.jpg
@@ -22,9 +20,7 @@ You can change the width and height of an image by adding ``:width:`` and/or ``:
 
 Images can also link to a website with the ``:target:`` attribute.
 
-``:alt:`` sets the alt name of an image for screen readers.
-
-.. code-block:: python
+``:alt:`` sets the alt name of an image for screen readers. ::
 
     .. image:: ./_static/image.jpg
        :width: 150px
@@ -42,9 +38,7 @@ Figures
 
 A figure is an image with a caption and/or a legend.
 
-Use ``width``, ``height``, ``alt`` and ``target`` as you would with ``.. image::``.
-
-.. code-block:: python
+Use ``width``, ``height``, ``alt`` and ``target`` as you would with ``.. image::``. ::
 
     .. figure:: ./_static/image.jpg
        :width: 150px

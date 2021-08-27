@@ -20,7 +20,7 @@ An example for a grid table markup:
   | row1 | col2 | col3 |
   +------+------+------+
 
-.. code-block:: python
+::
 
   # example markup for a simple
   # grid table
@@ -40,7 +40,7 @@ An example for a grid table markup:
 Complex grid tables
 ~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: python
+::
 
   # example markup for a more complex table
 
@@ -92,7 +92,7 @@ Simple Tables
   True   True   True
   =====  =====  ======
 
-.. code-block:: python
+::
 
   # markup for a simple table
 
@@ -128,7 +128,7 @@ Big Tables
 List Tables
 -----------
 
-.. code-block:: python
+::
 
   # example markup for a list table
 
