@@ -1,0 +1,4 @@
+include *.rst
+recursive-include sphinx_conestack_theme *
+recursive-exclude sphinx_conestack_theme *.pyc *.pyo __pycache__
+prune sphinx_conestack_theme/conestack/scss

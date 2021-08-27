@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.0a1 (unreleased)
+1.0b1 (2021-08-27)
 ------------------
 
-- Initial package.
+- Initial release.
