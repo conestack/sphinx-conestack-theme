@@ -4,17 +4,20 @@ Conestack Sphinx Theme
 **A Bootstrap 5 based, mobile friendly Sphinx theme**
 
 
-Theme Behavior
---------------
+Behavior
+--------
 
-This sphinx template is created with responsive design in mind.
+This sphinx theme is created with responsive design in mind.
 
 .. Tip:: Try resizing this page to see the effect!
 
 The conestack sphinx template works on the following breakpoints:
-    - mobile: ``max-width: 768px``
-    - tablet: ``min-width: 769px`` and ``max-width: 991px``
-    - desktop: ``min-width: 992px``
+
+- mobile: ``max-width: 768px``
+
+- tablet: ``min-width: 769px`` and ``max-width: 991px``
+
+- desktop: ``min-width: 992px``
 
 
 Mobile View
@@ -24,6 +27,7 @@ If the window width is lesser or equal than 768px, no sidebars will be visible.
 
 The global table of contents (``globaltoc``) and searchbar are accessible from a dropdown menu in the header.
 
+
 Tablet View
 ~~~~~~~~~~~
 
@@ -32,6 +36,7 @@ the global table of contents (``globaltoc``) is visible and the local table of c
 (``localtoc``) is hidden.
 
 The search box appears in the header element.
+
 
 Desktop View
 ~~~~~~~~~~~~
@@ -74,7 +79,7 @@ Indices and tables
 .. toctree::
    :maxdepth: 3
 
-   Customize <customize>
+   Usage <usage>
    Contributing <contributing>
    Paragraphs <paragraphs>
    Lists <lists>

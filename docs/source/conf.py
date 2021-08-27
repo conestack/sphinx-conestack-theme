@@ -22,7 +22,7 @@ copyright = '2021, Cone Contributors'
 author = 'Cone Contributors'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0a1'
+release = '1.0b1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -54,3 +54,8 @@ html_theme = 'conestack'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_theme_options = {
+    'github_url': 'https://github.com/conestack/sphinx-conestack-theme',
+    'pypi_url': 'https://pypi.org/project/sphinx-conestack-theme'
+}
