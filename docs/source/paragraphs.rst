@@ -12,6 +12,31 @@ external hyperlinks with embedded URIs (`Python web site <http://www.python.org>
 (manually numbered [1]_, anonymous auto-numbered [#]_, labeled auto-numbered [#label]_, or symbolic [*]_),
 citation references ([12]_), substitution references (|example|), and _`inline hyperlink targets`.
 
+*Emphasis:*
+    ``*text*``
+
+**Strong emphasis:**
+    ``**text**``
+
+``inline literal:``
+    ````inline literal````
+
+Standalone hyperlink:
+    http://www.python.org ``http://www.python.org``
+
+Internal cross-reference:
+    example_ ``example_``
+
+External hyperlink with embedded URI:
+    `Python web site <http://www.python.org>`__ ```Python web site <http://www.python.org>`__``
+
+Footnote references:
+    - manually numbered [1]_
+    - anonymous auto-numbered [#]_
+    - labeled auto-numbered [#label]_
+    - symbolic [*]_
+
+
 .. Warning:: Invalid hyperlinks will display red_.
 
 GUI labels
@@ -135,7 +160,18 @@ Footnotes
 Glossary
 ~~~~~~~~
 
-This is a glossary with definition terms like :term:`Writing`:
+This is a glossary with definition terms like :term:`Writing`: ::
+
+   .. glossary::
+
+      Documentation
+         Provides users with the knowledge they need to use something.
+
+      Reading
+         The process of taking information into ones mind through the use of eyes.
+
+      Writing
+         The process of putting thoughts into a medium for other people to :term:`read <Reading>`.
 
 .. glossary::
 

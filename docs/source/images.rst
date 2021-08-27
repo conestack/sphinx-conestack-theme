@@ -1,7 +1,6 @@
 Images and Figures
 ==================
 
-
 Inserting Images
 ----------------
 
@@ -14,6 +13,7 @@ Images can be inserted with the ``.. image::`` or ``.. figure::`` command:
 
 Insert images either locally or from a URL.
 
+
 Images
 ~~~~~~
 
@@ -23,7 +23,6 @@ You can change the width and height of an image by adding ``:width:`` and/or ``:
 Images can also link to a website with the ``:target:`` attribute.
 
 ``:alt:`` sets the alt name of an image for screen readers.
-
 
 .. code-block:: python
 
@@ -62,6 +61,7 @@ Use ``width``, ``height``, ``alt`` and ``target`` as you would with ``.. image::
    This is the content of a figure.
 
 .. Hint:: Other elements can be nested in the content of a figure.
+
 
 Images in tables
 ----------------

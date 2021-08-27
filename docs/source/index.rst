@@ -65,6 +65,8 @@ Parts of the demo content is taken from
 Sample images on this page are taken from
 `Pixabay <https://pixabay.com>`_.
 
+Images are linked to the creator's page.
+
 
 Indices and tables
 ------------------
