@@ -6,11 +6,12 @@ Inline Markup
 
 Paragraphs contain text and may also contain inline markup, such as:
 
-*emphasis*, **strong emphasis**, ``inline literals``,
-standalone hyperlinks (http://www.python.org), internal cross-references (example_),
-external hyperlinks with embedded URIs (`Python web site <http://www.python.org>`__), footnote references
-(manually numbered [1]_, anonymous auto-numbered [#]_, labeled auto-numbered [#label]_),
-citation references ([12]_), substitution references (|example|), and _`inline hyperlink targets`.
+*emphasis*, **strong emphasis**, ``inline literals``, standalone hyperlinks
+(http://www.python.org), internal cross-references (example_), external
+hyperlinks with embedded URIs (`Python web site <http://www.python.org>`_),
+footnote references (manually numbered [1]_, anonymous auto-numbered [#]_,
+labeled auto-numbered [#label]_), citation references ([12]_), substitution
+references (|example|), and _`inline hyperlink targets`.
 
 *Emphasis:*
     ``*text*``
@@ -28,7 +29,8 @@ Internal cross-reference:
     example_ ``example_``
 
 External hyperlink with embedded URI:
-    `Python web site <http://www.python.org>`__ ```Python web site <http://www.python.org>`__``
+    `Python web site <http://www.python.org>`_
+    ```Python web site <http://www.python.org>`_``
 
 Footnote reference:
     - manually numbered [1]_ ``[1]_``
@@ -50,22 +52,24 @@ _`inline hyperlink target`:
 GUI labels
 ~~~~~~~~~~
 
-GUI labels (``:guilabel:`some action```) are a useful way to indicate that :guilabel:`Some action` is to be taken by the user.
-The GUI label should not run over ``line-height`` so as not to :guilabel:`interfere` with text from adjacent lines.
+GUI labels (``:guilabel:`some action```) are a useful way to indicate that
+:guilabel:`Some action` is to be taken by the user. The GUI label should not
+run over ``line-height`` so as not to :guilabel:`interfere` with text from
+adjacent lines.
 
 
 Key bindings
 ~~~~~~~~~~~~
 
-Key-bindings (``:kbd:`key```) indicate that the read is to press a button on the keyboard or mouse,
-for example :kbd:`MMB` and :kbd:`Shift-MMB`. 
+Key-bindings (``:kbd:`key```) indicate that the read is to press a button on
+the keyboard or mouse, for example :kbd:`MMB` and :kbd:`Shift-MMB`.
 
 
 Menu Selection
 ~~~~~~~~~~~~~~
 
-Another useful markup to indicate a user action
-is to use ``:menuselection:`Path --> To```:
+Another useful markup to indicate a user action is to use
+``:menuselection:`Path --> To```:
 
 :menuselection:`My --> Software --> Some menu --> Some sub menu 1 --> sub menu 2`.
 
@@ -78,6 +82,8 @@ Math
     :math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
 
   :math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
+
+|
 
 - A more complex example: ::
 
@@ -99,7 +105,9 @@ Math
     \left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
     \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}
 
-.. Note:: Math elements have ``overflow:auto`` enabled by default.
+.. Note::
+
+    Math elements have ``overflow:auto`` enabled by default.
 
 
 Blocks
@@ -108,8 +116,8 @@ Blocks
 Literal Blocks
 ~~~~~~~~~~~~~~
 
-Literal blocks are indicated with a double-colon ("::") at the end of
-the preceding paragraph.  They can be indented. ::
+Literal blocks are indicated with a double-colon ("::") at the end of the
+preceding paragraph. They can be indented. ::
 
   Title ::
 
@@ -163,10 +171,10 @@ References
 Footnotes
 ~~~~~~~~~
 
-.. [1] A footnote contains body elements, consistently indented by at
-   least 3 spaces.
+.. [1] A footnote contains body elements, consistently indented by at least 3
+   spaces.
 
-   This is the footnote's second paragraph.
+   This is the second paragraph.
 
 .. [#label] Footnotes may be numbered, either manually (as in [1]_) or
    automatically using a "#"-prefixed label.  This footnote has a
@@ -174,14 +182,14 @@ Footnotes
    footnote reference ([#label]_) and as a hyperlink reference
    (label_).
 
-.. [#] This footnote is numbered automatically and anonymously using a
-   label of "#" only.
+.. [#] This footnote is numbered automatically and anonymously using a label
+   of "#" only.
 
 ::
 
    .. [1] A simple footnote
 
-      This is the footnote's second paragraph.
+      This is the second paragraph.
 
    .. [#label] A numbered footnote with a label.
 
@@ -199,10 +207,12 @@ This is a glossary with definition terms like :term:`Writing`: ::
          Provides users with the knowledge they need to use something.
 
       Reading
-         The process of taking information into ones mind through the use of eyes.
+         The process of taking information into ones mind through the use
+         of eyes.
 
       Writing
-         The process of putting thoughts into a medium for other people to :term:`read <Reading>`.
+         The process of putting thoughts into a medium for other people
+         to :term:`read <Reading>`.
 
 .. glossary::
 
@@ -210,10 +220,12 @@ This is a glossary with definition terms like :term:`Writing`: ::
      Provides users with the knowledge they need to use something.
 
   Reading
-     The process of taking information into ones mind through the use of eyes.
+     The process of taking information into ones mind through the use
+     of eyes.
 
   Writing
-     The process of putting thoughts into a medium for other people to :term:`read <Reading>`.
+     The process of putting thoughts into a medium for other people
+     to :term:`read <Reading>`.
 
 Link to a term with ``:term:``. ::
 
@@ -271,6 +283,7 @@ Use admonitions for important information. ::
 
     ``.. some-name::``
 
+
 Admonition nesting
 ~~~~~~~~~~~~~~~~~~
 
@@ -322,9 +335,11 @@ Use `Link text <https://domain.invalid/>`_ for simple inline web links. ::
 
     `Link text <https://domain.invalid/>`_
 
-.. Important:: There must be a space between the link text and the opening ``<`` for the URL.
+.. Important::
 
-You can also separate the link and the target definition. 
+    There must be a space between the link text and the opening ``<`` for the URL.
+
+You can also separate the link and the target definition.
 
 This is a paragraph that contains `a link`_. ::
 
@@ -342,7 +357,7 @@ Cross-referencing locations:
 
 Place a label directly before the section title.
 
-You can reference to it with ``:ref:`label-name```.  ::
+You can reference to it with ``:ref:`label-name```. ::
 
     .. _your-label:
 
@@ -353,9 +368,7 @@ You can reference to it with ``:ref:`label-name```.  ::
 
     It refers to the section itself, see :ref:`your-label`.
 
-
 Try this hyperlink to download links: :ref:`download-ref`
-
 
 You can also label a figure. ::
 
@@ -381,8 +394,10 @@ Reference the figure like so: ::
 
 :ref:`rgb`
 
-.. Caution:: Reference labels must start with an underscore. When referencing a label, 
-             the underscore must be omitted.
+.. Caution::
+
+    Reference labels must start with an underscore. When referencing a label,
+    the underscore must be omitted.
 
 Directly link to documents: ::
 
@@ -399,6 +414,7 @@ Or add your own link text. ::
 .. Note:: You can also reference tables.
 
 .. _download-ref:
+
 
 Download Links
 ~~~~~~~~~~~~~~
