@@ -568,6 +568,10 @@ footer .next-chapter::after {
   font-weight: 400;
   color: var(--bs-gray-600);
 }
+.cs-content #api-documentation {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 
 .cs-local-toc {
   grid-area: toc;
