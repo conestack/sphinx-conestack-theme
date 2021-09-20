@@ -43,4 +43,4 @@ Contributors
 TODO
 ----
 
-- Fix searchbox and external links in mobile view.
+- ensure compatibility across mobile browsers (mobile detection in conestack.js)
