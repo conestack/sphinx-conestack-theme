@@ -43,4 +43,3 @@ Contributors
 TODO
 ----
 
-- Fix searchbox and external links in mobile view.

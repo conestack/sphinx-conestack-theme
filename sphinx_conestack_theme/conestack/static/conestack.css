@@ -316,6 +316,21 @@ body {
   opacity: 1;
 }
 
+#scrolltop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 1rem;
+  left: calc(100vw - 1rem);
+  background: var(--cs-bg-color);
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--cs-color);
+  box-shadow: -2px 2px 12px #00000031;
+}
+
 footer .previous-chapter::before {
   content: "<< ";
 }

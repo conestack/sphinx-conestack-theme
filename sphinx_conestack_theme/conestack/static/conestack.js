@@ -9,7 +9,7 @@ let cs = {
         this.init_navigation();
         this.bind_navigation();
         this.handle_searchbox();
-        this.handle_codeblocks();
+        this.handle_mobile();
         this.handle_images();
         $(window).on('resize', cs.handle_searchbox.bind(this));
     },
@@ -53,11 +53,27 @@ let cs = {
         }
     },
 
-    handle_codeblocks: function() {
+    handle_mobile: function() {
         const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
         if(isMobileDevice) {
-            return;
+            let btn = $(`<button id="scrolltop" class="btn"><i class="bi bi-arrow-up"></button>`);
+            $('#cs-layout').append(btn);
+            btn.on('click', () => {
+                $(window).scrollTop(0);
+            });
+            $(window).on('scroll', () => {
+                if (btn.css('display') === 'none') {
+                    btn.fadeIn('fast');
+                } else if ($(window).scrollTop() === 0) {
+                    btn.fadeOut('fast');
+                }
+            })
+        } else {
+            cs.handle_codeblocks();
         }
+    },
+
+    handle_codeblocks: function() {
         let elem = $(`
           <button class="copy-literal-block btn btn-outline-primary"
                   data-text="Copy">
