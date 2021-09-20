@@ -11,6 +11,7 @@ let cs = {
         this.handle_searchbox();
         this.handle_codeblocks();
         this.handle_images();
+        this.handle_mobile();
         $(window).on('resize', cs.handle_searchbox.bind(this));
     },
 
@@ -43,6 +44,13 @@ let cs = {
                 ul.slideDown(300);
             }
         }.bind(this));
+    },
+
+    handle_mobile: function() {
+        let ext_link_width = $('#cs-ext-links').outerWidth();
+        let button_width = $('#navbar-toggle').outerWidth(true);
+        let maxwidth = ext_link_width + button_width + 'px';
+        $('#logo').css('max-width', `calc(100% - ${maxwidth} - 3rem)`);
     },
 
     handle_searchbox: function() {
