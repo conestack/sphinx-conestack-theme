@@ -7,8 +7,8 @@ Source Code
 The sources are in a GIT DVCS with its main branches at
 `github <http://github.com/conestack/sphinx-conestack-theme>`_.
 
-If you encounter bugs, missing features or someting to improve, please file
-an issue or fork thie repo and create a pull request.
+If you encounter any bugs, missing features or something to improve, please file
+an issue or fork this repo and create a pull request.
 
 
 Theme development
@@ -17,7 +17,7 @@ Theme development
 A general guide about shpinx theme development can be found
 `here <https://www.sphinx-doc.org/en/master/development/theming.html>`_.
 
-Styles are creates using `sass <https://sass-lang.com>`_.
+Styles are created using `sass <https://sass-lang.com>`_.
 
 If you plan to contribute code to this project, please create a fork from
 the repository.
@@ -57,7 +57,7 @@ To rebuild the styles, run:
 
     $ ./scripts/styles.sh
 
-Building this docs (will also rebuild styles) is done with:
+Building the docs (will also rebuild styles) is done with:
 
 .. code-block:: sh
 

@@ -35,7 +35,7 @@ Theming options
 Theme colors
 ~~~~~~~~~~~~
 
-The Header background and text colos can be customized by defining ``cs_color``
+The Header background and text colors can be customized by defining ``cs_color``
 and ``cs_bg_color`` HTML theme options in ``conf.py``:
 
 .. code-block:: python
