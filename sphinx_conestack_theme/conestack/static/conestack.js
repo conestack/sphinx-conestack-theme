@@ -46,7 +46,7 @@ let cs = {
     },
 
     handle_searchbox: function() {
-        if(window.matchMedia('(max-width:768px)').matches) {
+        if (window.matchMedia('(max-width:768px)').matches) {
             this.searchbox.detach().prependTo('#cs-mobile-menu');
         } else {
             this.searchbox.detach().appendTo('#nav-search');
@@ -54,10 +54,11 @@ let cs = {
     },
 
     handle_mobile: function() {
-        const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
-        if(isMobileDevice) {
+        const is_mobile_device = /Mobi/i.test(window.navigator.userAgent);
+        if (is_mobile_device) {
             let btn = $(`<button id="scrolltop" class="btn"><i class="bi bi-arrow-up"></button>`);
             $('#cs-layout').append(btn);
+            btn.hide();
             btn.on('click', () => {
                 $(window).scrollTop(0);
             });
