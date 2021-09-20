@@ -49,9 +49,7 @@ let cs = {
     handle_mobile: function() {
         let ext_link_width = $('#cs-ext-links').outerWidth();
         let button_width = $('#navbar-toggle').outerWidth(true);
-
         let maxwidth = ext_link_width + button_width + 'px';
-
         $('#logo').css('max-width', `calc(100% - ${maxwidth} - 3rem)`);
     },
 
