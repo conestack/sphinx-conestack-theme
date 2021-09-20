@@ -54,6 +54,10 @@ let cs = {
     },
 
     handle_codeblocks: function() {
+        const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+        if(isMobileDevice) {
+            return;
+        }
         let elem = $(`
           <button class="copy-literal-block btn btn-outline-primary"
                   data-text="Copy">
