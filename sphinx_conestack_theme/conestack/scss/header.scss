@@ -30,12 +30,7 @@
     text-decoration: none;
   }
 
-  @media (min-width: 769px) {
-    max-width: calc(100% - 500px)!important;
-  }
-
   @media (max-width: 768px) {
-    max-width: calc(100% - 300px)!important;
     margin-left: 1rem!important;
   }
 
@@ -60,11 +55,18 @@
     color: black;
     margin-right: 0px!important;
   }
+
+  form.search {
+    margin-bottom: 0;
+  }
 }
 
 #cs-ext-links {
   @media (max-width: 400px) {
     display: none !important;
+  }
+  @media (max-width: 768px) {
+    margin-left: auto;
   }
 
   .nav-link {
