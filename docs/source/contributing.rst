@@ -14,7 +14,7 @@ an issue or fork this repo and create a pull request.
 Theme development
 -----------------
 
-A general guide about shpinx theme development can be found
+A general guide about sphinx theme development can be found
 `here <https://www.sphinx-doc.org/en/master/development/theming.html>`_.
 
 Styles are created using `sass <https://sass-lang.com>`_.
