@@ -62,19 +62,25 @@ let cs = {
     },
 
     handle_searchbox_resize: function() {
-        let nav_exists = $('#nav-search').children().length;
-
-        if (window.matchMedia('(max-width:768px)').matches && nav_exists === 1) {
+        let nav_exists = $('#nav-search').children().length > 0;
+        if (window.matchMedia('(max-width:768px)').matches && nav_exists) {
             this.searchbox.detach().prependTo('#cs-mobile-menu');
-        } else if (window.matchMedia('(min-width:768px)').matches && nav_exists === 0) {
+        } else if (window.matchMedia('(min-width:768px)').matches && !nav_exists) {
             this.searchbox.detach().appendTo('#nav-search');
         }
     },
 
     handle_mobile: function() {
-        const is_mobile_device = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
+        const is_mobile_device = (
+            'ontouchstart' in document.documentElement
+            && navigator.userAgent.match(/Mobi/)
+        );
         if (is_mobile_device) {
-            let btn = $(`<button id="scrolltop" class="btn"><i class="bi bi-arrow-up"></button>`);
+            let btn = $(`
+              <button id="scrolltop" class="btn">
+                <i class="bi bi-arrow-up">
+              </button>
+            `);
             $('#cs-layout').append(btn);
             btn.hide();
             btn.on('click', () => {

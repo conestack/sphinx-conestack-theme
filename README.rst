@@ -38,7 +38,3 @@ Contributors
 - Lena Daxenbichler
 
 - Robert Niederreiter
-
-
-TODO
-----
