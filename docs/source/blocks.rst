@@ -37,7 +37,7 @@ Format the code block for python with ``.. code-block:: python``.
 Javascript Code Block
 ---------------------
 
-Format the code block for python with ``.. code-block:: js``.
+Format the code block for javascript with ``.. code-block:: js``.
 
 .. code-block:: js
 

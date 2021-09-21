@@ -42,5 +42,3 @@ Contributors
 
 TODO
 ----
-
-- ensure compatibility across mobile browsers (mobile detection in conestack.js)
