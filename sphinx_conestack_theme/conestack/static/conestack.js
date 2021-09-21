@@ -12,7 +12,7 @@ let cs = {
         this.handle_codeblocks();
         this.handle_images();
         this.handle_mobile();
-        $(window).on('resize', cs.handle_searchbox.bind(this));
+        $(window).on('resize', cs.handle_searchbox_resize.bind(this));
     },
 
     init_navigation: function() {
@@ -54,9 +54,19 @@ let cs = {
     },
 
     handle_searchbox: function() {
-        if(window.matchMedia('(max-width:768px)').matches) {
-            this.searchbox.detach().prependTo('#cs-mobile-menu');
+        if (window.matchMedia('(min-width:768px)').matches) {
+            this.searchbox.detach().appendTo('#nav-search');
         } else {
+            this.searchbox.detach().prependTo('#cs-mobile-menu');
+        }
+    },
+
+    handle_searchbox_resize: function() {
+        let nav_exists = $('#nav-search').children().length;
+
+        if (window.matchMedia('(max-width:768px)').matches && nav_exists === 1) {
+            this.searchbox.detach().prependTo('#cs-mobile-menu');
+        } else if (window.matchMedia('(min-width:768px)').matches && nav_exists === 0) {
             this.searchbox.detach().appendTo('#nav-search');
         }
     },
