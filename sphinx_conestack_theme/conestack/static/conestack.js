@@ -72,7 +72,7 @@ let cs = {
     },
 
     handle_mobile: function() {
-        const is_mobile_device = /Mobi/i.test(window.navigator.userAgent);
+        const is_mobile_device = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
         if (is_mobile_device) {
             let btn = $(`<button id="scrolltop" class="btn"><i class="bi bi-arrow-up"></button>`);
             $('#cs-layout').append(btn);
