@@ -20,6 +20,11 @@
   grid-area: content;
   height: fit-content;
 
+  #search-results {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
   .headerlink {
     text-decoration: none;
     padding-left: 8px;

@@ -283,6 +283,10 @@ body {
   grid-area: content;
   height: fit-content;
 }
+.cs-content #search-results {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 .cs-content .headerlink {
   text-decoration: none;
   padding-left: 8px;
