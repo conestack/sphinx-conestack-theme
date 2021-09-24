@@ -176,6 +176,8 @@ body {
   position: relative;
   font-weight: 600;
   margin-bottom: 0.3rem;
+  margin-left: 20px;
+  text-indent: -10px;
 }
 .cs-nav-toc li.toctree-l1.current > a {
   color: var(--cs-bg-color);
@@ -213,6 +215,11 @@ body {
 .cs-nav-toc li.toctree-l1 > span.toggle {
   position: absolute;
   cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: -22px;
+  top: 2px;
 }
 .cs-nav-toc li.toctree-l1 > span.toggle::before {
   display: inline-block;
@@ -244,7 +251,7 @@ body {
 }
 @media (min-width: 992px) {
   #cs-layout {
-    grid-template-columns: 1fr 5fr !important;
+    grid-template-columns: 1fr 10fr !important;
   }
 }
 @media (min-width: 769px) {

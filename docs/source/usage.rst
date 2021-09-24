@@ -65,8 +65,60 @@ The Logo is customized by setting the following HTML theme options.
     }
 
 
+Layout options
+--------------
+
+Customize your layout by overwriting the following variables: ::
+
+    html_theme_options = {
+        'sidebar_left_width': '',
+        'sidebar_right_width': '',
+        'layout_width': ''
+    }
+
+The given parameter is included as a ``<style>`` tag with the ``min-width`` property for sidebars,
+and ``max-width`` for the layout.
+
+All changes are implemented desktop-only.
+
+.. Tip::
+
+    Most css syntax is supported, including, but not limited to:
+
+    - ``px``
+    - ``rem``
+    - ``calc()``
+    - ``%``
+    - ``min-content`` and ``max-content``
+
+Example: ::
+
+    html_theme_options = {
+        'sidebar_left_width': 'calc(100px - 2rem)',
+        'sidebar_right_width': '150px',
+        'layout_width': '100%'
+    }
+
+.. Important::
+
+    Customization has its limits.
+    If you choose to include custom styles, make sure your layout composition works on different browser sizes.
+
+
+Sidebar display
+~~~~~~~~~~~~~~~
+
+By default, the local toc (table of contents) will be displayed on desktop viewports.
+
+If you want to disable the local toc (``sidebar_right``), add a 'none' attribute. ::
+
+    html_theme_options = {
+        'sidebar_right': 'none'
+    }
+
+
 External links
-~~~~~~~~~~~~~~
+--------------
 
 You can link to your twitter, github, gitlab, pypi or npm account in the header
 by inserting the URL in the corresponding variable.

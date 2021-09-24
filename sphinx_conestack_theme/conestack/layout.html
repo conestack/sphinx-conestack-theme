@@ -33,6 +33,15 @@
     </style>
   </noscript>
 
+  {% if theme_layout_width %}
+    <style>
+      @media (min-width: 992px) {
+        #cs-layout, #cs-nav {
+          max-width:{{ theme_layout_width }} !important;
+        }
+      }
+    </style>
+  {% endif %}
   {% block header_navbar %}
   <header class="navbar navbar-expand-md" id="header">
     <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
@@ -55,6 +64,16 @@
   </header>
   {% endblock %}
 
+  {% if theme_sidebar_left_width %}
+    <style>
+      @media (min-width: 992px) {
+        #cs-sidebar {
+            min-width: {{ theme_sidebar_left_width }} !important;
+        }
+      }
+    </style>
+  {% endif %}
+
   <div class="container-xxl my-md-4" id="cs-layout">
     {% block sidebar %}
       {%- include "sidebar.html" %}
@@ -67,7 +86,15 @@
       </div>
       {%- endblock %}
 
+    {% if theme_sidebar_right != 'none' %}
       {%- include "localtoc.html" %}
+    {% else %}
+      <style>
+        .cs-main {
+          display: block!important;
+        }
+      </style>
+    {% endif %}
     </main>
   </div>
 {%- endblock %}
