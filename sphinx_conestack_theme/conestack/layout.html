@@ -60,14 +60,20 @@
       {%- include "sidebar.html" %}
     {% endblock %}
 
-    <main class="document cs-main order-1">
+    {% if theme_sidebar_right %}
+      <main class="document cs-main order-1">
+    {% else %}
+      <main class="document cs-main d-block overflow-auto order-1">
+    {% endif %}
       {%- block document %}
       <div class="ps-lg-4 mt-3 cs-content">
         {% block body %}{% endblock %}
       </div>
       {%- endblock %}
 
+    {% if theme_sidebar_right %}
       {%- include "localtoc.html" %}
+    {% endif %}
     </main>
   </div>
 {%- endblock %}
