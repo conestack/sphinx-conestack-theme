@@ -110,10 +110,10 @@ Sidebar display
 
 By default, the local toc (table of contents) will be displayed on desktop viewports.
 
-If you want to disable the local toc (``sidebar_right``), add a 'none' attribute. ::
+If you want to disable the local toc (``sidebar_right``): ::
 
     html_theme_options = {
-        'sidebar_right': 'none'
+        'sidebar_right': False
     }
 
 
