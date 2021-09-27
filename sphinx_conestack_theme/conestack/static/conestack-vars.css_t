@@ -2,4 +2,8 @@
     --cs-color: {{ theme_cs_color }};
     --cs-bg-color: {{ theme_cs_bg_color }};
     --cs-highlight-color: {{ theme_cs_highlight_color }};
+
+    --layout-width: {{ theme_layout_width }};
+    --sidebar-left-width: {{ theme_sidebar_left_width }};
+    --sidebar-right-width: {{ theme_sidebar_right_width }};
 }

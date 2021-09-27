@@ -76,7 +76,7 @@ Customize your layout by overwriting the following variables: ::
         'layout_width': ''
     }
 
-The given parameter is included as a ``<style>`` tag with the ``min-width`` property for sidebars,
+The given parameter is set in css with the ``min-width`` property for sidebars,
 and ``max-width`` for the layout.
 
 All changes are implemented desktop-only.

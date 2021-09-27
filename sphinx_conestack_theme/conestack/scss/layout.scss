@@ -16,3 +16,13 @@
     padding: 1rem;
   }
 }
+
+@media (min-width: 992px) {
+  #cs-layout, #cs-nav {
+    max-width: var(--layout-width) !important;
+  }
+
+  #cs-sidebar {
+    min-width: var(--sidebar-left-width) !important;
+  }
+}

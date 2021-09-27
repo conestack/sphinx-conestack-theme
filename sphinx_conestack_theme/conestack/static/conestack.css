@@ -268,6 +268,15 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  #cs-layout, #cs-nav {
+    max-width: var(--layout-width) !important;
+  }
+
+  #cs-sidebar {
+    min-width: var(--sidebar-left-width) !important;
+  }
+}
 .cs-main {
   gap: inherit;
   display: grid;
@@ -621,7 +630,7 @@ footer .next-chapter::after {
     height: max-content;
     max-height: calc(100vh - 8rem);
     width: min-content;
-    min-width: 180px;
+    min-width: var(--sidebar-right-width) !important;
   }
 }
 .cs-local-toc nav {

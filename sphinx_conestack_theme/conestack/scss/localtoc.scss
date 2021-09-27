@@ -17,7 +17,7 @@
     height: max-content;
     max-height: calc(100vh - 8rem);
     width: min-content;
-    min-width: 180px;
+    min-width: var(--sidebar-right-width) !important;
   }
 
   nav {

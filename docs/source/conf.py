@@ -57,5 +57,8 @@ html_static_path = ['_static']
 
 html_theme_options = {
     'github_url': 'https://github.com/conestack/sphinx-conestack-theme',
-    'pypi_url': 'https://pypi.org/project/sphinx-conestack-theme'
+    'pypi_url': 'https://pypi.org/project/sphinx-conestack-theme',
+    'layout_width': '1320px',
+    'sidebar_left_width': '180px',
+    'sidebar_right_width': '180px'
 }
