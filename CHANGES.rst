@@ -1,6 +1,16 @@
 Changes
 =======
 
+1.0b3 (unreleased)
+------------------
+
+- Add them option to hide localtoc.
+
+- Improve global toc styles.
+
+- Make colums widths configurable.
+
+
 1.0b2 (2021-09-21)
 ------------------
 

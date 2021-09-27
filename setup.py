@@ -7,7 +7,7 @@ def read_file(name):
         return f.read()
 
 
-version = '1.0b2'
+version = '1.0b3.dev0'
 shortdesc = 'Mobile friendly Bootstrap 5 based Sphinx theme'
 longdesc = '\n\n'.join([read_file(name) for name in [
     'README.rst',
