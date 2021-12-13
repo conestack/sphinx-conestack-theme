@@ -4,7 +4,7 @@ Changes
 1.0b3 (unreleased)
 ------------------
 
-- Add them option to hide localtoc.
+- Add theme option to hide localtoc.
 
 - Improve global toc styles.
 
