@@ -1,7 +1,13 @@
 Changes
 =======
 
-1.0b3 (unreleased)
+1.0b4 (unreleased)
+------------------
+
+- No changes yet.
+
+
+1.0b3 (2021-12-13)
 ------------------
 
 - Add theme option to hide localtoc.
