@@ -1,10 +1,14 @@
 Changes
 =======
 
-1.0b4 (unreleased)
-------------------
+1.0 (unreleased)
+----------------
 
-- No changes yet.
+- Minimum Sphinx version is 5.0. Testet up to 7.3.
+
+- Minimum Python version is 3.9 now.
+
+- Migrate from setup.py to pyproject.toml.
 
 
 1.0b3 (2021-12-13)
