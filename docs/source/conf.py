@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Conestack Sphinx Theme'
-copyright = '2021, Cone Contributors'
+copyright = '2021-2024, Cone Contributors'
 author = 'Cone Contributors'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0b3'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
