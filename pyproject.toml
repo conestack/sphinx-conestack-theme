@@ -42,7 +42,7 @@ Code = "https://github.com/conestack/sphinx-conestack-theme"
 packages = ["sphinx_conestack_theme"]
 
 [tool.setuptools.dynamic]
-readme = {file = ["README.rst", "CHANGES.rst", "LICENSE.rst"], content-type = "text/rst"}
+readme = {file = ["README.rst", "CHANGES.rst", "LICENSE.rst"], content-type = "text/x-rst"}
 
 [tool.zest.releaser]
 create-wheel = true
