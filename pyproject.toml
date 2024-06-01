@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "sphinx-conestack-theme"
 description = "Mobile friendly Bootstrap 5 based Sphinx theme"
 version = "1.0b4.dev0"
-readme = "README.rst"
-license = "Simplified BSD"
+requires-python = ">=3.9"
+license = { text = "BSD 2-Clause License" }
 authors = [
     { name = "Cone Contributors", email = "dev@conestack.org" },
 ]
@@ -39,6 +39,9 @@ Homepage = "https://github.com/conestack/sphinx-conestack-theme"
 
 [tool.distutils.bdist_wheel]
 universal = true
+
+[tool.setuptools]
+packages = ["sphinx_conestack_theme"]
 
 [tool.setuptools.dynamic]
 readme = {file = ["README.rst", "CHANGES.rst", "LICENSE.rst"], content-type = "text/rst"}
