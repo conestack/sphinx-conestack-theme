@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.0 (unreleased)
+1.0 (2024-06-01)
 ----------------
 
 - Minimum Sphinx version is 5.0. Testet up to 7.3.
