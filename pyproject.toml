@@ -44,4 +44,4 @@ universal = true
 readme = {file = ["README.rst", "CHANGES.rst", "LICENSE.rst"], content-type = "text/rst"}
 
 [tool.zest.releaser]
-create-wheel = yes
+create-wheel = true
