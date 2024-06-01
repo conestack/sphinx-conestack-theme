@@ -43,11 +43,11 @@ Enter respository and create a new feature or bugfix branch:
 
 The repository contains a set of helper bash scripts for development.
 
-For installation of the python virtual environment and sass, use:
+For installation of the development environment, use:
 
 .. code-block:: sh
 
-    $ ./scripts/install.sh
+    $ make install
 
 The scss files are located in ``shpinx_conestack_theme/conestack/scss``.
 
@@ -55,22 +55,19 @@ To rebuild the styles, run:
 
 .. code-block:: sh
 
-    $ ./scripts/styles.sh
+    $ make scss
 
 Building the docs (will also rebuild styles) is done with:
 
 .. code-block:: sh
 
-    $ ./scripts/docs.sh
+    $ make docs
 
 To cleanup the development environment, call:
 
 .. code-block:: sh
 
-    $ ./scripts/clean.sh
-
-This will remove the installed python virtual environment, npm modules and
-the generated project docs.
+    $ make clean
 
 When done with your work, push your newly created branch and create a pull
 request.

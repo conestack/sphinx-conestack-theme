@@ -35,7 +35,8 @@ dynamic = ["readme"]
 conestack = "sphinx_conestack_theme"
 
 [project.urls]
-Homepage = "https://github.com/conestack/sphinx-conestack-theme"
+Homepage = "https://conestack.github.io/sphinx-conestack-theme"
+Code = "https://github.com/conestack/sphinx-conestack-theme"
 
 [tool.distutils.bdist_wheel]
 universal = true

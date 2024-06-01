@@ -16,7 +16,7 @@ Detailed Documentation
 ----------------------
 
 The detailed ``sphinx-conestack-theme`` documentation is available
-`here <https://sphinx-conestack-theme.readthedocs.io>`_.
+`here <https://conestack.github.io/sphinx-conestack-theme>`_.
 
 
 Source Code
