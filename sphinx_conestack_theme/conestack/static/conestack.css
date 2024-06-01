@@ -272,7 +272,6 @@ body {
   #cs-layout, #cs-nav {
     max-width: var(--layout-width) !important;
   }
-
   #cs-sidebar {
     min-width: var(--sidebar-left-width) !important;
   }
@@ -350,7 +349,7 @@ body {
   width: 2.2rem;
   height: 2.2rem;
   color: var(--cs-color);
-  box-shadow: -2px 2px 12px #00000031;
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.1921568627);
 }
 
 footer .previous-chapter::before {
@@ -866,5 +865,3 @@ footer .next-chapter::after {
   font-size: 12px;
   padding: 0.1em 0.2em;
 }
-
-/*# sourceMappingURL=conestack.css.map */

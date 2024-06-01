@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-conestack-theme"
+description = "Mobile friendly Bootstrap 5 based Sphinx theme"
+version = "1.0b4.dev0"
+readme = "README.rst"
+license = "Simplified BSD"
+authors = [
+    { name = "Cone Contributors", email = "dev@conestack.org" },
+]
+keywords = [
+    "Sphinx",
+    "conestack",
+    "theme",
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+]
+dependencies = [
+    "Sphinx>=7.3.0",
+]
+dynamic = ["readme"]
+
+[project.entry-points."sphinx.html_themes"]
+conestack = "sphinx_conestack_theme"
+
+[project.urls]
+Homepage = "https://github.com/conestack/sphinx-conestack-theme"
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst", "CHANGES.rst", "LICENSE.rst"], content-type = "text/rst"}
+
+[tool.zest.releaser]
+create-wheel = yes

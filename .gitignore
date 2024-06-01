@@ -1,4 +1,6 @@
 __pycache__
+.mxmake/
+.venv/
 *.egg-info/
 *.pyc
 /dist/
