@@ -7,3 +7,4 @@ __pycache__
 /docs/html/
 /node_modules/
 /pyvenv.cfg
+/requirements-mxdev.txt

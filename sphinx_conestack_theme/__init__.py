@@ -94,6 +94,6 @@ def setup(app):
     base_path = os.path.dirname(__file__)
     theme_path = os.path.abspath(os.path.join(base_path, 'conestack'))
     app.add_html_theme('conestack', theme_path)
-    hpi = app.config.values['html_permalinks_icon']
-    app.config.values['html_permalinks_icon'] = ('#', hpi[1], hpi[2])
     app.connect('html-page-context', setup_localtoc)
+    # https://github.com/sphinx-doc/sphinx/issues/9573
+    app.config.__dict__['html_permalinks_icon'] = '#'

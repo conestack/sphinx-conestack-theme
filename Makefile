@@ -5,6 +5,8 @@
 #: applications.zest-releaser
 #: core.base
 #: core.mxenv
+#: core.mxfiles
+#: core.packages
 #: docs.sphinx
 #: js.npm
 #: js.scss
@@ -147,6 +149,19 @@ DOCS_TARGET_FOLDER?=docs/html
 # Documentation Python requirements to be installed (via pip).
 # No default value.
 DOCS_REQUIREMENTS?=
+
+## core.mxfiles
+
+# The config file to use.
+# Default: mx.ini
+PROJECT_CONFIG?=mx.ini
+
+## core.packages
+
+# Allow prerelease and development versions.
+# By default, the package installer only finds stable versions.
+# Default: false
+PACKAGES_ALLOW_PRERELEASES?=false
 
 ## applications.zest-releaser
 
@@ -378,6 +393,106 @@ docs-clean: docs-dirty
 INSTALL_TARGETS+=$(DOCS_TARGET)
 DIRTY_TARGETS+=docs-dirty
 CLEAN_TARGETS+=docs-clean
+
+##############################################################################
+# mxfiles
+##############################################################################
+
+# case `core.sources` domain not included
+SOURCES_TARGET?=
+
+# File generation target
+MXMAKE_FILES?=$(MXMAKE_FOLDER)/files
+
+# set environment variables for mxmake
+define set_mxfiles_env
+	@export MXMAKE_FILES=$(1)
+endef
+
+# unset environment variables for mxmake
+define unset_mxfiles_env
+	@unset MXMAKE_FILES
+endef
+
+$(PROJECT_CONFIG):
+ifneq ("$(wildcard $(PROJECT_CONFIG))","")
+	@touch $(PROJECT_CONFIG)
+else
+	@echo "[settings]" > $(PROJECT_CONFIG)
+endif
+
+LOCAL_PACKAGE_FILES:=$(wildcard pyproject.toml setup.cfg setup.py requirements.txt constraints.txt)
+
+FILES_TARGET:=requirements-mxdev.txt
+$(FILES_TARGET): $(PROJECT_CONFIG) $(MXENV_TARGET) $(SOURCES_TARGET) $(LOCAL_PACKAGE_FILES)
+	@echo "Create project files"
+	@mkdir -p $(MXMAKE_FILES)
+	$(call set_mxfiles_env,$(MXMAKE_FILES))
+	@mxdev -n -c $(PROJECT_CONFIG)
+	$(call unset_mxfiles_env)
+	@test -e $(MXMAKE_FILES)/pip.conf && cp $(MXMAKE_FILES)/pip.conf $(VENV_FOLDER)/pip.conf || :
+	@touch $(FILES_TARGET)
+
+.PHONY: mxfiles
+mxfiles: $(FILES_TARGET)
+
+.PHONY: mxfiles-dirty
+mxfiles-dirty:
+	@touch $(PROJECT_CONFIG)
+
+.PHONY: mxfiles-clean
+mxfiles-clean: mxfiles-dirty
+	@rm -rf constraints-mxdev.txt requirements-mxdev.txt $(MXMAKE_FILES)
+
+INSTALL_TARGETS+=mxfiles
+DIRTY_TARGETS+=mxfiles-dirty
+CLEAN_TARGETS+=mxfiles-clean
+
+##############################################################################
+# packages
+##############################################################################
+
+# additional sources targets which requires package re-install on change
+-include $(MXMAKE_FILES)/additional_sources_targets.mk
+ADDITIONAL_SOURCES_TARGETS?=
+
+INSTALLED_PACKAGES=$(MXMAKE_FILES)/installed.txt
+
+ifeq ("$(PACKAGES_ALLOW_PRERELEASES)","true")
+ifeq ("$(PYTHON_PACKAGE_INSTALLER)","uv")
+PACKAGES_PRERELEASES=--prerelease=allow
+else
+PACKAGES_PRERELEASES=--pre
+endif
+else
+PACKAGES_PRERELEASES=
+endif
+
+PACKAGES_TARGET:=$(INSTALLED_PACKAGES)
+$(PACKAGES_TARGET): $(FILES_TARGET) $(ADDITIONAL_SOURCES_TARGETS)
+	@echo "Install python packages"
+	@$(PYTHON_PACKAGE_COMMAND) install $(PACKAGES_PRERELEASES) -r $(FILES_TARGET)
+	@$(PYTHON_PACKAGE_COMMAND) freeze > $(INSTALLED_PACKAGES)
+	@touch $(PACKAGES_TARGET)
+
+.PHONY: packages
+packages: $(PACKAGES_TARGET)
+
+.PHONY: packages-dirty
+packages-dirty:
+	@rm -f $(PACKAGES_TARGET)
+
+.PHONY: packages-clean
+packages-clean:
+	@test -e $(FILES_TARGET) \
+		&& test -e $(MXENV_PYTHON) \
+		&& $(MXENV_PYTHON) -m pip uninstall -y -r $(FILES_TARGET) \
+		|| :
+	@rm -f $(PACKAGES_TARGET)
+
+INSTALL_TARGETS+=packages
+DIRTY_TARGETS+=packages-dirty
+CLEAN_TARGETS+=packages-clean
 
 ##############################################################################
 # zest-releaser
