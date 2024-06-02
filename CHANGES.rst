@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.0.1 (unreleased)
+1.0.1 (2024-06-02)
 ------------------
 
 - Pin Sphinx version to 5.0.0. Javascript changes in newer versions are
