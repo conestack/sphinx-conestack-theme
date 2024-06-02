@@ -1,11 +1,13 @@
 Changes
 =======
 
-1.1 (unreleased)
-----------------
+1.0.1 (unreleased)
+------------------
 
-- Nothing changed yet.
+- Pin Sphinx version to 5.0.0. Javascript changes in newer versions are
+  incompatible.
 
+- Add ``role="main"`` to main containers in markup.
 
 1.0 (2024-06-01)
 ----------------
