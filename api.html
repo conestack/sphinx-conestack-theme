@@ -1,0 +1,1195 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>API documentation &#8212; Conestack Sphinx Theme 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/conestack.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Code Blocks" href="blocks.html" />
+<link rel="stylesheet" type="text/css" src="_static/bootstrap.css" />
+<script src="_static/bootstrap.bundle.min.js"></script>
+<script src="_static/conestack.js"></script>
+
+  </head><body>
+
+  <noscript>
+    <style type="text/css">
+      #searchbox,
+      #searchdesc {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #navbar-toggle {
+          display: none;
+        }
+        #cs-mobile-menu {
+          display: block;
+        }
+        #cs-layout {
+          margin-top: 12rem;
+        }
+        #cs-ext-links {
+          margin-right: 2rem!important;
+        }
+      }
+    </style>
+  </noscript>
+
+  
+  <header class="navbar navbar-expand-md" id="header">
+    <nav class="container-xxl flex-wrap flex-md-nowrap p-0" id="cs-nav">
+  <a id="logo" class="navbar-brand p-0 me-2" href="index.html">
+    <img src="_static/conestack.svg"
+         alt="Logo"
+         width="40px"
+         height="40px" />
+    <span>conestack</span>
+  </a>
+
+      
+  <div id="nav-search" class="ms-auto">
+    <div id="searchbox" class="nav-item me-3" role="search">
+      <form class="search input-group" action="search.html" method="get">
+        <input type="text" class="form-control" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button type="submit" 
+                class="bi bi-search input-group-text"
+                btn-title="Search documentation"></button>
+      </form>
+    </div>
+  </div>
+      
+  <div id="cs-ext-links"class="me-3">
+    <ul class="navbar-nav flex-row ms-md-auto">
+  <li class="nav-item" data-title="GitHub">
+    <a class="nav-link p-2" href="https://github.com/conestack/sphinx-conestack-theme" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+    </a>
+  </li>
+
+  <li class="nav-item" data-title="Pypi">
+    <a class="nav-link p-2" href="https://pypi.org/project/sphinx-conestack-theme" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 50 50" role="img" style=" fill:#000000;"><path d="M 25 2 C 20.941406 2 18.1875 2.96875 16.4375 4.375 C 14.6875 5.78125 14 7.589844 14 9.09375 L 14 14 L 24 14 L 24 15 L 9.09375 15 C 7.265625 15 5.410156 15.792969 4.09375 17.46875 C 2.777344 19.144531 2 21.644531 2 25 C 2 28.355469 2.777344 30.855469 4.09375 32.53125 C 5.410156 34.207031 7.265625 35 9.09375 35 L 14 35 L 14 40.90625 C 14 42.410156 14.6875 44.21875 16.4375 45.625 C 18.1875 47.03125 20.941406 48 25 48 C 29.058594 48 31.8125 47.03125 33.5625 45.625 C 35.3125 44.21875 36 42.410156 36 40.90625 L 36 36 L 26 36 L 26 35 L 40.90625 35 C 42.734375 35 44.589844 34.207031 45.90625 32.53125 C 47.222656 30.855469 48 28.355469 48 25 C 48 21.644531 47.222656 19.144531 45.90625 17.46875 C 44.589844 15.792969 42.734375 15 40.90625 15 L 36 15 L 36 9.09375 C 36 7.550781 35.316406 5.738281 33.5625 4.34375 C 31.808594 2.949219 29.054688 2 25 2 Z M 25 4 C 28.746094 4 31.015625 4.875 32.3125 5.90625 C 33.609375 6.9375 34 8.136719 34 9.09375 L 34 21 C 34 22.65625 32.65625 24 31 24 L 19 24 C 16.941406 24 15.167969 25.269531 14.40625 27.0625 C 14.277344 27.359375 14.160156 27.675781 14.09375 28 C 14.027344 28.324219 14 28.65625 14 29 L 14 33 L 9.09375 33 C 7.824219 33 6.648438 32.503906 5.6875 31.28125 C 4.726563 30.058594 4 28.042969 4 25 C 4 21.957031 4.726563 19.941406 5.6875 18.71875 C 6.648438 17.496094 7.824219 17 9.09375 17 L 26 17 L 26 12 L 16 12 L 16 9.09375 C 16 8.199219 16.386719 6.980469 17.6875 5.9375 C 18.988281 4.894531 21.257813 4 25 4 Z M 20 7 C 18.898438 7 18 7.898438 18 9 C 18 10.101563 18.898438 11 20 11 C 21.101563 11 22 10.101563 22 9 C 22 7.898438 21.101563 7 20 7 Z M 36 17 L 40.90625 17 C 42.175781 17 43.351563 17.496094 44.3125 18.71875 C 45.273438 19.941406 46 21.957031 46 25 C 46 28.042969 45.273438 30.058594 44.3125 31.28125 C 43.351563 32.503906 42.175781 33 40.90625 33 L 24 33 L 24 38 L 34 38 L 34 40.90625 C 34 41.800781 33.613281 43.019531 32.3125 44.0625 C 31.011719 45.105469 28.742188 46 25 46 C 21.257813 46 18.988281 45.105469 17.6875 44.0625 C 16.386719 43.019531 16 41.800781 16 40.90625 L 16 29 C 16 28.792969 16.023438 28.601563 16.0625 28.40625 C 16.34375 27.039063 17.550781 26 19 26 L 31 26 C 33.746094 26 36 23.746094 36 21 Z M 30 39 C 28.898438 39 28 39.898438 28 41 C 28 42.101563 28.898438 43 30 43 C 31.101563 43 32 42.101563 32 41 C 32 39.898438 31.101563 39 30 39 Z"></path></svg>
+    </a>
+  </li>
+
+    </ul>
+  </div>
+
+
+      <button id="navbar-toggle" class="navbar-toggler p-0 me-4" type="button" data-bs-toggle="collapse" data-bs-target="#cs-mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
+      </button>
+
+      <div class="collapse container-fluid m-0 p-3" id="cs-mobile-menu"><nav class="cs-mobile-toc">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks.html">Code Blocks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Docs</a></li>
+</ul>
+
+</nav>
+      </div>
+    </nav>
+  </header>
+  
+
+  <div class="container-xxl my-md-4" id="cs-layout">
+    
+  <aside id="cs-sidebar" class="ms-4 sphinxsidebar"><nav class="cs-nav-toc">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#theming-options">Theming options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#layout-options">Layout options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#external-links">External links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme-development">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#inline-markup">Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#math">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#blocks">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#line-blocks">Line Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#block-quotes">Block Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#admonitions">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paragraphs.html#hyperlinks">Hyperlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#enumerated-lists">Enumerated Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#definition-lists">Definition Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#option-lists">Option Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#field-list">Field list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#bullet-lists">Bullet Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#hlists">Hlists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html#hlist-with-images">Hlist with images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tables.html#grid-tables">Grid Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html#list-tables">List Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="images.html#inserting-images">Inserting Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html#images-in-tables">Images in tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html#images-in-hlist">Images in hlist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blocks.html">Code Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#python-code-block">Python Code Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#javascript-code-block">Javascript Code Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#shell-script-code-block">Shell Script Code Block</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">Sphinx</a></li>
+</ul>
+</li>
+</ul>
+
+</nav>
+    
+  </aside>
+    
+
+    
+      <main class="document cs-main order-1" role="main">
+    
+      <div class="ps-lg-4 mt-3 cs-content">
+        
+  <section id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h1>
+<p>API Documentation can be generated with
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">sphinx.ext.autodoc</a>.</p>
+<p>For example, the following directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sphinx</span>
+<span class="o">------</span>
+
+<span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">Sphinx</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>produces the following output:</p>
+<section id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinx.application.</span></span><span class="sig-name descname"><span class="pre">Sphinx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">srcdir:</span> <span class="pre">str,</span> <span class="pre">confdir:</span> <span class="pre">~typing.Optional[str],</span> <span class="pre">outdir:</span> <span class="pre">str,</span> <span class="pre">doctreedir:</span> <span class="pre">str,</span> <span class="pre">buildername:</span> <span class="pre">str,</span> <span class="pre">confoverrides:</span> <span class="pre">~typing.Dict</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">status:</span> <span class="pre">~typing.IO</span> <span class="pre">=</span> <span class="pre">&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;,</span> <span class="pre">warning:</span> <span class="pre">~typing.IO</span> <span class="pre">=</span> <span class="pre">&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;,</span> <span class="pre">freshenv:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">warningiserror:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">tags:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">verbosity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">parallel:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">keep_going:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx.application.Sphinx" title="Permalink to this definition">#</a></dt>
+<dd><p>The main application class and extensibility interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>srcdir</strong> – Directory containing source.</p></li>
+<li><p><strong>confdir</strong> – Directory containing <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p></li>
+<li><p><strong>doctreedir</strong> – Directory for storing pickled doctrees.</p></li>
+<li><p><strong>outdir</strong> – Directory for storing build documents.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_autodoc_attrgetter">
+<span class="sig-name descname"><span class="pre">add_autodoc_attrgetter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_autodoc_attrgetter" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new <code class="docutils literal notranslate"><span class="pre">getattr</span></code>-like function for the autodoc extension.</p>
+<p>Add <em>getter</em>, which must be a function with an interface compatible to
+the <code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code> builtin, as the autodoc attribute getter for
+objects that are instances of <em>typ</em>.  All cases where autodoc needs to
+get an attribute of a type are then handled by this function instead of
+<code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_autodocumenter">
+<span class="sig-name descname"><span class="pre">add_autodocumenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_autodocumenter" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new documenter class for the autodoc extension.</p>
+<p>Add <em>cls</em> as a new documenter class for the <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>
+extension.  It must be a subclass of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.Documenter</span></code>.  This allows auto-documenting
+new types of objects.  See the source of the autodoc module for
+examples on how to subclass <code class="xref py py-class docutils literal notranslate"><span class="pre">Documenter</span></code>.</p>
+<p>If <em>override</em> is True, the given <em>cls</em> is forcedly installed even if
+a documenter having the same name is already installed.</p>
+<p>See <span class="xref std std-ref">autodoc_ext_tutorial</span>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.6.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.2: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_builder">
+<span class="sig-name descname"><span class="pre">add_builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Builder</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_builder" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new builder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>builder</strong> – A builder class</p></li>
+<li><p><strong>override</strong> – If true, install the builder forcedly even if another builder
+is already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_config_value">
+<span class="sig-name descname"><span class="pre">add_config_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_config_value" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a configuration value.</p>
+<p>This is necessary for Sphinx to recognize new values and set default
+values accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the configuration value.  It is recommended to be prefixed
+with the extension name (ex. <code class="docutils literal notranslate"><span class="pre">html_logo</span></code>, <code class="docutils literal notranslate"><span class="pre">epub_title</span></code>)</p></li>
+<li><p><strong>default</strong> – The default value of the configuration.</p></li>
+<li><p><strong>rebuild</strong> – <p>The condition of rebuild.  It must be one of those values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'env'</span></code> if a change in the setting only takes effect when a
+document is parsed – this means that the whole environment must be
+rebuilt.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'html'</span></code> if a change in the setting needs a full rebuild of HTML
+documents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">''</span></code> if a change in the setting will not need any special rebuild.</p></li>
+</ul>
+</p></li>
+<li><p><strong>types</strong> – The type of configuration value.  A list of types can be specified.  For
+example, <code class="docutils literal notranslate"><span class="pre">[str]</span></code> is used to describe a configuration that takes string
+value.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.4: </span>If the <em>default</em> value is a callable, it will be called with the
+config object as its argument in order to get the default value.
+This can be used to implement config values whose default depends on
+other values.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.6: </span>Changed <em>rebuild</em> from a simple boolean (equivalent to <code class="docutils literal notranslate"><span class="pre">''</span></code> or
+<code class="docutils literal notranslate"><span class="pre">'env'</span></code>) to a string.  However, booleans are still accepted and
+converted internally.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_crossref_type">
+<span class="sig-name descname"><span class="pre">add_crossref_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directivename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indextemplate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_nodeclass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">TextElement</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_crossref_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new crossref object type.</p>
+<p>This method is very similar to <a class="reference internal" href="#sphinx.application.Sphinx.add_object_type" title="sphinx.application.Sphinx.add_object_type"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_object_type()</span></code></a> except that the
+directive it generates must be empty, and will produce no output.</p>
+<p>That means that you can add semantic targets to your sources, and refer
+to them using custom roles instead of generic ones (like
+<code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code>).  Example call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_crossref_type</span><span class="p">(</span><span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="s1">&#39;single: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                      <span class="n">docutils</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. topic:: application API
+
+The application API
+-------------------
+
+Some random text here.
+
+See also :topic:`this section &lt;application API&gt;`.
+</pre></div>
+</div>
+<p>(Of course, the element following the <code class="docutils literal notranslate"><span class="pre">topic</span></code> directive needn’t be a
+section.)</p>
+<p>If <em>override</em> is True, the given crossref_type is forcedly installed even if
+a crossref_type having the same name is already installed.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_css_file">
+<span class="sig-name descname"><span class="pre">add_css_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_css_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a stylesheet to include in the HTML output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The filename of the CSS file.  It must be relative to the HTML
+static path, or a full URI with scheme.</p></li>
+<li><p><strong>priority</strong> – The priority to determine the order of <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> tag for the
+CSS files.  See list of “prority range for CSS files” below.
+If the priority of the CSS files it the same as others, the
+CSS files will be loaded in order of registration.</p></li>
+<li><p><strong>kwargs</strong> – Extra keyword arguments are included as attributes of the <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code>
+tag.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s1">&#39;custom.css&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;_static/custom.css&quot; type=&quot;text/css&quot; /&gt;</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s1">&#39;print.css&#39;</span><span class="p">,</span> <span class="n">media</span><span class="o">=</span><span class="s1">&#39;print&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;_static/print.css&quot;</span>
+<span class="c1">#          type=&quot;text/css&quot; media=&quot;print&quot; /&gt;</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s1">&#39;fancy.css&#39;</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="s1">&#39;alternate stylesheet&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;fancy&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;link rel=&quot;alternate stylesheet&quot; href=&quot;_static/fancy.css&quot;</span>
+<span class="c1">#          type=&quot;text/css&quot; title=&quot;fancy&quot; /&gt;</span>
+</pre></div>
+</div>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">priority range for CSS files</span><a class="headerlink" href="#id14" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Priority</p></td>
+<td><p>Main purpose in Sphinx</p></td>
+</tr>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>default priority for built-in CSS files</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>default priority for extensions</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>default priority for <a href="#id1"><span class="problematic" id="id2">:confval:`html_css_files`</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>A CSS file can be added to the specific HTML page when an extension calls
+this method on <a href="#id3"><span class="problematic" id="id4">:event:`html-page-context`</span></a> event.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.6: </span>Optional <code class="docutils literal notranslate"><span class="pre">alternate</span></code> and/or <code class="docutils literal notranslate"><span class="pre">title</span></code> attributes can be supplied
+with the arguments <em>alternate</em> (a Boolean) and <em>title</em> (a string).
+The default is no title and <em>alternate</em> = <code class="docutils literal notranslate"><span class="pre">False</span></code>. For
+more information, refer to the <a class="reference external" href="https://mdn.io/Web/CSS/Alternative_style_sheets">documentation</a>.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Renamed from <code class="docutils literal notranslate"><span class="pre">app.add_stylesheet()</span></code>.
+And it allows keyword arguments as attributes of link tag.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.5: </span>Take priority argument.  Allow to add a CSS file to the specific page.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_directive">
+<span class="sig-name descname"><span class="pre">add_directive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Directive</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_directive" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils directive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the directive</p></li>
+<li><p><strong>cls</strong> – A directive class</p></li>
+<li><p><strong>override</strong> – If true, install the directive forcedly even if another directive
+is already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<p>For example, a custom directive named <code class="docutils literal notranslate"><span class="pre">my-directive</span></code> would be added
+like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
+
+<span class="k">class</span> <span class="nc">MyDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">class_option</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;my-directive&#39;</span><span class="p">,</span> <span class="n">MyDirective</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more details, see <a class="reference external" href="https://docutils.sourceforge.io/docs/howto/rst-directives.html">the Docutils docs</a> .</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.6: </span>Docutils 0.5-style directive classes are now supported.</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.8: </span>Docutils 0.4-style (function based) directives support is deprecated.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_directive_to_domain">
+<span class="sig-name descname"><span class="pre">add_directive_to_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Directive</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_directive_to_domain" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils directive in a domain.</p>
+<p>Like <a class="reference internal" href="#sphinx.application.Sphinx.add_directive" title="sphinx.application.Sphinx.add_directive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_directive()</span></code></a>, but the directive is added to the domain
+named <em>domain</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> – The name of target domain</p></li>
+<li><p><strong>name</strong> – A name of directive</p></li>
+<li><p><strong>cls</strong> – A directive class</p></li>
+<li><p><strong>override</strong> – If true, install the directive forcedly even if another directive
+is already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_domain">
+<span class="sig-name descname"><span class="pre">add_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Domain</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_domain" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a domain.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> – A domain class</p></li>
+<li><p><strong>override</strong> – If true, install the domain forcedly even if another domain
+is already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_enumerable_node">
+<span class="sig-name descname"><span class="pre">add_enumerable_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Element</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_getter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_enumerable_node" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils node class as a numfig target.</p>
+<p>Sphinx numbers the node automatically. And then the users can refer it
+using <code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – A node class</p></li>
+<li><p><strong>figtype</strong> – The type of enumerable nodes.  Each figtype has individual numbering
+sequences.  As system figtypes, <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">table</span></code> and
+<code class="docutils literal notranslate"><span class="pre">code-block</span></code> are defined.  It is possible to add custom nodes to
+these default figtypes.  It is also possible to define new custom
+figtype if a new figtype is given.</p></li>
+<li><p><strong>title_getter</strong> – A getter function to obtain the title of node.  It takes an
+instance of the enumerable node, and it must return its title as
+string.  The title is used to the default title of references for
+<code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code>.  By default, Sphinx searches
+<code class="docutils literal notranslate"><span class="pre">docutils.nodes.caption</span></code> or <code class="docutils literal notranslate"><span class="pre">docutils.nodes.title</span></code> from the
+node as a title.</p></li>
+<li><p><strong>kwargs</strong> – Visitor functions for each builder (same as <a class="reference internal" href="#sphinx.application.Sphinx.add_node" title="sphinx.application.Sphinx.add_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_node()</span></code></a>)</p></li>
+<li><p><strong>override</strong> – If true, install the node forcedly even if another node is already
+installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.4.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_env_collector">
+<span class="sig-name descname"><span class="pre">add_env_collector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">collector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">EnvironmentCollector</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_env_collector" title="Permalink to this definition">#</a></dt>
+<dd><p>Register an environment collector class.</p>
+<p>Refer to <span class="xref std std-ref">collector-api</span>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_event">
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_event" title="Permalink to this definition">#</a></dt>
+<dd><p>Register an event called <em>name</em>.</p>
+<p>This is needed to be able to emit it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – The name of the event</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_generic_role">
+<span class="sig-name descname"><span class="pre">add_generic_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeclass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_generic_role" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a generic Docutils role.</p>
+<p>Register a Docutils role that does nothing but wrap its contents in the
+node given by <em>nodeclass</em>.</p>
+<p>If <em>override</em> is True, the given <em>nodeclass</em> is forcedly installed even if
+a role named as <em>name</em> is already installed.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.6.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_html_math_renderer">
+<span class="sig-name descname"><span class="pre">add_html_math_renderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_renderers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_renderers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_html_math_renderer" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a math renderer for HTML.</p>
+<p>The <em>name</em> is a name of math renderer.  Both <em>inline_renderers</em> and
+<em>block_renderers</em> are used as visitor functions for the HTML writer:
+the former for inline math node (<code class="docutils literal notranslate"><span class="pre">nodes.math</span></code>), the latter for
+block math node (<code class="docutils literal notranslate"><span class="pre">nodes.math_block</span></code>).  Regarding visitor functions,
+see <a class="reference internal" href="#sphinx.application.Sphinx.add_node" title="sphinx.application.Sphinx.add_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_node()</span></code></a> for details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_html_theme">
+<span class="sig-name descname"><span class="pre">add_html_theme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_html_theme" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a HTML Theme.</p>
+<p>The <em>name</em> is a name of theme, and <em>theme_path</em> is a full path to the
+theme (refs: <span class="xref std std-ref">distribute-your-theme</span>).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_index_to_domain">
+<span class="sig-name descname"><span class="pre">add_index_to_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Index</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_index_to_domain" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a custom index for a domain.</p>
+<p>Add a custom <em>index</em> class to the domain named <em>domain</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> – The name of the target domain</p></li>
+<li><p><strong>index</strong> – The index class</p></li>
+<li><p><strong>override</strong> – If true, install the index forcedly even if another index is
+already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_js_file">
+<span class="sig-name descname"><span class="pre">add_js_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loading_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_js_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a JavaScript file to include in the HTML output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The filename of the JavaScript file.  It must be relative to the HTML
+static path, a full URI with scheme, or <code class="docutils literal notranslate"><span class="pre">None</span></code> value.  The <code class="docutils literal notranslate"><span class="pre">None</span></code>
+value is used to create inline <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag.  See the description
+of <em>kwargs</em> below.</p></li>
+<li><p><strong>priority</strong> – The priority to determine the order of <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag for
+JavaScript files.  See list of “prority range for JavaScript
+files” below.  If the priority of the JavaScript files it the same
+as others, the JavaScript files will be loaded in order of
+registration.</p></li>
+<li><p><strong>loading_method</strong> – The loading method of the JavaScript file.  <code class="docutils literal notranslate"><span class="pre">'async'</span></code> or
+<code class="docutils literal notranslate"><span class="pre">'defer'</span></code> is allowed.</p></li>
+<li><p><strong>kwargs</strong> – Extra keyword arguments are included as attributes of the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code>
+tag.  A special keyword argument <code class="docutils literal notranslate"><span class="pre">body</span></code> is given, its value will be
+added between the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_js_file</span><span class="p">(</span><span class="s1">&#39;example.js&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;script src=&quot;_static/example.js&quot;&gt;&lt;/script&gt;</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_js_file</span><span class="p">(</span><span class="s1">&#39;example.js&#39;</span><span class="p">,</span> <span class="n">loading_method</span><span class="o">=</span><span class="s2">&quot;async&quot;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;script src=&quot;_static/example.js&quot; async=&quot;async&quot;&gt;&lt;/script&gt;</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_js_file</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="s2">&quot;var myVariable = &#39;foo&#39;;&quot;</span><span class="p">)</span>
+<span class="c1"># =&gt; &lt;script&gt;var myVariable = &#39;foo&#39;;&lt;/script&gt;</span>
+</pre></div>
+</div>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">priority range for JavaScript files</span><a class="headerlink" href="#id15" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Priority</p></td>
+<td><p>Main purpose in Sphinx</p></td>
+</tr>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>default priority for built-in JavaScript files</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>default priority for extensions</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>default priority for <a href="#id5"><span class="problematic" id="id6">:confval:`html_js_files`</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>A JavaScript file can be added to the specific HTML page when an extension
+calls this method on <a href="#id7"><span class="problematic" id="id8">:event:`html-page-context`</span></a> event.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.5.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Renamed from <code class="docutils literal notranslate"><span class="pre">app.add_javascript()</span></code>.
+And it allows keyword arguments as attributes of script tag.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.5: </span>Take priority argument.  Allow to add a JavaScript file to the specific page.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 4.4: </span>Take loading_method argument.  Allow to change the loading method of the
+JavaScript file.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_latex_package">
+<span class="sig-name descname"><span class="pre">add_latex_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packagename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after_hyperref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_latex_package" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a package to include in the LaTeX source code.</p>
+<p>Add <em>packagename</em> to the list of packages that LaTeX source code will
+include.  If you provide <em>options</em>, it will be taken to the <cite>usepackage</cite>
+declaration.  If you set <em>after_hyperref</em> truthy, the package will be
+loaded after <code class="docutils literal notranslate"><span class="pre">hyperref</span></code> package.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_latex_package</span><span class="p">(</span><span class="s1">&#39;mypackage&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; \usepackage{mypackage}</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_latex_package</span><span class="p">(</span><span class="s1">&#39;mypackage&#39;</span><span class="p">,</span> <span class="s1">&#39;foo,bar&#39;</span><span class="p">)</span>
+<span class="c1"># =&gt; \usepackage[foo,bar]{mypackage}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.1: </span><em>after_hyperref</em> option.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_lexer">
+<span class="sig-name descname"><span class="pre">add_lexer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lexer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Lexer</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_lexer" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new lexer for source code.</p>
+<p>Use <em>lexer</em> to highlight code blocks with the given language <em>alias</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.6.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.1: </span>Take a lexer class as an argument.  An instance of lexers are
+still supported until Sphinx-3.x.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_message_catalog">
+<span class="sig-name descname"><span class="pre">add_message_catalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locale_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_message_catalog" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a message catalog.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>catalog</strong> – The name of the catalog</p></li>
+<li><p><strong>locale_dir</strong> – The base path of the message catalog</p></li>
+</ul>
+</dd>
+</dl>
+<p>For more details, see <code class="xref py py-func docutils literal notranslate"><span class="pre">sphinx.locale.get_translation()</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_node">
+<span class="sig-name descname"><span class="pre">add_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Element</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_node" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils node class.</p>
+<p>This is necessary for Docutils internals.  It may also be used in the
+future to validate nodes in the parsed documents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – A node class</p></li>
+<li><p><strong>kwargs</strong> – Visitor functions for each builder (see below)</p></li>
+<li><p><strong>override</strong> – If true, install the node forcedly even if another node is already
+installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<p>Node visitor functions for the Sphinx HTML, LaTeX, text and manpage
+writers can be given as keyword arguments: the keyword should be one or
+more of <code class="docutils literal notranslate"><span class="pre">'html'</span></code>, <code class="docutils literal notranslate"><span class="pre">'latex'</span></code>, <code class="docutils literal notranslate"><span class="pre">'text'</span></code>, <code class="docutils literal notranslate"><span class="pre">'man'</span></code>, <code class="docutils literal notranslate"><span class="pre">'texinfo'</span></code>
+or any other supported translators, the value a 2-tuple of <code class="docutils literal notranslate"><span class="pre">(visit,</span>
+<span class="pre">depart)</span></code> methods.  <code class="docutils literal notranslate"><span class="pre">depart</span></code> can be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the <code class="docutils literal notranslate"><span class="pre">visit</span></code>
+function raises <code class="xref py py-exc docutils literal notranslate"><span class="pre">docutils.nodes.SkipNode</span></code>.  Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">math</span><span class="p">(</span><span class="n">docutils</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span> <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">visit_math_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;math&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">depart_math_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&lt;/math&gt;&#39;</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">math</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_math_html</span><span class="p">,</span> <span class="n">depart_math_html</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Obviously, translators for which you don’t specify visitor methods will
+choke on the node when encountered in a document to translate.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.5: </span>Added the support for keyword arguments giving visit functions.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_object_type">
+<span class="sig-name descname"><span class="pre">add_object_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directivename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indextemplate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_nodeclass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">TextElement</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc_field_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_object_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new object type.</p>
+<p>This method is a very convenient way to add a new <span class="xref std std-term">object</span> type
+that can be cross-referenced.  It will do this:</p>
+<ul class="simple">
+<li><p>Create a new directive (called <em>directivename</em>) for documenting an
+object.  It will automatically add index entries if <em>indextemplate</em>
+is nonempty; if given, it must contain exactly one instance of
+<code class="docutils literal notranslate"><span class="pre">%s</span></code>.  See the example below for how the template will be
+interpreted.</p></li>
+<li><p>Create a new role (called <em>rolename</em>) to cross-reference to these
+object descriptions.</p></li>
+<li><p>If you provide <em>parse_node</em>, it must be a function that takes a
+string and a docutils node, and it must populate the node with
+children parsed from the string.  It must then return the name of the
+item to be used in cross-referencing and index entries.  See the
+<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> file in the source for this documentation for an
+example.</p></li>
+<li><p>The <em>objname</em> (if not given, will default to <em>directivename</em>) names
+the type of object.  It is used when listing objects, e.g. in search
+results.</p></li>
+</ul>
+<p>For example, if you have this call in a custom Sphinx extension:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span><span class="s1">&#39;directive&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;pair: </span><span class="si">%s</span><span class="s1">; directive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>you can use this markup in your documents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. rst:directive:: function
+
+   Document a function.
+
+&lt;...&gt;
+
+See also the :rst:dir:`function` directive.
+</pre></div>
+</div>
+<p>For the directive, an index entry will be generated as if you had prepended</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">index</span><span class="p">::</span> <span class="n">pair</span><span class="p">:</span> <span class="n">function</span><span class="p">;</span> <span class="n">directive</span>
+</pre></div>
+</div>
+<p>The reference node will be of class <code class="docutils literal notranslate"><span class="pre">literal</span></code> (so it will be rendered
+in a proportional font, as appropriate for code) unless you give the
+<em>ref_nodeclass</em> argument, which must be a docutils node class.  Most
+useful are <code class="docutils literal notranslate"><span class="pre">docutils.nodes.emphasis</span></code> or <code class="docutils literal notranslate"><span class="pre">docutils.nodes.strong</span></code> –
+you can also use <code class="docutils literal notranslate"><span class="pre">docutils.nodes.generated</span></code> if you want no further
+text decoration.  If the text should be treated as literal (e.g. no
+smart quote replacement), but not have typewriter styling, use
+<code class="docutils literal notranslate"><span class="pre">sphinx.addnodes.literal_emphasis</span></code> or
+<code class="docutils literal notranslate"><span class="pre">sphinx.addnodes.literal_strong</span></code>.</p>
+<p>For the role content, you have the same syntactical possibilities as
+for standard Sphinx roles (see <span class="xref std std-ref">xref-syntax</span>).</p>
+<p>If <em>override</em> is True, the given object_type is forcedly installed even if
+an object_type having the same name is already installed.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_post_transform">
+<span class="sig-name descname"><span class="pre">add_post_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Transform</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_post_transform" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils transform to be applied before writing.</p>
+<p>Add the standard docutils <code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code> subclass <em>transform</em> to
+the list of transforms that are applied before Sphinx writes a
+document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>transform</strong> – A transform class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_role">
+<span class="sig-name descname"><span class="pre">add_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_role" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of role</p></li>
+<li><p><strong>role</strong> – A role function</p></li>
+<li><p><strong>override</strong> – If true, install the role forcedly even if another role is already
+installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<p>For more details about role functions, see <a class="reference external" href="https://docutils.sourceforge.io/docs/howto/rst-roles.html">the Docutils docs</a> .</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_role_to_domain">
+<span class="sig-name descname"><span class="pre">add_role_to_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Inliner</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">system_message</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">XRefRole</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_role_to_domain" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils role in a domain.</p>
+<p>Like <a class="reference internal" href="#sphinx.application.Sphinx.add_role" title="sphinx.application.Sphinx.add_role"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_role()</span></code></a>, but the role is added to the domain named
+<em>domain</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> – The name of the target domain</p></li>
+<li><p><strong>name</strong> – The name of the role</p></li>
+<li><p><strong>role</strong> – The role function</p></li>
+<li><p><strong>override</strong> – If true, install the role forcedly even if another role is already
+installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_search_language">
+<span class="sig-name descname"><span class="pre">add_search_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_search_language" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a new language for the HTML search index.</p>
+<p>Add <em>cls</em>, which must be a subclass of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.search.SearchLanguage</span></code>, as a support language for
+building the HTML full-text search index.  The class must have a <em>lang</em>
+attribute that indicates the language it should be used for.  See
+<a href="#id9"><span class="problematic" id="id10">:confval:`html_search_language`</span></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.1.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_source_parser">
+<span class="sig-name descname"><span class="pre">add_source_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Parser</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_source_parser" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a parser class.</p>
+<p>If <em>override</em> is True, the given <em>parser</em> is forcedly installed even if
+a parser for the same suffix is already installed.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.4.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span><em>suffix</em> argument is deprecated.  It only accepts <em>parser</em> argument.
+Use <a class="reference internal" href="#sphinx.application.Sphinx.add_source_suffix" title="sphinx.application.Sphinx.add_source_suffix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_source_suffix()</span></code></a> API to register suffix instead.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_source_suffix">
+<span class="sig-name descname"><span class="pre">add_source_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_source_suffix" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a suffix of source files.</p>
+<p>Same as <a href="#id11"><span class="problematic" id="id12">:confval:`source_suffix`</span></a>.  The users can override this
+using the config setting.</p>
+<p>If <em>override</em> is True, the given <em>suffix</em> is forcedly installed even if
+the same suffix is already installed.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_stylesheet">
+<span class="sig-name descname"><span class="pre">add_stylesheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alternate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_stylesheet" title="Permalink to this definition">#</a></dt>
+<dd><p>An alias of <a class="reference internal" href="#sphinx.application.Sphinx.add_css_file" title="sphinx.application.Sphinx.add_css_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_css_file()</span></code></a>.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.add_transform">
+<span class="sig-name descname"><span class="pre">add_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Transform</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.add_transform" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a Docutils transform to be applied after parsing.</p>
+<p>Add the standard docutils <code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code> subclass <em>transform</em> to
+the list of transforms that are applied after Sphinx parses a reST
+document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>transform</strong> – A transform class</p>
+</dd>
+</dl>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">priority range categories for Sphinx transforms</span><a class="headerlink" href="#id16" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Priority</p></td>
+<td><p>Main purpose in Sphinx</p></td>
+</tr>
+<tr class="row-even"><td><p>0-99</p></td>
+<td><p>Fix invalid nodes by docutils. Translate a doctree.</p></td>
+</tr>
+<tr class="row-odd"><td><p>100-299</p></td>
+<td><p>Preparation</p></td>
+</tr>
+<tr class="row-even"><td><p>300-399</p></td>
+<td><p>early</p></td>
+</tr>
+<tr class="row-odd"><td><p>400-699</p></td>
+<td><p>main</p></td>
+</tr>
+<tr class="row-even"><td><p>700-799</p></td>
+<td><p>Post processing. Deadline to modify text and referencing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>800-899</p></td>
+<td><p>Collect referencing and referenced nodes. Domain processing.</p></td>
+</tr>
+<tr class="row-even"><td><p>900-999</p></td>
+<td><p>Finalize and clean up.</p></td>
+</tr>
+</tbody>
+</table>
+<p>refs: <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/transforms.html#transform-priority-range-categories">Transform Priority Range Categories</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.connect" title="Permalink to this definition">#</a></dt>
+<dd><p>Register <em>callback</em> to be called when <em>event</em> is emitted.</p>
+<p>For details on available core events and the arguments of callback
+functions, please see <span class="xref std std-ref">events</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> – The name of target event</p></li>
+<li><p><strong>callback</strong> – Callback function for the event</p></li>
+<li><p><strong>priority</strong> – The priority of the callback.  The callbacks will be invoked
+in order of <em>priority</em> (ascending).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A listener ID.  It can be used for <a class="reference internal" href="#sphinx.application.Sphinx.disconnect" title="sphinx.application.Sphinx.disconnect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect()</span></code></a>.</p>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.0: </span>Support <em>priority</em></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">listener_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.disconnect" title="Permalink to this definition">#</a></dt>
+<dd><p>Unregister callback by <em>listener_id</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>listener_id</strong> – A listener_id that <a class="reference internal" href="#sphinx.application.Sphinx.connect" title="sphinx.application.Sphinx.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> returns</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_exceptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.emit" title="Permalink to this definition">#</a></dt>
+<dd><p>Emit <em>event</em> and pass <em>arguments</em> to the callback functions.</p>
+<p>Return the return values of all callbacks as a list.  Do not emit core
+Sphinx events in extensions!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> – The name of event that will be emitted</p></li>
+<li><p><strong>args</strong> – The arguments for the event</p></li>
+<li><p><strong>allowed_exceptions</strong> – The list of exceptions that are allowed in the callbacks</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.1: </span>Added <em>allowed_exceptions</em> to specify path-through exceptions</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.emit_firstresult">
+<span class="sig-name descname"><span class="pre">emit_firstresult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_exceptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.emit_firstresult" title="Permalink to this definition">#</a></dt>
+<dd><p>Emit <em>event</em> and pass <em>arguments</em> to the callback functions.</p>
+<p>Return the result of the first callback that doesn’t return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> – The name of event that will be emitted</p></li>
+<li><p><strong>args</strong> – The arguments for the event</p></li>
+<li><p><strong>allowed_exceptions</strong> – The list of exceptions that are allowed in the callbacks</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.5.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.1: </span>Added <em>allowed_exceptions</em> to specify path-through exceptions</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.is_parallel_allowed">
+<span class="sig-name descname"><span class="pre">is_parallel_allowed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.is_parallel_allowed" title="Permalink to this definition">#</a></dt>
+<dd><p>Check whether parallel processing is allowed or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>typ</strong> – A type of processing; <code class="docutils literal notranslate"><span class="pre">'read'</span></code> or <code class="docutils literal notranslate"><span class="pre">'write'</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.require_sphinx">
+<span class="sig-name descname"><span class="pre">require_sphinx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.require_sphinx" title="Permalink to this definition">#</a></dt>
+<dd><p>Check the Sphinx version if requested.</p>
+<p>Compare <em>version</em> with the version of the running Sphinx, and abort the
+build when it is too old.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>version</strong> – The required version in the form of <code class="docutils literal notranslate"><span class="pre">major.minor</span></code>.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.set_html_assets_policy">
+<span class="sig-name descname"><span class="pre">set_html_assets_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx.application.Sphinx.set_html_assets_policy" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the policy to include assets in HTML pages.</p>
+<ul class="simple">
+<li><p>always: include the assets in all the pages</p></li>
+<li><p>per_page: include the assets only in pages where they are used</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.set_translator">
+<span class="sig-name descname"><span class="pre">set_translator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translator_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">NodeVisitor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.set_translator" title="Permalink to this definition">#</a></dt>
+<dd><p>Register or override a Docutils translator class.</p>
+<p>This is used to register a custom output translator or to replace a
+builtin translator.  This allows extensions to use a custom translator
+and define custom nodes for the translator (see <a class="reference internal" href="#sphinx.application.Sphinx.add_node" title="sphinx.application.Sphinx.add_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_node()</span></code></a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the builder for the translator</p></li>
+<li><p><strong>translator_class</strong> – A translator class</p></li>
+<li><p><strong>override</strong> – If true, install the translator forcedly even if another translator
+is already installed as the same name</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.8: </span>Add <em>override</em> keyword.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinx.application.Sphinx.setup_extension">
+<span class="sig-name descname"><span class="pre">setup_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sphinx.application.Sphinx.setup_extension" title="Permalink to this definition">#</a></dt>
+<dd><p>Import and setup a Sphinx extension module.</p>
+<p>Load the extension given by the module <em>name</em>.  Use this if your
+extension needs the features provided by another extension.  No-op if
+called twice.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+      </div>
+
+    
+  <div class="cs-local-toc mx-4 mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+    <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+    <nav id="TableOfContents">
+      <ul>
+<li><a class="reference internal" href="#sphinx">Sphinx</a></li>
+</ul>
+
+    </nav>
+  </div>
+    
+    </main>
+  </div><div class="container footer" role="contentinfo">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 my-4 border-top"><ul class="pb-2 mb-3 nav container border-bottom">
+  <li class="nav-item col-md-6 col">
+    <a href="blocks.html"
+       title="previous chapter"
+       class="nav-link px-2 text-muted previous-chapter">Code Blocks</a>
+  </li>
+  <li class="nav-item col-md-6 col text-end">
+  </li>
+</ul>
+      <div class="container text-center text-muted pt-2 pb-2">
+          &#169; Copyright 2021-2024, Cone Contributors.
+      </div>
+      <div class="container text-center text-muted pt-2 pb-2">
+        Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
+      </div>
+  </footer>
+</div>
+
+  </body>
+</html>
