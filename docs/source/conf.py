@@ -59,3 +59,9 @@ html_theme_options = {
     'github_url': 'https://github.com/conestack/sphinx-conestack-theme',
     'pypi_url': 'https://pypi.org/project/sphinx-conestack-theme'
 }
+
+html_css_files = [
+]
+
+html_js_files = [
+]

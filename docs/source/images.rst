@@ -48,7 +48,7 @@ Use ``width``, ``height``, ``alt`` and ``target`` as you would with ``.. image::
 
        This is the caption of a figure.
 
-.. figure:: ./_static/spiral.png
+.. figure:: ./_static/images/spiral.png
 
    This is the caption of a figure.
 
@@ -64,14 +64,14 @@ Images and figures can also be inserted in tables.
 
 .. list-table:: This is a list table with figures in it.
 
-    * - .. figure:: ./_static/rgb.png
+    * - .. figure:: ./_static/images/rgb.png
            :width: 180px
            :alt: OpenClipart-Vectors | Pixabay
            :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782
 
            This is an image of rgb color mixing.
 
-      - .. figure:: ./_static/monitor.png
+      - .. figure:: ./_static/images/monitor.png
            :width: 180px
            :alt: Clker-Free-Vector-Images | Pixabay
            :target: https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=32872
@@ -89,14 +89,14 @@ Add images to a hlist.
 .. hlist::
     :columns: 2
 
-    - .. figure:: ./_static/rgb.png
+    - .. figure:: ./_static/images/rgb.png
          :width: 40px
          :alt: OpenClipart-Vectors | Pixabay
          :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782
 
          This is a short caption for a figure.
 
-    - .. figure:: ./_static/monitor.png
+    - .. figure:: ./_static/images/monitor.png
          :width: 40px
          :alt: Clker-Free-Vector-Images | Pixabay
          :target: https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=32872

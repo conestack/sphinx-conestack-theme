@@ -311,7 +311,7 @@ Most elements can be nested in an admonition, for example:
 
    Images and Figures:
 
-   .. figure:: ./_static/fibonacci.png
+   .. figure:: ./_static/images/fibonacci.png
       :width: 300px
       :alt: Nicolás Damián Visceglio | pixabay
       :target: https://pixabay.com/users/ndv-2997446/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1601158
@@ -374,14 +374,14 @@ You can also label a figure. ::
 
   .. _my-figure:
 
-  .. figure:: ./_static/rgb.png
+  .. figure:: ./_static/images/rgb.png
       :width: 180px
 
       This is an image of rgb color mixing.
 
 .. _rgb:
 
-.. figure:: ./_static/rgb.png
+.. figure:: ./_static/images/rgb.png
     :width: 180px
     :alt: OpenClipart-Vectors | Pixabay
     :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782

@@ -256,7 +256,7 @@ Images and figures can also be added to a horizontal list. ::
   .. hlist::
     :columns: 3
 
-    - .. figure:: ./_static/spiral.png
+    - .. figure:: ./_static/images/spiral.png
          :width: 200px
          :alt: David Zydd | Pixabay
          :target: https://pixabay.com/users/davidzydd-985081/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559">David Zydd</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559
@@ -270,7 +270,7 @@ Images and figures can also be added to a horizontal list. ::
 
          This is another caption.
 
-    - .. figure:: ./_static/rgb.png
+    - .. figure:: ./_static/images/rgb.png
            :width: 180px
            :alt: OpenClipart-Vectors | Pixabay
            :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782
@@ -280,7 +280,7 @@ Images and figures can also be added to a horizontal list. ::
 .. hlist::
     :columns: 3
 
-    - .. figure:: ./_static/spiral.png
+    - .. figure:: ./_static/images/spiral.png
          :width: 200px
          :alt: David Zydd | Pixabay
          :target: https://pixabay.com/users/davidzydd-985081/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559">David Zydd</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2481559
@@ -294,7 +294,7 @@ Images and figures can also be added to a horizontal list. ::
 
          This is another caption.
 
-    - .. figure:: ./_static/rgb.png
+    - .. figure:: ./_static/images/rgb.png
            :width: 180px
            :alt: OpenClipart-Vectors | Pixabay
            :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782

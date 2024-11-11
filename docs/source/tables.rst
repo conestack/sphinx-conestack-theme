@@ -180,13 +180,13 @@ List Tables
 
 .. list-table:: This is a list table with images in it.
 
-    * - .. figure:: ./_static/fibonacci.png
+    * - .. figure:: ./_static/images/fibonacci.png
            :alt: Nicolás Damián Visceglio | pixabay
            :target: https://pixabay.com/users/ndv-2997446/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1601158
 
            This is a caption for this image of a fibonacci spiral.
 
-      - .. figure:: ./_static/rgb.png
+      - .. figure:: ./_static/images/rgb.png
            :alt: OpenClipart-Vectors | Pixabay
            :target: https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=154782
 
