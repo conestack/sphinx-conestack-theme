@@ -50,7 +50,7 @@
 
     &.current {
       > a {
-        color: var(--cs-bg-color);
+        text-decoration: underline;
       }
 
       ul {

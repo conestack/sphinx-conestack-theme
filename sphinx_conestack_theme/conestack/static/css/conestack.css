@@ -179,7 +179,7 @@ body {
   text-indent: -10px;
 }
 .cs-nav-toc li.toctree-l1.current > a {
-  color: var(--cs-bg-color);
+  text-decoration: underline;
 }
 .cs-nav-toc li.toctree-l1.current ul {
   display: block;
@@ -854,7 +854,7 @@ footer .next-chapter::after {
   margin-block-end: 1rem;
 }
 .cs-content dt {
-  color: var(--bs-gray-700);
+  color: var(--bs-body-color);
 }
 .cs-content a > span.problematic {
   color: var(--bs-danger);
@@ -868,8 +868,7 @@ footer .next-chapter::after {
   max-width: 100%;
 }
 .cs-content blockquote {
-  border-left: 1px solid var(--bs-gray-700);
-  color: var(--bs-gray-700);
+  border-left: 1px solid var(--bs-body-color);
   font-style: italic;
   margin-right: 0.5rem;
   padding: 0.5rem 1rem;
@@ -882,7 +881,7 @@ footer .next-chapter::after {
   padding-bottom: 0.35rem;
 }
 .cs-content a > code {
-  color: var(--bs-blue) !important;
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
 }
 .cs-content span.menuselection {
   background: rgba(102, 16, 242, 0.1);
@@ -905,10 +904,10 @@ footer .next-chapter::after {
 .cs-content kbd:not(.compound) {
   padding: 0.1rem 0.4em;
   font-size: 0.8em;
-  color: var(--bs-gray-800);
-  background: var(--bs-gray-100);
-  border: 1px solid var(--bs-gray-400);
-  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem white;
+  color: var(--bs-body-color);
+  background: var(--bs-tertiary-bg);
+  border: 1px solid var(--bs-border-color);
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem var(--bs-body-bg);
   border-radius: 0.2rem;
   font-weight: 400;
 }
@@ -957,9 +956,9 @@ footer .next-chapter::after {
   transform: translate(calc(-50% - 0.75rem), -120%);
 }
 .cs-content code.literal {
-  background: #f8f9fa;
-  border: 1px solid var(--bs-gray-400);
-  color: black;
+  background: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
+  color: var(--bs-body-color);
   border-radius: 0.2em;
   font-size: 12px;
   padding: 0.1em 0.2em;

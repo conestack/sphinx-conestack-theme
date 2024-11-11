@@ -38,9 +38,9 @@
   }
 
   code.literal {
-    background: #f8f9fa;
-    border: 1px solid var(--bs-gray-400);
-    color: black;
+    background: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
     border-radius: 0.2em;
     font-size: 12px;
     padding: 0.1em 0.2em;
