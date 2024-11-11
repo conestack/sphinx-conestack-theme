@@ -23,14 +23,14 @@ var colortoggle = (function (exports, $) {
          * @returns {string | null}
          */
         static get stored_theme() {
-            return localStorage.getItem('cone-app-color-theme');
+            return localStorage.getItem('sphinx-conestack-theme-color-theme');
         }
 
         /**
          * @param {string} theme The theme to store in local storage.
          */
         static set stored_theme(theme) {
-            localStorage.setItem('cone-app-color-theme', theme);
+            localStorage.setItem('sphinx-conestack-theme-color-theme', theme);
         }
 
         /**
@@ -58,11 +58,21 @@ var colortoggle = (function (exports, $) {
          */
         static set_theme(theme) {
             const elem = document.documentElement;
+            const is_dark = (theme === 'dark');
             if (theme === 'auto' && this.media_query.matches) {
                 // Set to dark if 'auto' and dark mode is preferred
                 elem.setAttribute('data-bs-theme', 'dark');
+                document.getElementById('pygments_dark_css').disabled = false;
             } else {
                 elem.setAttribute('data-bs-theme', theme);
+                document.getElementById('pygments_dark_css').disabled = !is_dark;
+            }
+
+            // customized for sphinx-conestack-theme pygments styles
+            if (theme === 'dark') {
+                document.getElementById('pygments_dark_css').disabled = false;
+            } else if (theme === 'light') {
+                document.getElementById('pygments_dark_css').disabled = true;
             }
         }
 
@@ -71,6 +81,9 @@ var colortoggle = (function (exports, $) {
          */
         constructor() {
             this.bind();
+            // INFO: Remove default media check (checks for prefers-dark-mode)
+            // from pygments_dark_css stylesheet generated in theme.conf
+            document.getElementById('pygments_dark_css').removeAttribute('media');
             ColorMode.set_theme(ColorMode.preferred_theme);
             this.observe_theme_change();
         }

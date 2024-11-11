@@ -486,7 +486,7 @@ footer .next-chapter::after {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5), 0 0 0.0625rem rgba(0, 0, 0, 0.5);
 }
 [data-bs-theme=dark] .cs-main .admonition p.admonition-title {
-  background-color: var(--bs-gray-200);
+  background-color: var(--bs-gray-700);
 }
 [data-bs-theme=dark] .cs-main .admonition p.admonition-title:before {
   color: var(--bs-gray-600);
