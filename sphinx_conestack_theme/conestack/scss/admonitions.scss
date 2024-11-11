@@ -1,3 +1,15 @@
+$admonition-types: (
+    attention: #ff3a00,
+    danger: #ff0000,
+    error: #ff3a00,
+    caution: #fd7e14,
+    warning: #fd7e14,
+    hint: #20c997,
+    tip: #20c997,
+    important: #0dcaf0,
+    note: #0d6efd
+);
+
 .cs-main {
   .admonition {
     margin: 1rem auto;
@@ -30,113 +42,99 @@
     }
   }
 
-  .admonition {
-    &.attention {
+  @each $type, $color in $admonition-types {
+    .admonition.#{$type} {
       > .admonition-title {
-        background: rgba(#ff3a00, 0.2);
+        background: rgba($color, 0.2);
 
         &:before {
-          content: "\f332";
-          color: #ff3a00;
+          @if $type == 'attention' {
+            content: "\f332";
+            color: $color;
+          } @else if $type == 'danger' {
+            content: "\f532";
+            color: $color;
+          } @else if $type == 'error' {
+            content: "\f622";
+            color: $color;
+          } @else if $type == 'caution' {
+            content: "\f46e";
+            color: $color;
+          } @else if $type == 'warning' {
+            content: "\f33a";
+            color: $color;
+          } @else if $type == 'hint' {
+            content: "\f504";
+            color: $color;
+          } @else if $type == 'tip' {
+            content: "\f406";
+            color: $color;
+          } @else if $type == 'important' {
+            content: "\f400";
+            color: $color;
+          } @else if $type == 'note' {
+            content: "\f4c9";
+            color: $color;
+          }
         }
       }
-      border-left-color: #ff3a00;
+      border-left-color: $color;
+    }
+  }
+}
+
+[data-bs-theme="dark"] .cs-main {
+    .admonition {
+      background: var(--bs-secondary-bg);
+      border-left: 10px solid var(--bs-gray-600);
+      box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 50%), 0 0 0.0625rem rgb(0 0 0 / 50%);
+
+      p.admonition-title {
+        background-color: var(--bs-gray-700);
+
+        &:before {
+          color: var(--bs-gray-600);
+        }
+      }
     }
 
-    &.danger {
-      > .admonition-title {
-        background: rgba(#ff0000, 0.25);
+    @each $type, $color in $admonition-types {
+      .admonition.#{$type} {
+        > .admonition-title {
+          background: rgba($color, 0.2);
 
         &:before {
-          content: "\f532";
-          color: #ff0000;
+          @if $type == 'attention' {
+            content: "\f332";
+            color: $color;
+          } @else if $type == 'danger' {
+            content: "\f532";
+            color: $color;
+          } @else if $type == 'error' {
+            content: "\f622";
+            color: $color;
+          } @else if $type == 'caution' {
+            content: "\f46e";
+            color: $color;
+          } @else if $type == 'warning' {
+            content: "\f33a";
+            color: $color;
+          } @else if $type == 'hint' {
+            content: "\f504";
+            color: $color;
+          } @else if $type == 'tip' {
+            content: "\f406";
+            color: $color;
+          } @else if $type == 'important' {
+            content: "\f400";
+            color: $color;
+          } @else if $type == 'note' {
+            content: "\f4c9";
+            color: $color;
+          }
         }
       }
-      border-left-color: #ff0000;
-    }
-
-    &.error {
-      > .admonition-title {
-        background: rgba(#ff3a00, 0.2);
-
-        &:before {
-          content: "\f622";
-          color: #ff3a00;
-        }
-      }
-      border-left-color: #ff3a00;
-    }
-
-    &.caution {
-      > .admonition-title {
-        background: rgba(#fd7e14, 0.2);
-
-        &:before {
-          content: "\f46e";
-          color: var(--bs-orange);
-        }
-      }
-      border-left-color: var(--bs-orange);
-    }
-
-    &.warning {
-      > .admonition-title {
-        background: rgba(#fd7e14, 0.2);
-
-        &:before {
-          content: "\f33a";
-          color: var(--bs-orange);
-        }
-      }
-      border-left-color: var(--bs-orange);
-    }
-
-    &.hint {
-      > .admonition-title {
-        background: rgba(#20c997, 0.2);
-
-        &:before {
-          content: "\f504";
-          color: var(--bs-teal);
-        }
-      }
-      border-left-color: var(--bs-teal);
-    }
-
-    &.tip {
-      > .admonition-title {
-        background: rgba(#20c997, 0.2);
-
-        &:before {
-          content: "\f406";
-          color: var(--bs-teal);
-        }
-      }
-      border-left-color: var(--bs-teal);
-    }
-
-    &.important {
-      > .admonition-title {
-        background: rgba(#0dcaf0, 0.2);
-
-        &:before {
-          content: "\f400";
-          color: var(--bs-info);
-        }
-      }
-      border-left-color: var(--bs-info);
-    }
-
-    &.note {
-      > .admonition-title {
-        background: rgba(#0d6efd, 0.2);
-
-        &:before {
-          content: "\f4c9";
-          color: var(--bs-primary);
-        }
-      }
-      border-left-color: var(--bs-primary);
+      border-left-color: $color;
     }
   }
 }
