@@ -14,6 +14,6 @@
 @use 'paragraphs';
 @use 'blocks';
 
-@import 'bootstrap.css';
-@import 'bootstrap-icons/bootstrap-icons.css';
+@import '../bootstrap/bootstrap.css';
+@import '../bootstrap/bootstrap-icons/bootstrap-icons.css';
 @import 'conestack-vars.css';
