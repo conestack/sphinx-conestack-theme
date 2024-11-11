@@ -2,7 +2,6 @@
 
 #cs-sidebar {
   grid-area: sidebar;
-  background: white;
   width: fit-content;
   min-width: 180px;
   max-height: calc(100vh - 8rem);
@@ -29,7 +28,7 @@
   a:active,
   a:hover {
     text-decoration: none;
-    color: var(--bs-gray-800);
+    color: var(--bs-body-color);
   }
 
   ul {
@@ -74,7 +73,7 @@
 
         content: '\f285';
         margin-right: .2rem;
-        color: var(--bs-gray-800);
+        color: var(--bs-body-color);
       }
 
       &.current::before,
@@ -113,7 +112,7 @@
       &:visited,
       &:active,
       &:hover {
-        color: var(--bs-gray-700);
+        color: var(--bs-body-color);
       }
     }
 
@@ -122,7 +121,7 @@
       &:visited,
       &:active,
       &:hover {
-        color: var(--bs-gray-700);
+        color: var(--bs-body-color);
         font-weight: bold;
       }
     }
