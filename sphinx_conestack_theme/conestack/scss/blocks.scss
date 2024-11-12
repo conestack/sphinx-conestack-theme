@@ -5,6 +5,10 @@
     margin-left: var(--bs-gutter-x, 0.75rem);
   }
 
+  [class^="highlight-"] .highlight {
+    margin-top: 0;
+  }
+
   .highlight,
   pre.literal-block {
     position: relative;

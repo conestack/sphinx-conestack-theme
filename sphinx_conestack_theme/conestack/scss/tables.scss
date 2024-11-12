@@ -16,7 +16,7 @@
     }
 
     thead {
-      background: var(--bs-gray-100);
+      background-color: var(--bs-tertiary-bg);
       border-top: none!important;
     }
 
@@ -37,7 +37,7 @@
     }
 
     .stub {
-      background: var(--bs-gray-100);
+      background: var(--bs-tertiary-bg);
     }
 
     &.docutils {
@@ -47,7 +47,7 @@
       box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
 
       td {
-        background: var(--bs-white);
+        background: var(--bs-body-bg);
       }
 
       td, th {
