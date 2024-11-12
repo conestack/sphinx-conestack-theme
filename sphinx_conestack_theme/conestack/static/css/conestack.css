@@ -164,7 +164,7 @@ body {
   max-height: calc(100vh - 8rem);
   height: max-content;
   position: sticky;
-  top: 1rem;
+  top: 7rem;
   overflow-y: auto;
 }
 @media (max-width: 768px) {
@@ -186,7 +186,7 @@ body {
 .cs-nav-toc a:active,
 .cs-nav-toc a:hover {
   text-decoration: none;
-  color: var(--bs-body-color);
+  color: var(--bs-secondary-color);
 }
 .cs-nav-toc ul {
   list-style: none;
@@ -203,8 +203,8 @@ body {
   margin-left: 20px;
   text-indent: -10px;
 }
-.cs-nav-toc li.toctree-l1.current > a {
-  text-decoration: underline;
+.cs-nav-toc li.toctree-l1.current > a, .cs-nav-toc li.toctree-l1.current > a::before {
+  color: var(--bs-emphasis-color);
 }
 .cs-nav-toc li.toctree-l1.current ul {
   display: block;
@@ -226,15 +226,15 @@ body {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\f285";
+  content: "\f234";
   margin-right: 0.2rem;
   color: var(--bs-body-color);
 }
 .cs-nav-toc li.toctree-l1 > a.current::before, .cs-nav-toc li.toctree-l1 > a.expanded::before {
-  content: "\f282";
+  content: "\f229";
 }
 .cs-nav-toc li.toctree-l1 > a.collapsed::before {
-  content: "\f285" !important;
+  content: "\f234" !important;
 }
 .cs-nav-toc li.toctree-l1 > span.toggle {
   position: absolute;
@@ -256,7 +256,7 @@ body {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\f285";
+  content: "\f229";
   opacity: 0;
 }
 .cs-nav-toc li.toctree-l2 a {
@@ -346,14 +346,22 @@ body {
   margin-bottom: 1.5rem;
   font-weight: 400;
   font-size: 3rem;
+  color: var(--bs-emphasis-color);
+}
+.cs-content h2 {
+  margin-top: 3rem;
 }
 .cs-content h3 {
+  margin-top: 1.5rem;
   font-size: 1.5rem;
 }
-.cs-content h2, .cs-content h3, .cs-content h4 {
+.cs-content h4 {
   margin-top: 1.5rem;
+}
+.cs-content h2, .cs-content h3, .cs-content h4 {
   margin-bottom: 1rem;
   font-weight: 500;
+  color: var(--bs-emphasis-color);
 }
 .cs-content h2:hover .headerlink, .cs-content h3:hover .headerlink, .cs-content h4:hover .headerlink {
   opacity: 1;
@@ -745,7 +753,7 @@ footer .next-chapter::after {
 @media (min-width: 992px) {
   .cs-local-toc {
     position: sticky;
-    top: 1rem;
+    top: 7rem;
     right: 0;
     z-index: 2;
     overflow-y: auto;
