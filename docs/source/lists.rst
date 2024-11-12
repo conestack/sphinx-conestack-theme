@@ -263,7 +263,7 @@ Images and figures can also be added to a horizontal list. ::
 
          This is a short caption for a figure.
 
-    - .. figure:: ./_static/drops.jpg
+    - .. figure:: ./_static/images/drops.jpg
          :width: 200px
          :alt: Leohoho | pixabay
          :target: https://pixabay.com/users/leohoho-16235524/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5470471
@@ -287,7 +287,7 @@ Images and figures can also be added to a horizontal list. ::
 
          This is a short caption for a figure.
 
-    - .. figure:: ./_static/drops.jpg
+    - .. figure:: ./_static/images/drops.jpg
          :width: 200px
          :alt: Leohoho | pixabay
          :target: https://pixabay.com/users/leohoho-16235524/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5470471
