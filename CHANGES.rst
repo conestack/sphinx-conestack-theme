@@ -4,7 +4,21 @@ Changes
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Pin Sphinx Version to 8.1.3.
+
+- Update Bootstrap Version to 5.3.3.
+
+- Update static directory structure.
+
+- Add jQuery Version v4.0.0-beta.2 to static directory.
+
+- Include Colortoggler (taken and modified from cone.app).
+
+- Add dark mode.
+
+- Add pygments_dark_style to config.
+
+[lenadax]
 
 
 1.0.1 (2024-06-02)
