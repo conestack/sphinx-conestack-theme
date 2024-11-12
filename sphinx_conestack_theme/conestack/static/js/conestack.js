@@ -6,13 +6,16 @@ let cs = {
     init: function() {
         this.navigation = $('.cs-nav-toc');
         this.searchbox = $('#searchbox');
+        this.colortoggler = $('#colortoggler');
         this.init_navigation();
         this.bind_navigation();
         this.handle_searchbox();
+        this.handle_colortoggler();
         this.handle_mobile();
         this.handle_images();
         this.handle_header();
         $(window).on('resize', cs.handle_searchbox_resize.bind(this));
+        $(window).on('resize', cs.handle_colortoggler_resize.bind(this));
     },
 
     init_navigation: function() {
@@ -59,14 +62,33 @@ let cs = {
         } else {
             this.searchbox.detach().prependTo('#cs-mobile-menu');
         }
+        this.searchbox.show();
     },
 
     handle_searchbox_resize: function() {
         let nav_exists = $('#nav-search').children().length > 0;
         if (window.matchMedia('(max-width:768px)').matches && nav_exists) {
             this.searchbox.detach().prependTo('#cs-mobile-menu');
-        } else if (window.matchMedia('(min-width:768px)').matches && !nav_exists) {
+        } else if (window.matchMedia('(min-width:769px)').matches && !nav_exists) {
             this.searchbox.detach().appendTo('#nav-search');
+        }
+    },
+
+    handle_colortoggler: function() {
+        if (window.matchMedia('(min-width:480px)').matches) {
+            this.colortoggler.detach().appendTo('#colortoggler-wrapper');
+        } else {
+            this.colortoggler.detach().appendTo('#cs-mobile-menu');
+        }
+        this.colortoggler.addClass('d-flex');
+    },
+
+    handle_colortoggler_resize: function() {
+        let nav_exists = $('#colortoggler-wrapper').children().length > 0;
+        if (window.matchMedia('(max-width:480px)').matches && nav_exists) {
+            this.colortoggler.detach().appendTo('#cs-mobile-menu');
+        } else if (window.matchMedia('(min-width:479px)').matches && !nav_exists) {
+            this.colortoggler.detach().appendTo('#colortoggler-wrapper');
         }
     },
 
@@ -102,7 +124,7 @@ let cs = {
         let elem = $(`
           <button class="copy-literal-block btn btn-outline-primary"
                   data-text="Copy">
-            Copy
+            <i class="bi bi-clipboard"></i>
           </button>
         `);
         $('.highlight').prepend(elem);

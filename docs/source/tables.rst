@@ -6,35 +6,38 @@ Grid Tables
 
 An example for a grid table markup:
 
-.. sidebar:: Output:
+.. container:: d-flex flex-column flex-sm-row
 
-  +------+------+------+
-  |   1  |   2  |  3   |
-  +======+======+======+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
+   .. code-block:: text
 
-::
+      # example markup for a simple
+      # grid table
 
-  # example markup for a simple
-  # grid table
-  +------+------+------+
-  |   1  |   2  |  3   |
-  +======+======+======+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
-  | row1 | col2 | col3 |
-  +------+------+------+
+      +------+------+------+
+      |   1  |   2  |  3   |
+      +======+======+======+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
+
+   .. container::  p-0 m-0
+
+      +------+------+------+
+      |   1  |   2  |  3   |
+      +======+======+======+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
+      | row1 | col2 | col3 |
+      +------+------+------+
 
 
 Complex grid tables
@@ -79,34 +82,35 @@ Complex grid tables
 Simple Tables
 ~~~~~~~~~~~~~
 
-.. sidebar:: Output:
+.. container:: d-flex flex-column flex-sm-row
 
-  =====  =====  ======
-  Inputs        Output
-  ------------  ------
-    A      B    A or B
-  =====  =====  ======
-  False  False  False
-  True   False  True
-  False  True   True
-  True   True   True
-  =====  =====  ======
+   .. code-block:: text
 
-::
+      # markup for a simple table
 
-  # markup for a simple table
+      =====  =====  ======
+      Inputs        Output
+      ------------  ------
+        A      B    A or B
+      =====  =====  ======
+      False  False  False
+      True   False  True
+      False  True   True
+      True   True   True
+      =====  =====  ======
 
-  =====  =====  ======
-  Inputs        Output
-  ------------  ------
-    A      B    A or B
-  =====  =====  ======
-  False  False  False
-  True   False  True
-  False  True   True
-  True   True   True
-  =====  =====  ======
+   .. container::  p-0 m-0
 
+      =====  =====  ======
+      Inputs        Output
+      ------------  ------
+        A      B    A or B
+      =====  =====  ======
+      False  False  False
+      True   False  True
+      False  True   True
+      True   True   True
+      =====  =====  ======
 
 Big Tables
 ~~~~~~~~~~

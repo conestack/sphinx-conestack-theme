@@ -20,6 +20,8 @@
 
     .copy-literal-block {
       position: absolute;
+      background-color: var(--bs-tertiary-bg);
+      color: var(--bs-btn-hover-border-color);
       right: 1rem;
       top: 1rem;
       padding: 0.2rem 0.4rem;
@@ -48,5 +50,24 @@
     border-radius: 0.2em;
     font-size: 12px;
     padding: 0.1em 0.2em;
+  }
+
+  .d-flex.docutils.container {
+    gap: 1rem;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .highlight-text {
+        width: 100%;
+
+        .highlight {
+            margin-bottom: 0;
+        }
+    }
+    .p-0.m-0.docutils.container {
+        width: auto;
+    }
   }
 }

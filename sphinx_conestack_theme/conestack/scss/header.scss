@@ -4,6 +4,10 @@
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
   height: 64px;
 
+  > nav {
+    height: 44px;
+  }
+
   button[btn-title]:hover::after {
     content: attr(btn-title);
     color: var(--bs-gray-600);
@@ -15,6 +19,15 @@
     position: absolute;
     z-index: 1000;
     top: 30px;
+  }
+
+  #colortoggler {
+    display: none;
+
+    @media (max-width: 480px) {
+        float: right;
+        margin-right: 0!important;
+    }
   }
 }
 
@@ -30,7 +43,7 @@
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     margin-left: 1rem!important;
   }
 
@@ -50,7 +63,8 @@
 #searchbox {
   max-width: 300px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
+    display: none;
     max-width: none;
     color: black;
     margin-right: 0px!important;
@@ -62,10 +76,10 @@
 }
 
 #cs-ext-links {
-  @media (max-width: 400px) {
+  @media (max-width: 470px) {
     display: none !important;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     margin-left: auto;
   }
 
@@ -101,6 +115,8 @@
 
 #cs-mobile-menu {
   background: var(--cs-bg-color);
+  border-bottom: 1px solid #3b3b3b;
+  box-shadow: 0px 20px 20px 8px rgba(0, 0, 0, 0.3607843137);
   z-index: 1000;
 
   @media (min-width: 769px) {

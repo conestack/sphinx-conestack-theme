@@ -12,6 +12,9 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   height: 64px;
 }
+#header > nav {
+  height: 44px;
+}
 #header button[btn-title]:hover::after {
   content: attr(btn-title);
   color: var(--bs-gray-600);
@@ -24,6 +27,15 @@ body {
   z-index: 1000;
   top: 30px;
 }
+#header #colortoggler {
+  display: none;
+}
+@media (max-width: 480px) {
+  #header #colortoggler {
+    float: right;
+    margin-right: 0 !important;
+  }
+}
 
 #logo, #logo:active, #logo:hover, #logo:visited {
   margin-left: 2rem;
@@ -32,7 +44,7 @@ body {
   color: var(--cs-color);
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #logo {
     margin-left: 1rem !important;
   }
@@ -52,8 +64,9 @@ body {
 #searchbox {
   max-width: 300px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #searchbox {
+    display: none;
     max-width: none;
     color: black;
     margin-right: 0px !important;
@@ -63,12 +76,12 @@ body {
   margin-bottom: 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 470px) {
   #cs-ext-links {
     display: none !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #cs-ext-links {
     margin-left: auto;
   }
@@ -101,6 +114,8 @@ body {
 
 #cs-mobile-menu {
   background: var(--cs-bg-color);
+  border-bottom: 1px solid #3b3b3b;
+  box-shadow: 0px 20px 20px 8px rgba(0, 0, 0, 0.3607843137);
   z-index: 1000;
 }
 @media (min-width: 769px) {
@@ -938,6 +953,8 @@ footer .next-chapter::after {
 .cs-content .highlight .copy-literal-block,
 .cs-content pre.literal-block .copy-literal-block {
   position: absolute;
+  background-color: var(--bs-tertiary-bg);
+  color: var(--bs-btn-hover-border-color);
   right: 1rem;
   top: 1rem;
   padding: 0.2rem 0.4rem;
@@ -964,4 +981,20 @@ footer .next-chapter::after {
   border-radius: 0.2em;
   font-size: 12px;
   padding: 0.1em 0.2em;
+}
+.cs-content .d-flex.docutils.container {
+  gap: 1rem;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.cs-content .d-flex.docutils.container .highlight-text {
+  width: 100%;
+}
+.cs-content .d-flex.docutils.container .highlight-text .highlight {
+  margin-bottom: 0;
+}
+.cs-content .d-flex.docutils.container .p-0.m-0.docutils.container {
+  width: auto;
 }
