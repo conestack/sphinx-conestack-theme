@@ -50,5 +50,8 @@ path = "CHANGES.rst"
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
 path = "LICENSE.rst"
 
+
+[tool.hatch.build.targets.wheel]
+packages = ["sphinx_conestack_theme"]
 [tool.zest.releaser]
 create-wheel = true
