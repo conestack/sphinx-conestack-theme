@@ -61,7 +61,7 @@ html_theme_options = {
 }
 
 html_css_files = [
-    'css/custom.css'
+    'css/conestack.css'
 ]
 
 html_js_files = [

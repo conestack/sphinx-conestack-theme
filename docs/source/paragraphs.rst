@@ -7,7 +7,7 @@ Inline Markup
 Paragraphs contain text and may also contain inline markup, such as:
 
 *emphasis*, **strong emphasis**, ``inline literals``, standalone hyperlinks
-(http://www.python.org), internal cross-references (example_), external
+(http://www.python.org), internal cross-references (internal-links_), external
 hyperlinks with embedded URIs (`Python web site <http://www.python.org>`_),
 footnote references (manually numbered [1]_, anonymous auto-numbered [#]_,
 labeled auto-numbered [#label]_), citation references ([12]_), substitution
@@ -26,7 +26,7 @@ Standalone hyperlink:
     http://www.python.org ``http://www.python.org``
 
 Internal cross-reference:
-    example_ ``example_``
+    internal-links_ ``internal-links_``
 
 External hyperlink with embedded URI:
     `Python web site <http://www.python.org>`_
@@ -34,13 +34,17 @@ External hyperlink with embedded URI:
 
 Footnote reference:
     - manually numbered [1]_ ``[1]_``
-    - anonymous auto-numbered [#]_ ``[#]_``
     - labeled auto-numbered [#label]_ ``[#label]_``
+    - anonymous auto-numbered [#]_ ``[#]_``
 
 Citation reference:
-    Reference ([12]_) ``([12]_)``
+    Reference [12]_ ``(Reference [12]_)``
 
 Substitution reference:
+    .. |example| replace:: Example Text
+
+    ``.. |example| replace:: Example Text``
+
     (|example|) ``(|example|)``
 
 _`inline hyperlink target`:
@@ -350,6 +354,8 @@ This is a paragraph that contains `a link`_. ::
 .. _a link: https://domain.invalid/
 
 
+.. _internal-links:
+
 Internal links
 ~~~~~~~~~~~~~~
 
@@ -424,3 +430,11 @@ Download Links
 Use download links by prepending ``:download:``: ::
 
    :download:`Title <https://download-link.com>`
+
+
+Examples
+~~~~~~~~
+
+.. [12] Example Reference ``.. [12] Example Reference``
+
+.. [#] Example automatically numbered footnote

@@ -422,9 +422,6 @@ footer .next-chapter::after {
   font-family: "bootstrap-icons";
   color: var(--bs-gray-600);
 }
-.cs-main .admonition.attention {
-  border-left-color: #ff3a00;
-}
 .cs-main .admonition.attention > .admonition-title {
   background: rgba(255, 58, 0, 0.2);
 }
@@ -432,8 +429,8 @@ footer .next-chapter::after {
   content: "\f332";
   color: #ff3a00;
 }
-.cs-main .admonition.danger {
-  border-left-color: #ff0000;
+.cs-main .admonition.attention {
+  border-left-color: #ff3a00;
 }
 .cs-main .admonition.danger > .admonition-title {
   background: rgba(255, 0, 0, 0.2);
@@ -442,8 +439,8 @@ footer .next-chapter::after {
   content: "\f532";
   color: #ff0000;
 }
-.cs-main .admonition.error {
-  border-left-color: #ff3a00;
+.cs-main .admonition.danger {
+  border-left-color: #ff0000;
 }
 .cs-main .admonition.error > .admonition-title {
   background: rgba(255, 58, 0, 0.2);
@@ -452,8 +449,8 @@ footer .next-chapter::after {
   content: "\f622";
   color: #ff3a00;
 }
-.cs-main .admonition.caution {
-  border-left-color: #fd7e14;
+.cs-main .admonition.error {
+  border-left-color: #ff3a00;
 }
 .cs-main .admonition.caution > .admonition-title {
   background: rgba(253, 126, 20, 0.2);
@@ -462,7 +459,7 @@ footer .next-chapter::after {
   content: "\f46e";
   color: #fd7e14;
 }
-.cs-main .admonition.warning {
+.cs-main .admonition.caution {
   border-left-color: #fd7e14;
 }
 .cs-main .admonition.warning > .admonition-title {
@@ -472,8 +469,8 @@ footer .next-chapter::after {
   content: "\f33a";
   color: #fd7e14;
 }
-.cs-main .admonition.hint {
-  border-left-color: #20c997;
+.cs-main .admonition.warning {
+  border-left-color: #fd7e14;
 }
 .cs-main .admonition.hint > .admonition-title {
   background: rgba(32, 201, 151, 0.2);
@@ -482,7 +479,7 @@ footer .next-chapter::after {
   content: "\f504";
   color: #20c997;
 }
-.cs-main .admonition.tip {
+.cs-main .admonition.hint {
   border-left-color: #20c997;
 }
 .cs-main .admonition.tip > .admonition-title {
@@ -492,8 +489,8 @@ footer .next-chapter::after {
   content: "\f406";
   color: #20c997;
 }
-.cs-main .admonition.important {
-  border-left-color: #0dcaf0;
+.cs-main .admonition.tip {
+  border-left-color: #20c997;
 }
 .cs-main .admonition.important > .admonition-title {
   background: rgba(13, 202, 240, 0.2);
@@ -502,8 +499,8 @@ footer .next-chapter::after {
   content: "\f400";
   color: #0dcaf0;
 }
-.cs-main .admonition.note {
-  border-left-color: #0d6efd;
+.cs-main .admonition.important {
+  border-left-color: #0dcaf0;
 }
 .cs-main .admonition.note > .admonition-title {
   background: rgba(13, 110, 253, 0.2);
@@ -511,6 +508,9 @@ footer .next-chapter::after {
 .cs-main .admonition.note > .admonition-title:before {
   content: "\f4c9";
   color: #0d6efd;
+}
+.cs-main .admonition.note {
+  border-left-color: #0d6efd;
 }
 
 [data-bs-theme=dark] .cs-main .admonition {
@@ -524,9 +524,6 @@ footer .next-chapter::after {
 [data-bs-theme=dark] .cs-main .admonition p.admonition-title:before {
   color: var(--bs-gray-600);
 }
-[data-bs-theme=dark] .cs-main .admonition.attention {
-  border-left-color: #ff3a00;
-}
 [data-bs-theme=dark] .cs-main .admonition.attention > .admonition-title {
   background: rgba(255, 58, 0, 0.2);
 }
@@ -534,8 +531,8 @@ footer .next-chapter::after {
   content: "\f332";
   color: #ff3a00;
 }
-[data-bs-theme=dark] .cs-main .admonition.danger {
-  border-left-color: #ff0000;
+[data-bs-theme=dark] .cs-main .admonition.attention {
+  border-left-color: #ff3a00;
 }
 [data-bs-theme=dark] .cs-main .admonition.danger > .admonition-title {
   background: rgba(255, 0, 0, 0.2);
@@ -544,8 +541,8 @@ footer .next-chapter::after {
   content: "\f532";
   color: #ff0000;
 }
-[data-bs-theme=dark] .cs-main .admonition.error {
-  border-left-color: #ff3a00;
+[data-bs-theme=dark] .cs-main .admonition.danger {
+  border-left-color: #ff0000;
 }
 [data-bs-theme=dark] .cs-main .admonition.error > .admonition-title {
   background: rgba(255, 58, 0, 0.2);
@@ -554,8 +551,8 @@ footer .next-chapter::after {
   content: "\f622";
   color: #ff3a00;
 }
-[data-bs-theme=dark] .cs-main .admonition.caution {
-  border-left-color: #fd7e14;
+[data-bs-theme=dark] .cs-main .admonition.error {
+  border-left-color: #ff3a00;
 }
 [data-bs-theme=dark] .cs-main .admonition.caution > .admonition-title {
   background: rgba(253, 126, 20, 0.2);
@@ -564,7 +561,7 @@ footer .next-chapter::after {
   content: "\f46e";
   color: #fd7e14;
 }
-[data-bs-theme=dark] .cs-main .admonition.warning {
+[data-bs-theme=dark] .cs-main .admonition.caution {
   border-left-color: #fd7e14;
 }
 [data-bs-theme=dark] .cs-main .admonition.warning > .admonition-title {
@@ -574,8 +571,8 @@ footer .next-chapter::after {
   content: "\f33a";
   color: #fd7e14;
 }
-[data-bs-theme=dark] .cs-main .admonition.hint {
-  border-left-color: #20c997;
+[data-bs-theme=dark] .cs-main .admonition.warning {
+  border-left-color: #fd7e14;
 }
 [data-bs-theme=dark] .cs-main .admonition.hint > .admonition-title {
   background: rgba(32, 201, 151, 0.2);
@@ -584,7 +581,7 @@ footer .next-chapter::after {
   content: "\f504";
   color: #20c997;
 }
-[data-bs-theme=dark] .cs-main .admonition.tip {
+[data-bs-theme=dark] .cs-main .admonition.hint {
   border-left-color: #20c997;
 }
 [data-bs-theme=dark] .cs-main .admonition.tip > .admonition-title {
@@ -594,8 +591,8 @@ footer .next-chapter::after {
   content: "\f406";
   color: #20c997;
 }
-[data-bs-theme=dark] .cs-main .admonition.important {
-  border-left-color: #0dcaf0;
+[data-bs-theme=dark] .cs-main .admonition.tip {
+  border-left-color: #20c997;
 }
 [data-bs-theme=dark] .cs-main .admonition.important > .admonition-title {
   background: rgba(13, 202, 240, 0.2);
@@ -604,8 +601,8 @@ footer .next-chapter::after {
   content: "\f400";
   color: #0dcaf0;
 }
-[data-bs-theme=dark] .cs-main .admonition.note {
-  border-left-color: #0d6efd;
+[data-bs-theme=dark] .cs-main .admonition.important {
+  border-left-color: #0dcaf0;
 }
 [data-bs-theme=dark] .cs-main .admonition.note > .admonition-title {
   background: rgba(13, 110, 253, 0.2);
@@ -613,6 +610,9 @@ footer .next-chapter::after {
 [data-bs-theme=dark] .cs-main .admonition.note > .admonition-title:before {
   content: "\f4c9";
   color: #0d6efd;
+}
+[data-bs-theme=dark] .cs-main .admonition.note {
+  border-left-color: #0d6efd;
 }
 
 .cs-content table {
