@@ -6,16 +6,20 @@ API Documentation can be generated with
 
 For example, the following directive::
 
-    Sphinx
-    ------
+    Python Datetime
+    ---------------
 
-    .. autoclass:: sphinx.application.Sphinx
-        :members:
+    .. automodule:: datetime
+       :members:
+       :undoc-members:
+       :show-inheritance:
 
 produces the following output:
 
-Sphinx
-------
+Python Datetime
+---------------
 
-.. autoclass:: sphinx.application.Sphinx
-    :members:
+.. automodule:: datetime
+   :members:
+   :undoc-members:
+   :show-inheritance:

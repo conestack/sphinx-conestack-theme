@@ -3,9 +3,13 @@ __pycache__
 *.pyc
 /.mxmake/
 /.venv/
+/bin/
 /build/
 /dist/
 /docs/html/
+/lib/
+/lib64
 /node_modules/
 /pyvenv.cfg
 /requirements-mxdev.txt
+/share/

@@ -9,7 +9,7 @@
 {%- endblock %}
 
 {% block extrahead %}
-  <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+  <script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
   {{ super() }}
 {% endblock %}
 
@@ -18,7 +18,7 @@
 
   {% block scriptwarning %}
   <div id="fallback" class="admonition warning">
-  <script>$('#fallback').hide();</script>
+  <script>document.querySelector('#fallback').style['display'] = 'none';</script>
   <p>
     {% trans %}Please activate JavaScript to enable the search
     functionality.{% endtrans %}
@@ -34,7 +34,7 @@
   {% endblock %}
 
   {% block searchbox %}
-  <div id="searchbox" class="nav-item me-3" role="search">
+  <div id="searchbox-search" class="nav-item me-3" role="search">
     <form class="search input-group" action="" method="get">
       <input type="text" class="form-control" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <button type="submit" class="bi bi-search input-group-text" />

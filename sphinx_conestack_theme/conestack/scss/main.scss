@@ -48,18 +48,26 @@
     margin-bottom: 1.5rem;
     font-weight: 400;
     font-size: 3rem;
-    color: var(--bs-gray-800);
+    color: var(--bs-emphasis-color);
+  }
+
+  h2 {
+    margin-top: 3rem;
   }
 
   h3 {
+    margin-top: 1.5rem;
     font-size: 1.5rem;
   }
 
-  h2, h3, h4 {
+  h4 {
     margin-top: 1.5rem;
+  }
+
+  h2, h3, h4 {
     margin-bottom: 1rem;
-    color: var(--bs-gray-700);
     font-weight: 500;
+    color: var(--bs-emphasis-color);
 
     &:hover {
       .headerlink {

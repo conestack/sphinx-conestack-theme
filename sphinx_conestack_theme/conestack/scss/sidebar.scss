@@ -2,13 +2,12 @@
 
 #cs-sidebar {
   grid-area: sidebar;
-  background: white;
   width: fit-content;
   min-width: 180px;
   max-height: calc(100vh - 8rem);
   height: max-content;
   position: sticky;
-  top: 1rem;
+  top: 7rem;
   overflow-y: auto;
 
   @media (max-width: 768px) {
@@ -29,7 +28,7 @@
   a:active,
   a:hover {
     text-decoration: none;
-    color: var(--bs-gray-800);
+    color: var(--bs-secondary-color);
   }
 
   ul {
@@ -50,8 +49,8 @@
     text-indent: -10px;
 
     &.current {
-      > a {
-        color: var(--cs-bg-color);
+      > a, > a::before {
+        color: var(--bs-emphasis-color);
       }
 
       ul {
@@ -72,18 +71,18 @@
       &::before {
         @include bootstrap-icons;
 
-        content: '\f285';
+        content: '\F234';
         margin-right: .2rem;
-        color: var(--bs-gray-800);
+        color: var(--bs-body-color);
       }
 
       &.current::before,
       &.expanded::before {
-        content: '\f282';
+        content: '\f229';
       }
 
       &.collapsed::before {
-        content: '\f285' !important;
+        content: '\F234' !important;
       }
     }
 
@@ -99,7 +98,7 @@
       &::before {
         @include bootstrap-icons;
 
-        content: '\f285';
+        content: '\f229';
         opacity: 0;
       }
     }
@@ -113,7 +112,7 @@
       &:visited,
       &:active,
       &:hover {
-        color: var(--bs-gray-700);
+        color: var(--bs-body-color);
       }
     }
 
@@ -122,7 +121,7 @@
       &:visited,
       &:active,
       &:hover {
-        color: var(--bs-gray-700);
+        color: var(--bs-body-color);
         font-weight: bold;
       }
     }

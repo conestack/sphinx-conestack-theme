@@ -74,11 +74,11 @@ SCSS_SOURCE?=sphinx_conestack_theme/conestack/scss/conestack.scss
 
 # The target file for the compiles Stylesheet.
 # Default: scss/styles.css
-SCSS_TARGET?=sphinx_conestack_theme/conestack/static/conestack.css
+SCSS_TARGET?=sphinx_conestack_theme/conestack/static/css/conestack.css
 
 # The target file for the compressed Stylesheet.
 # Default: scss/styles.min.css
-SCSS_MIN_TARGET?=sphinx_conestack_theme/conestack/static/conestack.min.css
+SCSS_MIN_TARGET?=sphinx_conestack_theme/conestack/static/css/conestack.min.css
 
 # Additional options to be passed to SCSS compiler.
 # Default: --no-source-map=none

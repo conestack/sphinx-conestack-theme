@@ -1,6 +1,6 @@
 {%- if pagename != "search" and builder != "singlehtml" %}
   <div id="nav-search" class="ms-auto">
-    <div id="searchbox" class="nav-item me-3" role="search">
+    <div id="searchbox" class="nav-item me-3" role="search" style="display: none;">
       <form class="search input-group" action="{{ pathto('search') }}" method="get">
         <input type="text" class="form-control" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <button type="submit" 

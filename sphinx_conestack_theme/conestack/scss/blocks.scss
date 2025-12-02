@@ -5,6 +5,10 @@
     margin-left: var(--bs-gutter-x, 0.75rem);
   }
 
+  [class^="highlight-"] .highlight {
+    margin-top: 0;
+  }
+
   .highlight,
   pre.literal-block {
     position: relative;
@@ -16,6 +20,8 @@
 
     .copy-literal-block {
       position: absolute;
+      background-color: var(--bs-tertiary-bg);
+      color: var(--bs-btn-hover-border-color);
       right: 1rem;
       top: 1rem;
       padding: 0.2rem 0.4rem;
@@ -38,11 +44,30 @@
   }
 
   code.literal {
-    background: #f8f9fa;
-    border: 1px solid var(--bs-gray-400);
-    color: black;
+    background: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
     border-radius: 0.2em;
     font-size: 12px;
     padding: 0.1em 0.2em;
+  }
+
+  .d-flex.docutils.container {
+    gap: 1rem;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .highlight-text {
+        width: 100%;
+
+        .highlight {
+            margin-bottom: 0;
+        }
+    }
+    .p-0.m-0.docutils.container {
+        width: auto;
+    }
   }
 }

@@ -42,7 +42,7 @@
   }
 
   dt {
-    color: var(--bs-gray-700);
+    color: var(--bs-body-color);
   }
 
   a > span.problematic {
@@ -60,8 +60,7 @@
   }
 
   blockquote {
-    border-left: 1px solid var(--bs-gray-700);
-    color: var(--bs-gray-700);
+    border-left: 1px solid var(--bs-body-color);
     font-style: italic;
     margin-right: 0.5rem;
     padding: 0.5rem 1rem;
@@ -69,14 +68,13 @@
 
   caption {
     text-align: center;
-    color: var(--bs-gray-800);
     font-size: 0.9rem;
     padding-top: 0.3rem;
     padding-bottom: 0.35rem;
   }
 
   a > code {
-    color: var(--bs-blue) !important;
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
   }
 
   span {
@@ -105,10 +103,10 @@
   kbd:not(.compound) {
     padding: 0.1rem 0.4em;
     font-size: 0.8em;
-    color: var(--bs-gray-800);
-    background: var(--bs-gray-100);
-    border: 1px solid var(--bs-gray-400);
-    box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem white;
+    color: var(--bs-body-color);
+    background: var(--bs-tertiary-bg);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.5), inset 0 0 0 0.125rem var(--bs-body-bg);
     border-radius: 0.2rem;
     font-weight: 400;
   }
