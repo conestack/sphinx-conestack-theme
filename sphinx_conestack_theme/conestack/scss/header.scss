@@ -36,6 +36,10 @@
 
   #searchbox-search {
     margin-left: auto;
+
+    @media (max-width: 769px) {
+      display: none!important;
+    }
   }
 }
 [data-bs-theme="dark"] #header {
@@ -75,7 +79,6 @@
   max-width: 300px;
 
   @media (max-width: 769px) {
-    display: none;
     max-width: none;
     color: black;
     margin-right: 0px!important;
@@ -83,6 +86,16 @@
 
   form.search {
     margin-bottom: 0;
+  }
+}
+
+.collapsing #searchbox, .show #searchbox {
+  display: block!important;
+}
+
+@media (min-width: 769px) {
+  #nav-search #searchbox {
+    display: block!important;
   }
 }
 

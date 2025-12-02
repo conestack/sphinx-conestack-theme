@@ -42,6 +42,11 @@ body {
 #header #searchbox-search {
   margin-left: auto;
 }
+@media (max-width: 769px) {
+  #header #searchbox-search {
+    display: none !important;
+  }
+}
 
 [data-bs-theme=dark] #header {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.44), inset 0 -1px 0 rgb(0, 0, 0);
@@ -76,7 +81,6 @@ body {
 }
 @media (max-width: 769px) {
   #searchbox {
-    display: none;
     max-width: none;
     color: black;
     margin-right: 0px !important;
@@ -86,6 +90,15 @@ body {
   margin-bottom: 0;
 }
 
+.collapsing #searchbox, .show #searchbox {
+  display: block !important;
+}
+
+@media (min-width: 769px) {
+  #nav-search #searchbox {
+    display: block !important;
+  }
+}
 @media (max-width: 470px) {
   #cs-ext-links {
     display: none !important;

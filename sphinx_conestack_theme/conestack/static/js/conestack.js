@@ -138,7 +138,7 @@ class Conestack
             });
             window.addEventListener('scroll', () => {
                 if (btn.style['display'] === 'none') {
-                    btn.stlye['display'] = '';
+                    btn.style['display'] = '';
                 } else if (window.scrollY === 0) {
                     btn.stlye['display'] = 'none';
                 }
