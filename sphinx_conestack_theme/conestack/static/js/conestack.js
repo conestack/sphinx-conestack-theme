@@ -110,7 +110,7 @@ class Conestack
     }
 
     handle_colortoggler_resize() {
-        let nav_exists = $('#colortoggler-wrapper').children().length > 0;
+        let nav_exists = document.querySelector('#colortoggler-wrapper').children.length > 0;
         if (window.matchMedia('(max-width:480px)').matches && nav_exists) {
             document.querySelector('#cs-mobile-menu')?.append(this.colortoggler);
         } else if (window.matchMedia('(min-width:479px)').matches && !nav_exists) {
@@ -170,25 +170,28 @@ class Conestack
     }
 
     highlight_search_words() {
-        var params = $.getQueryParameters();
-        var terms = (params.highlight) ? params.highlight[0].split(/\s+/) : [];
+        // Parse query parameters
+        const params = new URLSearchParams(window.location.search);
+        const terms = params.has('highlight')
+            ? params.get('highlight').split(/\s+/)
+            : [];
+
         if (terms.length) {
-            var body = document.querySelector('div.body');
-            if (!body.length) {
-                body = document.querySelector('body');
-            }
-            window.setTimeout(function() {
-                $.each(terms, function() {
-                    body.highlightText(this.toLowerCase(), 'highlighted');
-                });
+            let body = document.querySelector('div.body') || document.querySelector('body');
+
+            window.setTimeout(() => {
+            terms.forEach(term => {
+                body.highlightText(term.toLowerCase(), 'highlighted');
+            });
             }, 10);
-            let btn = `
-              <button class="highlight-link bi bi-eye-slash input-group-text"
-                      onclick="Documentation.hideSearchWords()"
-                      btn-title="remove highlighted words">
-              </button>
-            `
-            $(btn).insertBefore($('#searchbox input'));
+
+            const btn = document.createElement('button');
+            btn.className = 'highlight-link bi bi-eye-slash input-group-text';
+            btn.setAttribute('onclick', 'Documentation.hideSearchWords()');
+            btn.setAttribute('btn-title', 'remove highlighted words');
+
+            const searchInput = document.querySelector('#searchbox input');
+            searchInput.parentNode.insertBefore(btn, searchInput);
         }
     }
 
