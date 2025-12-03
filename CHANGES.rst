@@ -4,21 +4,29 @@ Changes
 1.0.2 (unreleased)
 ------------------
 
+- Refactor package layout to use ``pyproject.toml``.
+  [rnix]
+
 - Pin Sphinx Version to 8.1.3.
+  [lenadax]
 
 - Update Bootstrap Version to 5.3.3.
+  [lenadax]
 
 - Update static directory structure.
+  [lenadax]
 
 - Add jQuery Version v4.0.0-beta.2 to static directory.
+  [lenadax]
 
 - Include Colortoggler (taken and modified from cone.app).
+  [lenadax]
 
 - Add dark mode.
+  [lenadax]
 
 - Add pygments_dark_style to config.
-
-[lenadax]
+  [lenadax]
 
 
 1.0.1 (2024-06-02)
