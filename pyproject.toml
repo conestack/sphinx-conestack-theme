@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "sphinx-conestack-theme"
 description = "Mobile friendly Bootstrap 5 based Sphinx theme"
-version = "1.1.0"
+version = "1.1.1.dev0"
 requires-python = ">=3.10"
 license = { text = "BSD 2-Clause License" }
 authors = [
