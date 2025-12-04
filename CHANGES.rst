@@ -34,6 +34,7 @@ Changes
 
 - Add ``role="main"`` to main containers in markup.
 
+
 1.0 (2024-06-01)
 ----------------
 
