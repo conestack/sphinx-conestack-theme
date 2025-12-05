@@ -4,7 +4,8 @@ Changes
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove version pinning for sphinx.
+  [rnix]
 
 
 1.1.0 (2025-12-04)

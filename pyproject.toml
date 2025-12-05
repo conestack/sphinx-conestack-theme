@@ -32,7 +32,7 @@ classifiers = [
     "Topic :: Software Development :: Documentation",
 ]
 dependencies = [
-    "Sphinx==9.0.1",
+    "Sphinx",
 ]
 dynamic = ["readme"]
 
