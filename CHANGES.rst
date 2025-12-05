@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.1.1 (unreleased)
+1.1.1 (2025-12-05)
 ------------------
 
 - Remove version pinning for sphinx.
