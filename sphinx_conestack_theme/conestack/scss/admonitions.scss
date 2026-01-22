@@ -175,6 +175,10 @@ $version-icons: (
       padding-top: 2rem;
       border-radius: 0.2rem;
 
+      ul, ol {
+        padding-left: 1rem;
+      }
+
       span.versionmodified {
         display: flex;
         position: absolute;

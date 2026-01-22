@@ -655,6 +655,9 @@ footer .next-chapter::after {
   padding-top: 2rem;
   border-radius: 0.2rem;
 }
+.cs-main div.versionadded ul, .cs-main div.versionadded ol, .cs-main div.versionchanged ul, .cs-main div.versionchanged ol, .cs-main div.deprecated ul, .cs-main div.deprecated ol, .cs-main div.versionremoved ul, .cs-main div.versionremoved ol {
+  padding-left: 1rem;
+}
 .cs-main div.versionadded span.versionmodified, .cs-main div.versionchanged span.versionmodified, .cs-main div.deprecated span.versionmodified, .cs-main div.versionremoved span.versionmodified {
   display: flex;
   position: absolute;
