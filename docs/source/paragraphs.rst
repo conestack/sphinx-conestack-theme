@@ -278,6 +278,10 @@ Use admonitions for important information. ::
 
    ``.. Important::``
 
+.. seealso:: This is an example see also admonition.
+
+   ``.. seealso::``
+
 .. Note:: This is a note.
 
    ``.. Note::``
@@ -328,6 +332,56 @@ Most elements can be nested in an admonition, for example:
 
    :download:`This is an example download link <https://cdn.pixabay.com/photo/2017/06/14/01/43/background-2400765_960_720.jpg>`
 
+
+Version Notes
+-------------
+
+.. seealso::
+
+    Refer to `the official Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#describing-changes-between-versions>`_
+    for more information about version notes.
+
+
+Use version notes for displaying information about versions. ::
+
+    .. version-added:: 2.0
+
+        ``do_something()`` was added in version 2.0.
+
+    .. version-changed:: 2.0
+
+        In version 2.0, ``do_something()`` now returns a boolean instead of
+        raising an exception.
+
+    .. version-deprecated:: 2.0
+
+        ``do_something()`` is deprecated since version 2.0 and will be removed
+        in a future release. Use ``do_something_else()`` instead.
+
+    .. version-removed:: 2.0
+
+        ``do_something()`` was removed in version 2.0. Use
+        ``do_something_else()`` instead.
+
+
+.. version-added:: 2.0
+
+    ``do_something()`` was added in version 2.0.
+
+.. version-changed:: 2.0
+
+    In version 2.0, ``do_something()`` now returns a boolean instead of
+    raising an exception.
+
+.. version-deprecated:: 2.0
+
+    ``do_something()`` is deprecated since version 2.0 and will be removed
+    in a future release. Use ``do_something_else()`` instead.
+
+.. version-removed:: 2.0
+
+    ``do_something()`` was removed in version 2.0. Use
+    ``do_something_else()`` instead.
 
 Hyperlinks
 ----------

@@ -525,6 +525,16 @@ footer .next-chapter::after {
 .cs-main .admonition.note {
   border-left-color: #0d6efd;
 }
+.cs-main .admonition.seealso > .admonition-title {
+  background: rgba(102, 16, 242, 0.2);
+}
+.cs-main .admonition.seealso > .admonition-title:before {
+  content: "\f133";
+  color: #6610f2;
+}
+.cs-main .admonition.seealso {
+  border-left-color: #6610f2;
+}
 
 [data-bs-theme=dark] .cs-main .admonition {
   background: var(--bs-secondary-bg);
@@ -626,6 +636,105 @@ footer .next-chapter::after {
 }
 [data-bs-theme=dark] .cs-main .admonition.note {
   border-left-color: #0d6efd;
+}
+[data-bs-theme=dark] .cs-main .admonition.seealso > .admonition-title {
+  background: rgba(102, 16, 242, 0.2);
+}
+[data-bs-theme=dark] .cs-main .admonition.seealso > .admonition-title:before {
+  content: "\f137";
+  color: rgb(147.9, 87.7, 245.9);
+}
+[data-bs-theme=dark] .cs-main .admonition.seealso {
+  border-left-color: #6610f2;
+}
+
+.cs-main div.versionadded span.versionmodified, .cs-main div.versionchanged span.versionmodified, .cs-main div.deprecated span.versionmodified, .cs-main div.versionremoved span.versionmodified {
+  display: flex;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 1rem;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+.cs-main div.versionadded p, .cs-main div.versionchanged p, .cs-main div.deprecated p, .cs-main div.versionremoved p {
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+}
+.cs-main div.versionadded span.versionmodified::before, .cs-main div.versionchanged span.versionmodified::before, .cs-main div.deprecated span.versionmodified::before, .cs-main div.versionremoved span.versionmodified::before {
+  font-family: "bootstrap-icons";
+  margin-right: 0.5rem;
+}
+.cs-main div.versionadded.versionadded span.versionmodified::before, .cs-main div.versionchanged.versionadded span.versionmodified::before, .cs-main div.deprecated.versionadded span.versionmodified::before, .cs-main div.versionremoved.versionadded span.versionmodified::before {
+  content: "\f442";
+}
+.cs-main div.versionadded.versionchanged span.versionmodified::before, .cs-main div.versionchanged.versionchanged span.versionmodified::before, .cs-main div.deprecated.versionchanged span.versionmodified::before, .cs-main div.versionremoved.versionchanged span.versionmodified::before {
+  content: "\f43f";
+}
+.cs-main div.versionadded.deprecated span.versionmodified::before, .cs-main div.versionchanged.deprecated span.versionmodified::before, .cs-main div.deprecated.deprecated span.versionmodified::before, .cs-main div.versionremoved.deprecated span.versionmodified::before {
+  content: "\f445";
+}
+.cs-main div.versionadded.versionremoved span.versionmodified::before, .cs-main div.versionchanged.versionremoved span.versionmodified::before, .cs-main div.deprecated.versionremoved span.versionmodified::before, .cs-main div.versionremoved.versionremoved span.versionmodified::before {
+  content: "\f441";
+}
+.cs-main div.versionadded span.versionmodified {
+  background-color: rgba(32, 201, 151, 0.2);
+}
+.cs-main div.versionadded p {
+  background-color: rgba(32, 201, 151, 0.1);
+}
+.cs-main div.versionchanged span.versionmodified {
+  background-color: rgba(255, 220, 80, 0.2);
+}
+.cs-main div.versionchanged p {
+  background-color: rgba(255, 220, 80, 0.1);
+}
+.cs-main div.deprecated span.versionmodified {
+  background-color: rgba(253, 126, 20, 0.2);
+}
+.cs-main div.deprecated p {
+  background-color: rgba(253, 126, 20, 0.1);
+}
+.cs-main div.versionremoved span.versionmodified {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.cs-main div.versionremoved p {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+[data-bs-theme=dark] .cs-main div.versionadded span.versionmodified, [data-bs-theme=dark] .cs-main div.versionchanged span.versionmodified, [data-bs-theme=dark] .cs-main div.deprecated span.versionmodified, [data-bs-theme=dark] .cs-main div.versionremoved span.versionmodified {
+  color: rgba(255, 255, 255, 0.8);
+}
+[data-bs-theme=dark] .cs-main div.versionadded span.versionmodified {
+  background-color: rgba(32, 201, 151, 0.3);
+}
+[data-bs-theme=dark] .cs-main div.versionadded p {
+  background-color: transparent;
+  border: 2px solid rgba(32, 201, 151, 0.8);
+}
+[data-bs-theme=dark] .cs-main div.versionchanged span.versionmodified {
+  background-color: rgba(255, 220, 80, 0.3);
+}
+[data-bs-theme=dark] .cs-main div.versionchanged p {
+  background-color: transparent;
+  border: 2px solid rgba(255, 220, 80, 0.8);
+}
+[data-bs-theme=dark] .cs-main div.deprecated span.versionmodified {
+  background-color: rgba(253, 126, 20, 0.3);
+}
+[data-bs-theme=dark] .cs-main div.deprecated p {
+  background-color: transparent;
+  border: 2px solid rgba(253, 126, 20, 0.8);
+}
+[data-bs-theme=dark] .cs-main div.versionremoved span.versionmodified {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+[data-bs-theme=dark] .cs-main div.versionremoved p {
+  background-color: transparent;
+  border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 .cs-content table {

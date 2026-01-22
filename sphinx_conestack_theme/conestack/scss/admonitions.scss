@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $admonition-types: (
     attention: #ff3a00,
     danger: #ff0000,
@@ -7,7 +9,8 @@ $admonition-types: (
     hint: #20c997,
     tip: #20c997,
     important: #0dcaf0,
-    note: #0d6efd
+    note: #0d6efd,
+    seealso: #6610f2
 );
 
 .cs-main {
@@ -72,6 +75,9 @@ $admonition-types: (
           } @else if $type == 'important' {
             content: "\f400";
             color: $color;
+          } @else if $type == 'seealso' {
+            content: "\f133";
+            color: $color;
           } @else if $type == 'note' {
             content: "\f4c9";
             color: $color;
@@ -128,6 +134,9 @@ $admonition-types: (
           } @else if $type == 'important' {
             content: "\f400";
             color: $color;
+          } @else if $type == 'seealso' {
+            content: "\F137";
+            color: color.mix($color, white, 70%);
           } @else if $type == 'note' {
             content: "\f4c9";
             color: $color;
@@ -135,6 +144,98 @@ $admonition-types: (
         }
       }
       border-left-color: $color;
+    }
+  }
+}
+
+// version notes
+$version-types: (
+  versionadded: #20c997,
+  versionchanged: #ffdc50,
+  deprecated: #fd7e14,
+  versionremoved: #ff0000
+);
+
+$version-icons: (
+  versionadded: F442,
+  versionchanged: F43F,
+  deprecated: F445,
+  versionremoved: F441
+);
+
+.cs-main {
+  div {
+    &.versionadded,
+    &.versionchanged,
+    &.deprecated,
+    &.versionremoved {
+      span.versionmodified {
+        display: flex;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        margin-top: -1rem;
+        margin-bottom: .5rem;
+        padding: .35rem 1rem;
+        border-top-left-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+        font-weight: bold;
+        color: rgba(0,0,0,0.8);
+      }
+      p {
+        padding: 1rem 1.5rem;
+        border-radius: 0.2rem;
+      }
+
+      span.versionmodified::before {
+        font-family: "bootstrap-icons";
+        margin-right: 0.5rem;
+      }
+      &.versionadded span.versionmodified::before {
+        content: "\F442";
+      }
+      &.versionchanged span.versionmodified::before {
+        content: "\F43F";
+      }
+      &.deprecated span.versionmodified::before {
+        content: "\F445";
+      }
+      &.versionremoved span.versionmodified::before {
+        content: "\F441";
+      }
+    }
+    @each $type, $color in $version-types {
+      &.#{$type} {
+        span.versionmodified {
+          background-color: rgba($color, 0.2);
+        }
+        p {
+          background-color: rgba($color, 0.1);
+        }
+      }
+    }
+  }
+}
+
+[data-bs-theme="dark"] .cs-main {
+  div {
+    &.versionadded,
+    &.versionchanged,
+    &.deprecated,
+    &.versionremoved {
+      span.versionmodified {
+        color: rgba(255,255,255,0.8);
+      }
+    }
+    @each $type, $color in $version-types {
+      &.#{$type} {
+        span.versionmodified {
+          background-color: rgba($color, 0.3);
+        }
+        p {
+          background-color: transparent;
+          border: 2px solid rgba($color, 0.8);
+        }
+      }
     }
   }
 }
