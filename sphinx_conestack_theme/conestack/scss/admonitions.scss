@@ -169,21 +169,24 @@ $version-icons: (
     &.versionchanged,
     &.deprecated,
     &.versionremoved {
+      position: relative;
+      margin-bottom: 1rem;
+      padding: .5rem 1rem;
+      padding-top: 2rem;
+      border-radius: 0.2rem;
+
       span.versionmodified {
         display: flex;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
-        margin-top: -1rem;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
         margin-bottom: .5rem;
         padding: .35rem 1rem;
         border-top-left-radius: 0.2rem;
         border-top-right-radius: 0.2rem;
         font-weight: bold;
         color: rgba(0,0,0,0.8);
-      }
-      p {
-        padding: 1rem 1.5rem;
-        border-radius: 0.2rem;
       }
 
       span.versionmodified::before {
@@ -205,11 +208,10 @@ $version-icons: (
     }
     @each $type, $color in $version-types {
       &.#{$type} {
+        background-color: rgba($color, 0.1);
+
         span.versionmodified {
           background-color: rgba($color, 0.2);
-        }
-        p {
-          background-color: rgba($color, 0.1);
         }
       }
     }
@@ -228,12 +230,11 @@ $version-icons: (
     }
     @each $type, $color in $version-types {
       &.#{$type} {
+        background-color: transparent;
+        outline: 2px solid rgba($color, 0.8);
+
         span.versionmodified {
           background-color: rgba($color, 0.3);
-        }
-        p {
-          background-color: transparent;
-          border: 2px solid rgba($color, 0.8);
         }
       }
     }

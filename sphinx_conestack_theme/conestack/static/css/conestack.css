@@ -648,21 +648,25 @@ footer .next-chapter::after {
   border-left-color: #6610f2;
 }
 
+.cs-main div.versionadded, .cs-main div.versionchanged, .cs-main div.deprecated, .cs-main div.versionremoved {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  padding-top: 2rem;
+  border-radius: 0.2rem;
+}
 .cs-main div.versionadded span.versionmodified, .cs-main div.versionchanged span.versionmodified, .cs-main div.deprecated span.versionmodified, .cs-main div.versionremoved span.versionmodified {
   display: flex;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  margin-top: -1rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
   margin-bottom: 0.5rem;
   padding: 0.35rem 1rem;
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 0.2rem;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
-}
-.cs-main div.versionadded p, .cs-main div.versionchanged p, .cs-main div.deprecated p, .cs-main div.versionremoved p {
-  padding: 1rem 1.5rem;
-  border-radius: 0.2rem;
 }
 .cs-main div.versionadded span.versionmodified::before, .cs-main div.versionchanged span.versionmodified::before, .cs-main div.deprecated span.versionmodified::before, .cs-main div.versionremoved span.versionmodified::before {
   font-family: "bootstrap-icons";
@@ -680,61 +684,61 @@ footer .next-chapter::after {
 .cs-main div.versionadded.versionremoved span.versionmodified::before, .cs-main div.versionchanged.versionremoved span.versionmodified::before, .cs-main div.deprecated.versionremoved span.versionmodified::before, .cs-main div.versionremoved.versionremoved span.versionmodified::before {
   content: "\f441";
 }
+.cs-main div.versionadded {
+  background-color: rgba(32, 201, 151, 0.1);
+}
 .cs-main div.versionadded span.versionmodified {
   background-color: rgba(32, 201, 151, 0.2);
 }
-.cs-main div.versionadded p {
-  background-color: rgba(32, 201, 151, 0.1);
+.cs-main div.versionchanged {
+  background-color: rgba(255, 220, 80, 0.1);
 }
 .cs-main div.versionchanged span.versionmodified {
   background-color: rgba(255, 220, 80, 0.2);
 }
-.cs-main div.versionchanged p {
-  background-color: rgba(255, 220, 80, 0.1);
+.cs-main div.deprecated {
+  background-color: rgba(253, 126, 20, 0.1);
 }
 .cs-main div.deprecated span.versionmodified {
   background-color: rgba(253, 126, 20, 0.2);
 }
-.cs-main div.deprecated p {
-  background-color: rgba(253, 126, 20, 0.1);
+.cs-main div.versionremoved {
+  background-color: rgba(255, 0, 0, 0.1);
 }
 .cs-main div.versionremoved span.versionmodified {
   background-color: rgba(255, 0, 0, 0.2);
-}
-.cs-main div.versionremoved p {
-  background-color: rgba(255, 0, 0, 0.1);
 }
 
 [data-bs-theme=dark] .cs-main div.versionadded span.versionmodified, [data-bs-theme=dark] .cs-main div.versionchanged span.versionmodified, [data-bs-theme=dark] .cs-main div.deprecated span.versionmodified, [data-bs-theme=dark] .cs-main div.versionremoved span.versionmodified {
   color: rgba(255, 255, 255, 0.8);
 }
+[data-bs-theme=dark] .cs-main div.versionadded {
+  background-color: transparent;
+  outline: 2px solid rgba(32, 201, 151, 0.8);
+}
 [data-bs-theme=dark] .cs-main div.versionadded span.versionmodified {
   background-color: rgba(32, 201, 151, 0.3);
 }
-[data-bs-theme=dark] .cs-main div.versionadded p {
+[data-bs-theme=dark] .cs-main div.versionchanged {
   background-color: transparent;
-  border: 2px solid rgba(32, 201, 151, 0.8);
+  outline: 2px solid rgba(255, 220, 80, 0.8);
 }
 [data-bs-theme=dark] .cs-main div.versionchanged span.versionmodified {
   background-color: rgba(255, 220, 80, 0.3);
 }
-[data-bs-theme=dark] .cs-main div.versionchanged p {
+[data-bs-theme=dark] .cs-main div.deprecated {
   background-color: transparent;
-  border: 2px solid rgba(255, 220, 80, 0.8);
+  outline: 2px solid rgba(253, 126, 20, 0.8);
 }
 [data-bs-theme=dark] .cs-main div.deprecated span.versionmodified {
   background-color: rgba(253, 126, 20, 0.3);
 }
-[data-bs-theme=dark] .cs-main div.deprecated p {
+[data-bs-theme=dark] .cs-main div.versionremoved {
   background-color: transparent;
-  border: 2px solid rgba(253, 126, 20, 0.8);
+  outline: 2px solid rgba(255, 0, 0, 0.8);
 }
 [data-bs-theme=dark] .cs-main div.versionremoved span.versionmodified {
   background-color: rgba(255, 0, 0, 0.3);
-}
-[data-bs-theme=dark] .cs-main div.versionremoved p {
-  background-color: transparent;
-  border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 .cs-content table {
